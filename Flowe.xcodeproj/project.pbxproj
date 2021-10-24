@@ -13,6 +13,7 @@
 		D738BEBA272559A8000EC3FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D738BEB9272559A8000EC3FF /* Preview Assets.xcassets */; };
 		D738BEBC272559A8000EC3FF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738BEBB272559A8000EC3FF /* Persistence.swift */; };
 		D738BEBF272559A8000EC3FF /* Flowe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D738BEBD272559A8000EC3FF /* Flowe.xcdatamodeld */; };
+		D78E8FEF27255FE6005E2E3E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E8FEE27255FE6005E2E3E /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		D738BEB9272559A8000EC3FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D738BEBB272559A8000EC3FF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D738BEBE272559A8000EC3FF /* Flowe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flowe.xcdatamodel; sourceTree = "<group>"; };
+		D78E8FEE27255FE6005E2E3E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				D738BEB2272559A7000EC3FF /* FloweApp.swift */,
+				D78E8FEE27255FE6005E2E3E /* Login.swift */,
 				D738BEB4272559A7000EC3FF /* ContentView.swift */,
 				D738BEB6272559A8000EC3FF /* Assets.xcassets */,
 				D738BEBB272559A8000EC3FF /* Persistence.swift */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D738BEBC272559A8000EC3FF /* Persistence.swift in Sources */,
+				D78E8FEF27255FE6005E2E3E /* Login.swift in Sources */,
 				D738BEB5272559A7000EC3FF /* ContentView.swift in Sources */,
 				D738BEB3272559A7000EC3FF /* FloweApp.swift in Sources */,
 				D738BEBF272559A8000EC3FF /* Flowe.xcdatamodeld in Sources */,
