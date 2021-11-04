@@ -7,28 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D738BEB3272559A7000EC3FF /* FloweApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738BEB2272559A7000EC3FF /* FloweApp.swift */; };
-		D738BEB5272559A7000EC3FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738BEB4272559A7000EC3FF /* ContentView.swift */; };
-		D738BEB7272559A8000EC3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D738BEB6272559A8000EC3FF /* Assets.xcassets */; };
-		D738BEBA272559A8000EC3FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D738BEB9272559A8000EC3FF /* Preview Assets.xcassets */; };
-		D738BEBC272559A8000EC3FF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738BEBB272559A8000EC3FF /* Persistence.swift */; };
-		D738BEBF272559A8000EC3FF /* Flowe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D738BEBD272559A8000EC3FF /* Flowe.xcdatamodeld */; };
-		D78E8FEF27255FE6005E2E3E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E8FEE27255FE6005E2E3E /* Login.swift */; };
+		D7AF683427339FC0001C7461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF683327339FC0001C7461 /* AppDelegate.swift */; };
+		D7AF683627339FC0001C7461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF683527339FC0001C7461 /* SceneDelegate.swift */; };
+		D7AF683827339FC0001C7461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF683727339FC0001C7461 /* ViewController.swift */; };
+		D7AF683B27339FC0001C7461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF683927339FC0001C7461 /* Main.storyboard */; };
+		D7AF683D27339FC1001C7461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7AF683C27339FC1001C7461 /* Assets.xcassets */; };
+		D7AF684027339FC1001C7461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF683E27339FC1001C7461 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D738BEAF272559A7000EC3FF /* Flowe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D738BEB2272559A7000EC3FF /* FloweApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloweApp.swift; sourceTree = "<group>"; };
-		D738BEB4272559A7000EC3FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D738BEB6272559A8000EC3FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D738BEB9272559A8000EC3FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D738BEBB272559A8000EC3FF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		D738BEBE272559A8000EC3FF /* Flowe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flowe.xcdatamodel; sourceTree = "<group>"; };
-		D78E8FEE27255FE6005E2E3E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		D7AF683027339FC0001C7461 /* flowe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flowe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7AF683327339FC0001C7461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7AF683527339FC0001C7461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D7AF683727339FC0001C7461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7AF683A27339FC0001C7461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7AF683C27339FC1001C7461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7AF683F27339FC1001C7461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7AF684127339FC1001C7461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D738BEAC272559A7000EC3FF /* Frameworks */ = {
+		D7AF682D27339FC0001C7461 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,80 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D738BEA6272559A7000EC3FF = {
+		D7AF682727339FC0001C7461 = {
 			isa = PBXGroup;
 			children = (
-				D738BEB1272559A7000EC3FF /* Flowe */,
-				D738BEB0272559A7000EC3FF /* Products */,
+				D7AF683227339FC0001C7461 /* flowe */,
+				D7AF683127339FC0001C7461 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D738BEB0272559A7000EC3FF /* Products */ = {
+		D7AF683127339FC0001C7461 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D738BEAF272559A7000EC3FF /* Flowe.app */,
+				D7AF683027339FC0001C7461 /* flowe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D738BEB1272559A7000EC3FF /* Flowe */ = {
+		D7AF683227339FC0001C7461 /* flowe */ = {
 			isa = PBXGroup;
 			children = (
-				D738BEB2272559A7000EC3FF /* FloweApp.swift */,
-				D78E8FEE27255FE6005E2E3E /* Login.swift */,
-				D738BEB4272559A7000EC3FF /* ContentView.swift */,
-				D738BEB6272559A8000EC3FF /* Assets.xcassets */,
-				D738BEBB272559A8000EC3FF /* Persistence.swift */,
-				D738BEBD272559A8000EC3FF /* Flowe.xcdatamodeld */,
-				D738BEB8272559A8000EC3FF /* Preview Content */,
+				D7AF683327339FC0001C7461 /* AppDelegate.swift */,
+				D7AF683527339FC0001C7461 /* SceneDelegate.swift */,
+				D7AF683727339FC0001C7461 /* ViewController.swift */,
+				D7AF683927339FC0001C7461 /* Main.storyboard */,
+				D7AF683C27339FC1001C7461 /* Assets.xcassets */,
+				D7AF683E27339FC1001C7461 /* LaunchScreen.storyboard */,
+				D7AF684127339FC1001C7461 /* Info.plist */,
 			);
-			path = Flowe;
-			sourceTree = "<group>";
-		};
-		D738BEB8272559A8000EC3FF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				D738BEB9272559A8000EC3FF /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = flowe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D738BEAE272559A7000EC3FF /* Flowe */ = {
+		D7AF682F27339FC0001C7461 /* flowe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D738BEC2272559A8000EC3FF /* Build configuration list for PBXNativeTarget "Flowe" */;
+			buildConfigurationList = D7AF684427339FC1001C7461 /* Build configuration list for PBXNativeTarget "flowe" */;
 			buildPhases = (
-				D738BEAB272559A7000EC3FF /* Sources */,
-				D738BEAC272559A7000EC3FF /* Frameworks */,
-				D738BEAD272559A7000EC3FF /* Resources */,
+				D7AF682C27339FC0001C7461 /* Sources */,
+				D7AF682D27339FC0001C7461 /* Frameworks */,
+				D7AF682E27339FC0001C7461 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Flowe;
-			productName = Flowe;
-			productReference = D738BEAF272559A7000EC3FF /* Flowe.app */;
+			name = flowe;
+			productName = flowe;
+			productReference = D7AF683027339FC0001C7461 /* flowe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D738BEA7272559A7000EC3FF /* Project object */ = {
+		D7AF682827339FC0001C7461 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					D738BEAE272559A7000EC3FF = {
-						CreatedOnToolsVersion = 13.0;
+					D7AF682F27339FC0001C7461 = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = D738BEAA272559A7000EC3FF /* Build configuration list for PBXProject "Flowe" */;
+			buildConfigurationList = D7AF682B27339FC0001C7461 /* Build configuration list for PBXProject "flowe" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,45 +110,63 @@
 				en,
 				Base,
 			);
-			mainGroup = D738BEA6272559A7000EC3FF;
-			productRefGroup = D738BEB0272559A7000EC3FF /* Products */;
+			mainGroup = D7AF682727339FC0001C7461;
+			productRefGroup = D7AF683127339FC0001C7461 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D738BEAE272559A7000EC3FF /* Flowe */,
+				D7AF682F27339FC0001C7461 /* flowe */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D738BEAD272559A7000EC3FF /* Resources */ = {
+		D7AF682E27339FC0001C7461 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D738BEBA272559A8000EC3FF /* Preview Assets.xcassets in Resources */,
-				D738BEB7272559A8000EC3FF /* Assets.xcassets in Resources */,
+				D7AF684027339FC1001C7461 /* LaunchScreen.storyboard in Resources */,
+				D7AF683D27339FC1001C7461 /* Assets.xcassets in Resources */,
+				D7AF683B27339FC0001C7461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D738BEAB272559A7000EC3FF /* Sources */ = {
+		D7AF682C27339FC0001C7461 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D738BEBC272559A8000EC3FF /* Persistence.swift in Sources */,
-				D78E8FEF27255FE6005E2E3E /* Login.swift in Sources */,
-				D738BEB5272559A7000EC3FF /* ContentView.swift in Sources */,
-				D738BEB3272559A7000EC3FF /* FloweApp.swift in Sources */,
-				D738BEBF272559A8000EC3FF /* Flowe.xcdatamodeld in Sources */,
+				D7AF683827339FC0001C7461 /* ViewController.swift in Sources */,
+				D7AF683427339FC0001C7461 /* AppDelegate.swift in Sources */,
+				D7AF683627339FC0001C7461 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		D7AF683927339FC0001C7461 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7AF683A27339FC0001C7461 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7AF683E27339FC1001C7461 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7AF683F27339FC1001C7461 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		D738BEC0272559A8000EC3FF /* Debug */ = {
+		D7AF684227339FC1001C7461 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		D738BEC1272559A8000EC3FF /* Release */ = {
+		D7AF684327339FC1001C7461 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,29 +282,27 @@
 			};
 			name = Release;
 		};
-		D738BEC3272559A8000EC3FF /* Debug */ = {
+		D7AF684527339FC1001C7461 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Flowe/Preview Content\"";
 				DEVELOPMENT_TEAM = SW5458J777;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = flowe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = utcs.Flowe;
+				PRODUCT_BUNDLE_IDENTIFIER = utcs.flowe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -303,29 +310,27 @@
 			};
 			name = Debug;
 		};
-		D738BEC4272559A8000EC3FF /* Release */ = {
+		D7AF684627339FC1001C7461 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Flowe/Preview Content\"";
 				DEVELOPMENT_TEAM = SW5458J777;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = flowe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = utcs.Flowe;
+				PRODUCT_BUNDLE_IDENTIFIER = utcs.flowe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -336,38 +341,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D738BEAA272559A7000EC3FF /* Build configuration list for PBXProject "Flowe" */ = {
+		D7AF682B27339FC0001C7461 /* Build configuration list for PBXProject "flowe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D738BEC0272559A8000EC3FF /* Debug */,
-				D738BEC1272559A8000EC3FF /* Release */,
+				D7AF684227339FC1001C7461 /* Debug */,
+				D7AF684327339FC1001C7461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D738BEC2272559A8000EC3FF /* Build configuration list for PBXNativeTarget "Flowe" */ = {
+		D7AF684427339FC1001C7461 /* Build configuration list for PBXNativeTarget "flowe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D738BEC3272559A8000EC3FF /* Debug */,
-				D738BEC4272559A8000EC3FF /* Release */,
+				D7AF684527339FC1001C7461 /* Debug */,
+				D7AF684627339FC1001C7461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D738BEBD272559A8000EC3FF /* Flowe.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D738BEBE272559A8000EC3FF /* Flowe.xcdatamodel */,
-			);
-			currentVersion = D738BEBE272559A8000EC3FF /* Flowe.xcdatamodel */;
-			path = Flowe.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = D738BEA7272559A7000EC3FF /* Project object */;
+	rootObject = D7AF682827339FC0001C7461 /* Project object */;
 }
