@@ -135,7 +135,7 @@ struct LoginHome: View {
         }
         .background(Color("color1").ignoresSafeArea(.all, edges: .all))
         .fullScreenCover(isPresented: $loginSuccessful) {
-            SegueSwiftUI(storyboard: "Main", VC: "HomeVC")
+            SegueSwiftUI(storyboard: "Main", VC: "SegueVC").ignoresSafeArea(.all)
         }
     }
 }

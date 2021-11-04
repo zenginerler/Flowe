@@ -12,14 +12,14 @@ struct SegueSwiftUI: UIViewControllerRepresentable {
     let storyboard: String
     let VC: String
 
-  func makeUIViewController(context: UIViewControllerRepresentableContext<SegueSwiftUI>) -> HomeVC {
+  func makeUIViewController(context: UIViewControllerRepresentableContext<SegueSwiftUI>) -> SegueVC {
     //Load the storyboard
     let loadedStoryboard = UIStoryboard(name: storyboard, bundle: nil)
     
     //Load the ViewController
-     return loadedStoryboard.instantiateViewController(withIdentifier: VC) as! HomeVC
+     return loadedStoryboard.instantiateViewController(withIdentifier: VC) as! SegueVC
   }
   
-  func updateUIViewController(_ uiViewController: HomeVC, context: UIViewControllerRepresentableContext<SegueSwiftUI>) {
+  func updateUIViewController(_ uiViewController: SegueVC, context: UIViewControllerRepresentableContext<SegueSwiftUI>) {
   }
 }

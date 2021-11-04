@@ -16,34 +16,31 @@
             </objects>
             <point key="canvasLocation" x="-703" y="94"/>
         </scene>
-        <!--HomeVC-->
+        <!--SegueVC-->
         <scene sceneID="Ifa-Q5-vRL">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" title="HomeVC" id="0vj-hh-sRx" customClass="HomeVC" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SegueVC" title="SegueVC" id="0vj-hh-sRx" customClass="SegueVC" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EPh-6O-wFC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Home Page!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-YX-ro1">
-                                <rect key="frame" x="113" y="421" width="188" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Segue ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-YX-ro1">
+                                <rect key="frame" x="77" y="44" width="260" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3c-Sz-R9s">
-                                <rect key="frame" x="162" y="484" width="91" height="66"/>
+                                <rect key="frame" x="108" y="107" width="199" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next Page"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Home Page"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="lBB-IB-Xl8"/>
+                        <viewLayoutGuide key="safeArea" id="ggP-X8-mAn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="OFH-SX-K9T">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qyM-Dw-L8c"/>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUe-LV-gRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
