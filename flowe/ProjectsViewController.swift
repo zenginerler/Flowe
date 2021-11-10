@@ -9,37 +9,11 @@ import UIKit
 import Foundation
 import CoreData
 
-//Project class will use Person class
-class Project {
-    //var initiator: Person?
-    //var team: [Person] = []
-    //var tasks: [Tasks] = []
-    var name: String
-    var due = DateComponents()
-    var description: String
-
-    init(){
-        // creator = Person
-        description = ""
-        name = ""
-    }
-}
-
-protocol addProject {
-    func addProject(project: Project)
-}
-
-var projectList: [Project] = []
-var projects: [NSManagedObject] = []
-
 class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var projectsTableView: UITableView!
-    
-    // test vars
-    let project1 = Project()
-    let project2 = Project()
-    let project3 = Project()
+    @IBOutlet weak var addProjecButton: UIBarButtonItem!
+    var projects: [Projects]?
     
     let userCalendar = Calendar(identifier: .gregorian)
     let formatter = DateFormatter()
@@ -50,77 +24,54 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         projectsTableView.dataSource = self
         formatter.dateStyle = .full
         formatter.timeStyle = .none
-        
-        self.project1.name = "Project 1"
-        project1.due.month = 7
-        project1.due.year = 2021
-        project1.due.day = 11
-        
-        self.project2.name = "Project 2"
-        project2.due.month = 8
-        project2.due.year = 2021
-        project2.due.day = 1
-        
-        self.project3.name = "Project 3"
-        project3.due.month = 10
-        project3.due.year = 2021
-        project3.due.day = 15
-        
-        addProject(project: project1)
-        addProject(project: project2)
-        addProject(project: project3)
+        getProjects()
     }
     
-    func addProject (project: Project) {
-        projectList.append(project)
-        self.projectsTableView.reloadData()
-    }
+    lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var context = appDelegate.persistentContainer.viewContext
     
-    func getProjects() -> [NSManagedObject]{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Project")
-        var fetchedResults:[NSManagedObject]? = nil
-        
-        do {
-            try fetchedResults = context.fetch(request) as? [NSManagedObject]
-        } catch {
-            // If an error occurs
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
+    func getProjects() {
+        try! projects = self.context.fetch(Projects.fetchRequest())
+        //Update UI in queue
+        DispatchQueue.main.async {
+            self.projectsTableView.reloadData()
         }
-        
-        return(fetchedResults)!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let fetchedProjects = getProjects()
-        return fetchedProjects.count
+        return projects!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = projectsTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
-        let project = projects[indexPath.row].value(forKey: "projectObject")
-        let dateDue = userCalendar.date(from: project.due)
-        let name = project.name
+        let project = self.projects![indexPath.row]
+        var dueDate = DateComponents()
+        dueDate.month = Int(project.monthDue)
+        dueDate.day = Int(project.dateDue)
+        dueDate.year = Int(project.yearDue)
+        let dateDue = userCalendar.date(from: dueDate)
         let datetime = formatter.string(from: dateDue!)
-        print(dateDue!)
+        let name = project.name!
         cell.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)
-
-        cell.textLabel?.text = "\(name)\n           Due: \(datetime)"
-        
-        
-        
+        cell.textLabel?.text = "\(name)\n        Due: \(datetime)"
         return cell
     }
     
+    @IBAction func addPressed(_ sender: Any) {
+        
+        //alert to add a new project
+        
+        // project name
+        
+        // date selectors
+        
+        // initial tasks
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        projects = getProjects()
         self.projectsTableView.reloadData()
     }
 
 }
-

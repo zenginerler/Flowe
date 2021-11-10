@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */; };
+		74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */; };
+		74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */; };
+		74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */; };
+		74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */; };
+		74DB65DC273C646A0025CBCF /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */; };
+		74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */; };
+		74DB65DE273C646A0025CBCF /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D4273C646A0025CBCF /* Profile+CoreDataProperties.swift */; };
+		74DB65DF273C646A0025CBCF /* Goals+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D5273C646A0025CBCF /* Goals+CoreDataClass.swift */; };
+		74DB65E0273C646A0025CBCF /* Goals+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D6273C646A0025CBCF /* Goals+CoreDataProperties.swift */; };
+		74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E1273C66240025CBCF /* GoalViewController.swift */; };
+		74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E2273C66240025CBCF /* GoalListViewController.swift */; };
+		74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E3273C66240025CBCF /* HomeViewController.swift */; };
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
 		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
 		D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68552733A1E1001C7461 /* AppDelegate.swift */; };
@@ -19,6 +32,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74DB65D4273C646A0025CBCF /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74DB65D5273C646A0025CBCF /* Goals+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goals+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74DB65D6273C646A0025CBCF /* Goals+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goals+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74DB65E1273C66240025CBCF /* GoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		74DB65E2273C66240025CBCF /* GoalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
+		74DB65E3273C66240025CBCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		D7AF68522733A1E1001C7461 /* flowe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flowe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74DB659C273B70440025CBCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */,
+				74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */,
+				74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */,
+				74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */,
+				74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */,
+				74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */,
+				74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */,
+				74DB65D4273C646A0025CBCF /* Profile+CoreDataProperties.swift */,
+				74DB65D5273C646A0025CBCF /* Goals+CoreDataClass.swift */,
+				74DB65D6273C646A0025CBCF /* Goals+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D7AF68492733A1E1001C7461 = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +105,14 @@
 		D7AF68542733A1E1001C7461 /* flowe */ = {
 			isa = PBXGroup;
 			children = (
+				74DB659C273B70440025CBCF /* Models */,
 				D7AF68552733A1E1001C7461 /* AppDelegate.swift */,
 				D7AF68572733A1E1001C7461 /* SceneDelegate.swift */,
 				D7AF68592733A1E1001C7461 /* ViewController.swift */,
 				74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */,
+				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
+				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
+				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
 				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				D7AF685B2733A1E1001C7461 /* Main.storyboard */,
 				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
@@ -147,11 +194,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */,
+				74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */,
+				74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */,
+				74DB65DF273C646A0025CBCF /* Goals+CoreDataClass.swift in Sources */,
+				74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */,
+				74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */,
 				74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */,
+				74DB65DC273C646A0025CBCF /* Tasks+CoreDataProperties.swift in Sources */,
 				D7AF685A2733A1E1001C7461 /* ViewController.swift in Sources */,
+				74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */,
+				74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */,
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */,
+				74DB65E0273C646A0025CBCF /* Goals+CoreDataProperties.swift in Sources */,
 				D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */,
+				74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */,
+				74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */,
+				74DB65DE273C646A0025CBCF /* Profile+CoreDataProperties.swift in Sources */,
 				D7AF68602733A1E1001C7461 /* flowe.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

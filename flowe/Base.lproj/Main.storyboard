@@ -59,80 +59,18 @@
                     <navigationItem key="navigationItem" id="X8x-OL-eLC">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Op1-UT-j8V">
                             <connections>
-                                <segue destination="9X0-mn-9MP" kind="show" id="hmK-i3-wUf"/>
+                                <action selector="addPressed:" destination="Mc9-Wy-1Su" id="KhR-Yn-srY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addProjecButton" destination="Op1-UT-j8V" id="2mQ-oh-4AY"/>
                         <outlet property="projectsTableView" destination="m6O-EM-s0w" id="fwd-CC-Hoz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fi8-c6-elB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="1085.4910714285713"/>
-        </scene>
-        <!--Add Project View Controller-->
-        <scene sceneID="t1M-Vo-ZEq">
-            <objects>
-                <viewController id="9X0-mn-9MP" customClass="AddProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XVx-Jq-4SA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WB0-6j-rUq">
-                                <rect key="frame" x="159" y="193" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="txg-yq-Vzv">
-                                <rect key="frame" x="66" y="318" width="282" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="July"/>
-                                    <segment title="August"/>
-                                    <segment title="December"/>
-                                </segments>
-                                <connections>
-                                    <action selector="monthSelected:" destination="9X0-mn-9MP" eventType="valueChanged" id="WLl-jf-Yp7"/>
-                                </connections>
-                            </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSz-VB-bjM">
-                                <rect key="frame" x="159" y="431" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbQ-q2-6h7">
-                                <rect key="frame" x="181" y="620" width="54" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="save"/>
-                                <connections>
-                                    <action selector="savePressed:" destination="9X0-mn-9MP" eventType="touchUpInside" id="2Gq-C6-IGb"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YHC-tn-dkL">
-                                <rect key="frame" x="159" y="504" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Kwp-p6-BlK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tdV-9z-O6G"/>
-                    <connections>
-                        <outlet property="dayField" destination="nSz-VB-bjM" id="WBc-Zq-qvu"/>
-                        <outlet property="monthSelector" destination="txg-yq-Vzv" id="awK-zE-bCV"/>
-                        <outlet property="projectNameField" destination="WB0-6j-rUq" id="f95-nU-xeH"/>
-                        <outlet property="yearField" destination="YHC-tn-dkL" id="fug-9t-BOU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ifc-vJ-zHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1813.0434782608697" y="1096.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ijt-MF-Shg">
