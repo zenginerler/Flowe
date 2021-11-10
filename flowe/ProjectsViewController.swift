@@ -30,10 +30,12 @@ protocol addProject {
 }
 
 var projectList: [Project] = []
+var projects: [NSManagedObject] = []
 
 class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var projectsTableView: UITableView!
+    
     // test vars
     let project1 = Project()
     let project2 = Project()
@@ -44,6 +46,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        projectsTableView.delegate = self
         projectsTableView.dataSource = self
         formatter.dateStyle = .full
         formatter.timeStyle = .none
@@ -73,23 +76,49 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         self.projectsTableView.reloadData()
     }
     
+    func getProjects() -> [NSManagedObject]{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Project")
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            try fetchedResults = context.fetch(request) as? [NSManagedObject]
+        } catch {
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        return(fetchedResults)!
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return projectList.count
+        let fetchedProjects = getProjects()
+        return fetchedProjects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = projectsTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
-        let project = projectList[indexPath.row]
+        let project = projects[indexPath.row].value(forKey: "projectObject")
         let dateDue = userCalendar.date(from: project.due)
         let name = project.name
         let datetime = formatter.string(from: dateDue!)
         print(dateDue!)
+        cell.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)
+
         cell.textLabel?.text = "\(name)\n           Due: \(datetime)"
+        
+        
+        
         return cell
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        projects = getProjects()
         self.projectsTableView.reloadData()
     }
 
