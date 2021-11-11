@@ -17,6 +17,8 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     let userCalendar = Calendar(identifier: .gregorian)
     let formatter = DateFormatter()
+    var textfield: UITextField!
+    let datePicker = UIDatePicker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,15 +61,41 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func addPressed(_ sender: Any) {
-        
-        //alert to add a new project
-        
-        // project name
-        
-        // date selectors
-        
-        // initial tasks
-        
+        let alert = UIAlertController(title: "New Project",
+                                      message: "Enter the details for your new project",
+                                      preferredStyle: .alert)
+        alert.addTextField()
+        alert.addTextField()
+        alert.addTextField()
+        alert.textFields![0].placeholder = "Project name"
+        alert.textFields![1].placeholder = "Date due"
+        alert.textFields![2].placeholder = "Enter a description"
+        let dateField = alert.textFields![1]
+        createDatePicker(textfield: dateField)
+        //alertController.view.addSubview(myDatePicker)
+        let selectAction = UIAlertAction(title: "Ok",
+                                         style: .default,
+                                         handler: { _ in
+            print("Selected Date: \(self.datePicker.date)")
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(selectAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
+    func createDatePicker(textfield: UITextField) {
+        datePicker.preferredDatePickerStyle = .wheels
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector (donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        textfield.inputAccessoryView = toolbar
+        textfield.inputView = datePicker
+    }
+    
+    @objc func donePressed() {
+        self.view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
