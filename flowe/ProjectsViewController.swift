@@ -116,8 +116,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @objc func donePressed() {
         dateField.text = formatter.string(from: datePicker.date)
-        self.datePicker.endEditing(true)
-
+        self.inputView?.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
