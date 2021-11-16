@@ -1,4 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Goals" representedClassName="Goals" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Profile" representedClassName="Profile" syncable="YES">
+        <attribute name="aboutMe" optional="YES" attributeType="String"/>
+        <attribute name="contactInfo" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <relationship name="userProfile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="profile" inverseEntity="Users"/>
+    </entity>
+    <entity name="Projects" representedClassName="Projects" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String"/>
+        <attribute name="dateDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="monthDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="tasks" optional="YES" attributeType="Transformable" customClassName="[Tasks]"/>
+        <attribute name="team" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[Users]"/>
+        <attribute name="yearDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="assignedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="assignedProjects" inverseEntity="Users"/>
+        <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="createdProjects" inverseEntity="Users"/>
+    </entity>
+    <entity name="Tasks" representedClassName="Tasks" syncable="YES">
+        <attribute name="dayDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="monthDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="yearDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Users" representedClassName="Users" syncable="YES">
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="assignedProjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Projects" inverseName="assignedTo" inverseEntity="Projects"/>
+        <relationship name="createdProjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Projects" inverseName="createdBy" inverseEntity="Projects"/>
+        <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="userProfile" inverseEntity="Profile"/>
+    </entity>
+    <elements>
+        <element name="Projects" positionX="-327.4286499023438" positionY="-68.54510498046875" width="128" height="164"/>
+        <element name="Tasks" positionX="-130.6796264648438" positionY="-36.32534790039062" width="128" height="89"/>
+        <element name="Users" positionX="-142.7080078125" positionY="203.6631469726562" width="128" height="89"/>
+        <element name="Profile" positionX="96.5985107421875" positionY="194.6828002929688" width="128" height="133"/>
+        <element name="Goals" positionX="-130.35546875" positionY="83.468994140625" width="128" height="59"/>
+    </elements>
 </model>
