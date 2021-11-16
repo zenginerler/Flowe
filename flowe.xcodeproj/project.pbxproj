@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */; };
 		74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */; };
+		74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */; };
+		74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */; };
 		74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */; };
 		74DB65DC273C646A0025CBCF /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */; };
 		74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */; };
@@ -18,21 +20,27 @@
 		74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E1273C66240025CBCF /* GoalViewController.swift */; };
 		74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E2273C66240025CBCF /* GoalListViewController.swift */; };
 		74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E3273C66240025CBCF /* HomeViewController.swift */; };
-		74DB65FD273D705A0025CBCF /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65FB273D705A0025CBCF /* Projects+CoreDataClass.swift */; };
-		74DB65FE273D705A0025CBCF /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65FC273D705A0025CBCF /* Projects+CoreDataProperties.swift */; };
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
+		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
+		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
 		D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68552733A1E1001C7461 /* AppDelegate.swift */; };
 		D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68572733A1E1001C7461 /* SceneDelegate.swift */; };
-		D7AF685A2733A1E1001C7461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68592733A1E1001C7461 /* ViewController.swift */; };
+		D7AF685A2733A1E1001C7461 /* SegueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68592733A1E1001C7461 /* SegueVC.swift */; };
 		D7AF685D2733A1E1001C7461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF685B2733A1E1001C7461 /* Main.storyboard */; };
 		D7AF68602733A1E1001C7461 /* flowe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */; };
 		D7AF68622733A1E1001C7461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7AF68612733A1E1001C7461 /* Assets.xcassets */; };
 		D7AF68652733A1E1001C7461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF68632733A1E1001C7461 /* LaunchScreen.storyboard */; };
+		D7AF68732733C64E001C7461 /* LoginHC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68722733C64E001C7461 /* LoginHC.swift */; };
+		D7AF68752733CC75001C7461 /* SegueSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */; };
+		D7AF687727348335001C7461 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7AF687627348335001C7461 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6100470B089EA2F9A9B982AC /* Pods-flowe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowe.debug.xcconfig"; path = "Target Support Files/Pods-flowe/Pods-flowe.debug.xcconfig"; sourceTree = "<group>"; };
 		74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -42,18 +50,23 @@
 		74DB65E1273C66240025CBCF /* GoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		74DB65E2273C66240025CBCF /* GoalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
 		74DB65E3273C66240025CBCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		74DB65FB273D705A0025CBCF /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
-		74DB65FC273D705A0025CBCF /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AF68522733A1E1001C7461 /* flowe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flowe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AF68552733A1E1001C7461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7AF68572733A1E1001C7461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7AF68592733A1E1001C7461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7AF68592733A1E1001C7461 /* SegueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueVC.swift; sourceTree = "<group>"; };
 		D7AF685C2733A1E1001C7461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7AF685F2733A1E1001C7461 /* flowe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = flowe.xcdatamodel; sourceTree = "<group>"; };
 		D7AF68612733A1E1001C7461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7AF68642733A1E1001C7461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7AF68662733A1E1001C7461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7AF68722733C64E001C7461 /* LoginHC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHC.swift; sourceTree = "<group>"; };
+		D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueSwiftUI.swift; sourceTree = "<group>"; };
+		D7AF687627348335001C7461 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7AF687827348527001C7461 /* flowe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = flowe.entitlements; sourceTree = "<group>"; };
+		E4331AD384E2E3913B787025 /* Pods-flowe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowe.release.xcconfig"; path = "Target Support Files/Pods-flowe/Pods-flowe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +74,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24CD07FABC28B43E2847177E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		74DB659C273B70440025CBCF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74DB65FB273D705A0025CBCF /* Projects+CoreDataClass.swift */,
-				74DB65FC273D705A0025CBCF /* Projects+CoreDataProperties.swift */,
 				74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */,
 				74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */,
+				74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */,
+				74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */,
 				74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */,
 				74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */,
 				74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */,
@@ -84,11 +106,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		ABD5590F763861D2FE8D17CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6100470B089EA2F9A9B982AC /* Pods-flowe.debug.xcconfig */,
+				E4331AD384E2E3913B787025 /* Pods-flowe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D7AF68492733A1E1001C7461 = {
 			isa = PBXGroup;
 			children = (
 				D7AF68542733A1E1001C7461 /* flowe */,
 				D7AF68532733A1E1001C7461 /* Products */,
+				ABD5590F763861D2FE8D17CE /* Pods */,
+				24CD07FABC28B43E2847177E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,18 +137,23 @@
 			isa = PBXGroup;
 			children = (
 				74DB659C273B70440025CBCF /* Models */,
+				D7AF687827348527001C7461 /* flowe.entitlements */,
+				D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */,
 				D7AF68552733A1E1001C7461 /* AppDelegate.swift */,
 				D7AF68572733A1E1001C7461 /* SceneDelegate.swift */,
-				D7AF68592733A1E1001C7461 /* ViewController.swift */,
 				74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */,
 				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
 				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
 				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
+				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				D7AF685B2733A1E1001C7461 /* Main.storyboard */,
-				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
+				D7AF68722733C64E001C7461 /* LoginHC.swift */,
+				D7AF68592733A1E1001C7461 /* SegueVC.swift */,
 				D7AF68632733A1E1001C7461 /* LaunchScreen.storyboard */,
-				D7AF68662733A1E1001C7461 /* Info.plist */,
+				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
 				D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */,
+				D7AF68662733A1E1001C7461 /* Info.plist */,
+				D7AF687627348335001C7461 /* GoogleService-Info.plist */,
 			);
 			path = flowe;
 			sourceTree = "<group>";
@@ -127,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7AF68692733A1E1001C7461 /* Build configuration list for PBXNativeTarget "flowe" */;
 			buildPhases = (
+				7EFD832AA109E9FC354DB769 /* [CP] Check Pods Manifest.lock */,
 				D7AF684E2733A1E1001C7461 /* Sources */,
 				D7AF684F2733A1E1001C7461 /* Frameworks */,
 				D7AF68502733A1E1001C7461 /* Resources */,
+				1C198F89A84C98C1BE9CDBB6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7AF68652733A1E1001C7461 /* LaunchScreen.storyboard in Resources */,
+				D7AF687727348335001C7461 /* GoogleService-Info.plist in Resources */,
 				D7AF68622733A1E1001C7461 /* Assets.xcassets in Resources */,
 				D7AF685D2733A1E1001C7461 /* Main.storyboard in Resources */,
 			);
@@ -186,21 +227,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C198F89A84C98C1BE9CDBB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flowe/Pods-flowe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flowe/Pods-flowe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-flowe/Pods-flowe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EFD832AA109E9FC354DB769 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flowe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7AF684E2733A1E1001C7461 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7AF685A2733A1E1001C7461 /* SegueVC.swift in Sources */,
+				D7AF68752733CC75001C7461 /* SegueSwiftUI.swift in Sources */,
+				D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */,
+				D7AF68732733C64E001C7461 /* LoginHC.swift in Sources */,
 				74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */,
 				74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */,
 				74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */,
-				74DB65FD273D705A0025CBCF /* Projects+CoreDataClass.swift in Sources */,
 				74DB65DF273C646A0025CBCF /* Goals+CoreDataClass.swift in Sources */,
 				74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */,
 				74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */,
+				74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */,
 				74DB65DC273C646A0025CBCF /* Tasks+CoreDataProperties.swift in Sources */,
-				D7AF685A2733A1E1001C7461 /* ViewController.swift in Sources */,
-				74DB65FE273D705A0025CBCF /* Projects+CoreDataProperties.swift in Sources */,
+				D7AF685A2733A1E1001C7461 /* SegueVC.swift in Sources */,
+				74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */,
+				74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */,
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */,
 				74DB65E0273C646A0025CBCF /* Goals+CoreDataProperties.swift in Sources */,
@@ -352,9 +440,11 @@
 		};
 		D7AF686A2733A1E1001C7461 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6100470B089EA2F9A9B982AC /* Pods-flowe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = flowe/flowe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SW5458J777;
@@ -380,9 +470,11 @@
 		};
 		D7AF686B2733A1E1001C7461 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4331AD384E2E3913B787025 /* Pods-flowe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = flowe/flowe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SW5458J777;

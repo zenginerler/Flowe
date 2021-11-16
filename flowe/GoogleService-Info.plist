@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>950448495307-0m008ntm45ubahi8eoact43onpt9sq0p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.950448495307-0m008ntm45ubahi8eoact43onpt9sq0p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAa3u4bKQFoec474NosscPDkwzxdazKLvE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>950448495307</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>utcs.flowe</string>
+	<key>PROJECT_ID</key>
+	<string>flowe-6c296</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flowe-6c296.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:950448495307:ios:eef154e94dbb5000fb994e</string>
+</dict>
+</plist>

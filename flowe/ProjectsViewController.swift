@@ -47,14 +47,28 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = projectsTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
         let project = self.projects![indexPath.row]
-        let dueDate = formatter.string(from: project.due!)
+        var dueDate = DateComponents()
+        dueDate.month = Int(project.monthDue)
+        dueDate.day = Int(project.dateDue)
+        dueDate.year = Int(project.yearDue)
+        let dateDue = userCalendar.date(from: dueDate)
+        let datetime = formatter.string(from: dateDue!)
         let name = project.name!
         cell.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)
-        cell.textLabel?.text = "\(name)\n      Due: \(dueDate)"
+        cell.textLabel?.text = "\(name)\n        Due: \(datetime)"
         return cell
     }
     
     @IBAction func addPressed(_ sender: Any) {
+        
+        //alert to add a new project
+        
+        // project name
+        
+        // date selectors
+        
+        // initial tasks
+        
         let alert = UIAlertController(title: "New Project",
                                       message: "Enter the details for your new project",
                                       preferredStyle: .alert)
