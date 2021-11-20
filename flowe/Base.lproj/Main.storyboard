@@ -485,18 +485,46 @@
         <!--Projects-->
         <scene sceneID="zRu-QW-1ab">
             <objects>
-                <viewController id="iD5-DE-8rn" sceneMemberID="viewController">
+                <viewController id="iD5-DE-8rn" customClass="ProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o4M-XX-b3a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ena-Rj-TKX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="105" id="0B6-EY-J5q">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0B6-EY-J5q" id="zAd-EZ-yBA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LQM-zf-vm8"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LQM-zf-vm8" firstAttribute="bottom" secondItem="ena-Rj-TKX" secondAttribute="bottom" id="224-a1-kpV"/>
+                            <constraint firstItem="ena-Rj-TKX" firstAttribute="top" secondItem="LQM-zf-vm8" secondAttribute="top" id="8dm-jW-FE6"/>
+                            <constraint firstItem="LQM-zf-vm8" firstAttribute="trailing" secondItem="ena-Rj-TKX" secondAttribute="trailing" id="8n2-vu-x9j"/>
+                            <constraint firstItem="ena-Rj-TKX" firstAttribute="leading" secondItem="LQM-zf-vm8" secondAttribute="leading" id="Bbp-cC-QQ9"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Projects" id="pW2-Tf-PN8"/>
+                    <navigationItem key="navigationItem" title="Projects" id="pW2-Tf-PN8">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="A8d-zm-iLC"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addProjectButton" destination="A8d-zm-iLC" id="NEZ-VR-qFp"/>
+                        <outlet property="projectsTableView" destination="ena-Rj-TKX" id="Kaw-Zw-dO7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFS-Rm-n0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="1234"/>
+            <point key="canvasLocation" x="-591.304347826087" y="1233.4821428571429"/>
         </scene>
         <!--Workflow-->
         <scene sceneID="Y4I-S2-qLX">

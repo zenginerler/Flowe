@@ -11,8 +11,10 @@ import CoreData
 
 class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     @IBOutlet weak var projectsTableView: UITableView!
-    @IBOutlet weak var addProjecButton: UIBarButtonItem!
+    @IBOutlet weak var addProjectButton: UIBarButtonItem!
+    
     var projects: [Projects]?
     
     let userCalendar = Calendar(identifier: .gregorian)
