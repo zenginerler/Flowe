@@ -116,11 +116,13 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
                                                     }
                                                     self.getProjects()
                 })
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                    [self] _ in self.projectsTableView.reloadData()})
                 alert.addAction(selectAction)
                 alert.addAction(cancelAction)
             self.present(alert, animated: true)
         })
+        action.image = UIImage(systemName: "trash")
         return UISwipeActionsConfiguration(actions: [action])
     }
     
@@ -159,11 +161,13 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.getProjects()
             })
         
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                [self] _ in self.projectsTableView.reloadData()})
             alert.addAction(selectAction)
             alert.addAction(cancelAction)
             self.present(alert, animated: true)
         })
+        action.image = UIImage(systemName: "pencil")
         return UISwipeActionsConfiguration(actions: [action])
     }
     
