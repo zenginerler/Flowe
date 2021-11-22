@@ -92,12 +92,14 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         present(alert, animated: true)
     }
     
-    // Swipe to Delete code
+    // Swipe left to Delete code
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive,
                                         title: "Delete",
                                         handler: { (action, view, completionHandler) in
             let projectToRemove = self.projects![indexPath.row]
+            
+            // alert to confirm the delete action
             let alert = UIAlertController(title: "Remove \(projectToRemove.name ?? "")",
                                               message: "Are you sure you want to remove this project? This action is irreversible.",
                                               preferredStyle: .alert)
@@ -114,10 +116,52 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
                                                     }
                                                     self.getProjects()
                 })
-                
                 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 alert.addAction(selectAction)
                 alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        })
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action = UIContextualAction(style: .normal,
+                                        title: "Edit",
+                                        handler: { (action, view, completionHandler) in
+            
+            let projectToEdit = self.projects![indexPath.row]
+            
+            // alert to edit the project info
+            let alert = UIAlertController(title: "Editing \(projectToEdit.name ?? "")",
+                                          message: "Make desired changes to the project.",
+                                          preferredStyle: .alert)
+            alert.addTextField()
+            alert.addTextField()
+            alert.addTextField()
+            alert.textFields![0].text = projectToEdit.name
+            alert.textFields![1].text = "\(self.formatter.string(from: projectToEdit.due!))"
+            alert.textFields![2].text = projectToEdit.about
+            self.dateField = alert.textFields![1]
+            self.createDatePicker()
+            let selectAction = UIAlertAction(title: "Confirm",
+                                             style: .default,
+                                             handler: {
+                [self] _ in
+                projectToEdit.due = self.datePicker.date
+                projectToEdit.name = alert.textFields![0].text
+                projectToEdit.about = alert.textFields![2].text
+                do {
+                    try self.context.save()
+                }catch{
+                    print("There was an error in saving the Project")
+                }
+                self.getProjects()
+            })
+        
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alert.addAction(selectAction)
+            alert.addAction(cancelAction)
             self.present(alert, animated: true)
         })
         return UISwipeActionsConfiguration(actions: [action])
