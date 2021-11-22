@@ -501,6 +501,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="08Y-eK-BW6" kind="show" destinationCreationSelector="showProject:" id="AYW-R9-pgh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -529,6 +532,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFS-Rm-n0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-591.304347826087" y="1233.4821428571429"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="zLA-ph-xCh">
+            <objects>
+                <hostingController id="08Y-eK-BW6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BFb-NB-qhS"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWk-G0-h65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="1961"/>
         </scene>
         <!--Workflow-->
         <scene sceneID="Y4I-S2-qLX">

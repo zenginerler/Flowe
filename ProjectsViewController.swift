@@ -11,7 +11,9 @@ import CoreData
 import SwiftUI
 
 class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+    @IBSegueAction func showProject(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: ProjectsView())
+    }
     
     @IBOutlet weak var projectsTableView: UITableView!
     @IBOutlet weak var addProjectButton: UIBarButtonItem!
@@ -52,8 +54,8 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         let project = self.projects![indexPath.row]
         let dueDate = formatter.string(from: project.due!)
         let name = project.name!
-        cell.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)
-        cell.textLabel?.text = "\(name)\n      Due: \(dueDate)"
+        cell.textLabel?.font = UIFont(name:"Sinhala Sangam MN", size: 20.0)
+        cell.textLabel?.text = "\(name)\nDue: \(dueDate)"
         return cell
     }
     

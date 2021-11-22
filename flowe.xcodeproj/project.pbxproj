@@ -20,6 +20,7 @@
 		74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E1273C66240025CBCF /* GoalViewController.swift */; };
 		74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E2273C66240025CBCF /* GoalListViewController.swift */; };
 		74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E3273C66240025CBCF /* HomeViewController.swift */; };
+		74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DF780B274C4277005DF304 /* ProjectsView.swift */; };
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
 		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
 		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
@@ -52,6 +53,7 @@
 		74DB65E1273C66240025CBCF /* GoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		74DB65E2273C66240025CBCF /* GoalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
 		74DB65E3273C66240025CBCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		74DF780B274C4277005DF304 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		74DF780A274C4224005DF304 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */,
+				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
+				74DF780B274C4277005DF304 /* ProjectsView.swift */,
+			);
+			name = Projects;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		ABD5590F763861D2FE8D17CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 		D7AF68542733A1E1001C7461 /* flowe */ = {
 			isa = PBXGroup;
 			children = (
+				74DF780A274C4224005DF304 /* Projects */,
 				74DB659C273B70440025CBCF /* Models */,
 				D7AF687827348527001C7461 /* flowe.entitlements */,
 				D7AF68552733A1E1001C7461 /* AppDelegate.swift */,
@@ -148,8 +162,6 @@
 				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
 				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
 				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
-				74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */,
-				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */,
 				D7FC035D2743B91F0019E686 /* ProfileViewController.swift */,
 				D7AF685B2733A1E1001C7461 /* Main.storyboard */,
@@ -298,6 +310,7 @@
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
 				D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */,
+				74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */,
 				74DB65E0273C646A0025CBCF /* Goals+CoreDataProperties.swift in Sources */,
 				D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */,
 				74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */,
