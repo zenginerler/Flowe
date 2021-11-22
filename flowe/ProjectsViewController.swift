@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import CoreData
+import SwiftUI
 
 class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -72,18 +73,18 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         let selectAction = UIAlertAction(title: "Ok",
                                          style: .default,
                                          handler: {
-            [self] _ in
-            let newProject = Projects(context: self.context)
-            newProject.due = self.datePicker.date
-            newProject.name = alert.textFields![0].text
-            newProject.about = alert.textFields![2].text
-            do {
-                try self.context.save()
-            }catch{
-                print("There was an error in saving the Project")
-            }
-            self.getProjects()
-        })
+                                [self] _ in
+                                let newProject = Projects(context: self.context)
+                                newProject.due = self.datePicker.date
+                                newProject.name = alert.textFields![0].text
+                                newProject.about = alert.textFields![2].text
+                                do {
+                                    try self.context.save()
+                                }catch{
+                                    print("There was an error in saving the Project")
+                                }
+                                self.getProjects()
+                            })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(selectAction)
@@ -97,9 +98,27 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
                                         title: "Delete",
                                         handler: { (action, view, completionHandler) in
             let projectToRemove = self.projects![indexPath.row]
-            self.context.delete(projectToRemove)
-            try! self.context.save()
-            self.getProjects()
+            let alert = UIAlertController(title: "Remove \(projectToRemove.name ?? "")",
+                                              message: "Are you sure you want to remove this project? This action is irreversible.",
+                                              preferredStyle: .alert)
+                
+                let selectAction = UIAlertAction(title: "Delete",
+                                                 style: .destructive,
+                                                 handler: {
+                                                    [self] _ in
+                                                    self.context.delete(projectToRemove)
+                                                    do {
+                                                        try self.context.save()
+                                                    }catch{
+                                                        print("There was an error in removing the Project")
+                                                    }
+                                                    self.getProjects()
+                })
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alert.addAction(selectAction)
+                alert.addAction(cancelAction)
+            self.present(alert, animated: true)
         })
         return UISwipeActionsConfiguration(actions: [action])
     }
