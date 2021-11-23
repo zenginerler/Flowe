@@ -157,7 +157,7 @@
         <!--Home-->
         <scene sceneID="Mri-8E-gv6">
             <objects>
-                <viewController id="t2y-3n-C6O" sceneMemberID="viewController">
+                <viewController id="t2y-3n-C6O" customClass="HomeViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pge-ek-9Da">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,7 +509,7 @@
         <!--Projects-->
         <scene sceneID="zRu-QW-1ab">
             <objects>
-                <viewController id="iD5-DE-8rn" customClass="ProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iD5-DE-8rn" customClass="GoalListViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o4M-XX-b3a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,7 +570,7 @@
         <!--Workflow-->
         <scene sceneID="Y4I-S2-qLX">
             <objects>
-                <viewController id="bkI-AP-2fI" sceneMemberID="viewController">
+                <viewController id="bkI-AP-2fI" customClass="GoalViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQA-LF-FU4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,19 +583,45 @@
             </objects>
             <point key="canvasLocation" x="-1315" y="1234"/>
         </scene>
-        <!--View Controller-->
+        <!--Goal List View Controller-->
         <scene sceneID="Szc-Uy-EAh">
             <objects>
-                <viewController id="zEI-Qh-Adi" sceneMemberID="viewController">
+                <viewController id="zEI-Qh-Adi" customClass="GoalListViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lud-j7-hQZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZe-SV-hVO">
-                                <rect key="frame" x="155" y="341" width="55" height="58"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iwz-T0-bnw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PPy-cp-lTE">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PPy-cp-lTE" id="Qpc-YG-WZy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NLO-9D-yTl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iwz-T0-bnw" firstAttribute="leading" secondItem="NLO-9D-yTl" secondAttribute="leading" id="Atw-Cz-NKX"/>
+                            <constraint firstItem="iwz-T0-bnw" firstAttribute="top" secondItem="NLO-9D-yTl" secondAttribute="top" id="FPh-em-105"/>
+                            <constraint firstItem="NLO-9D-yTl" firstAttribute="bottom" secondItem="iwz-T0-bnw" secondAttribute="bottom" id="dyd-xF-468"/>
+                            <constraint firstItem="NLO-9D-yTl" firstAttribute="trailing" secondItem="iwz-T0-bnw" secondAttribute="trailing" id="kz1-ld-sBu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PRb-tk-T6B">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="nHL-iS-HTd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EJg-Ae-WYT">
+                                <rect key="frame" x="323" y="0.0" width="71" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="+">
                                             <attributes>
@@ -604,16 +630,49 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="7xx-uI-YRX" kind="show" id="U8y-tu-o5c"/>
+                                </connections>
                             </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="NLO-9D-yTl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="PRb-tk-T6B"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="iwz-T0-bnw" id="HZ2-ko-uLV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Li-os-gJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2901" y="1233"/>
+            <point key="canvasLocation" x="-2901.449275362319" y="1232.8125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dr8-aq-SFC">
+            <objects>
+                <viewController id="7xx-uI-YRX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XUR-RC-fol">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-ze-OIh">
+                                <rect key="frame" x="32" y="230" width="351" height="436"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
+                                <rect key="frame" x="46" y="146" width="173" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="What's your goal type?"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sFg-cg-iSr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uOv-uP-0pr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMZ-gw-eDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3633.3333333333335" y="1232.8125"/>
         </scene>
     </scenes>
     <resources>
