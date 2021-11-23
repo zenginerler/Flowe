@@ -509,7 +509,7 @@
         <!--Projects-->
         <scene sceneID="zRu-QW-1ab">
             <objects>
-                <viewController id="iD5-DE-8rn" customClass="GoalListViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iD5-DE-8rn" customClass="ProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o4M-XX-b3a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,10 +583,10 @@
             </objects>
             <point key="canvasLocation" x="-1315" y="1234"/>
         </scene>
-        <!--Goal List View Controller-->
+        <!--View Controller-->
         <scene sceneID="Szc-Uy-EAh">
             <objects>
-                <viewController id="zEI-Qh-Adi" customClass="GoalListViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zEI-Qh-Adi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lud-j7-hQZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
