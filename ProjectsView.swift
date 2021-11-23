@@ -27,9 +27,31 @@ struct ProjectsView: View {
             
             HStack{
                 Image(systemName: "calendar")
-                    .foregroundColor(Color("color4"))
-                Text("Due: \(dueDate, formatter: dateFormatter)")
+                    .foregroundColor(Color.white)
+                Text("Due: ")
                     .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                Text("\(dueDate, formatter: dateFormatter)")
+                    .font(.headline)
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
+            .padding(.top, 20.0)
+            .padding(.bottom, 28)
+            .padding(.leading, 30)
+            
+            HStack{
+                Image(systemName: "person")
+                    .foregroundColor(Color.white)
+                Text("Project Lead: ")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                Text("John Smith")
+                    .font(.headline)
                     .fontWeight(.medium)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
@@ -37,33 +59,13 @@ struct ProjectsView: View {
             }
             .padding(.top, 10.0)
             .padding(.bottom, 28)
-            .padding(.leading, 35)
-//            VStack{
-//                HStack{
-//                    Text("")
-//                        .foregroundColor(.white)
-//                    Spacer()
-//                }
-//                .padding()
-//                Spacer()
-//            }
-//
-//            .padding()
-//            .frame(width: 350, height: 60)
-//            .background(Color("color2").ignoresSafeArea(.all, edges: .all))
+            .padding(.leading, 30)
+            
             Spacer()
-            VStack{
-                HStack{
-                    Text("hey")
-                    Spacer()
-                }
-                .padding()
-                Spacer()
-            }
-            .padding()
-            .frame(width: 400, height: 300)
-            .background(Color("color2").ignoresSafeArea(.all, edges: .all))
-            Spacer()
+
+            
+            
+            
             
         }
         .background(Color(red: 0.3411764705882353, green: 0.4588235294117647, blue: 0.5647058823529412))
