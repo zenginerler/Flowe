@@ -19,8 +19,9 @@ struct ProjectsView: View {
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
                     .padding(.top, 25.0)
-                    .padding(.leading, 35)
+                    .padding(.leading, 25)
                 Spacer()
+                // add buttons here
             }
             .padding(.bottom, 45)
             

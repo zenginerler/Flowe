@@ -178,6 +178,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
             self.present(alert, animated: true)
         })
         action.image = UIImage(systemName: "pencil")
+        action.backgroundColor = UIColor.orange
         return UISwipeActionsConfiguration(actions: [action])
     }
     

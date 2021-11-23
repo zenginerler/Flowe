@@ -153,9 +153,9 @@
 		D7AF68542733A1E1001C7461 /* flowe */ = {
 			isa = PBXGroup;
 			children = (
-				74DF780A274C4224005DF304 /* Projects */,
-				74DB659C273B70440025CBCF /* Models */,
 				D7AF687827348527001C7461 /* flowe.entitlements */,
+				74DB659C273B70440025CBCF /* Models */,
+				74DF780A274C4224005DF304 /* Projects */,
 				D7AF68552733A1E1001C7461 /* AppDelegate.swift */,
 				D7AF68572733A1E1001C7461 /* SceneDelegate.swift */,
 				D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */,
