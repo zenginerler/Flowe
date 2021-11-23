@@ -11,8 +11,9 @@ import CoreData
 import SwiftUI
 
 class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBSegueAction func showProject(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: ProjectsView())
+        return UIHostingController(coder: coder, rootView: ProjectsView(project: projects![row]))
     }
     
     @IBOutlet weak var projectsTableView: UITableView!
@@ -20,6 +21,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var projects: [Projects]?
     
+    var row = 0
     let userCalendar = Calendar(identifier: .gregorian)
     let formatter = DateFormatter()
     var dateField: UITextField!
@@ -57,6 +59,11 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.font = UIFont(name:"Sinhala Sangam MN", size: 20.0)
         cell.textLabel?.text = "\(name)\nDue: \(dueDate)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        row = indexPath.row
+        return indexPath
     }
     
     @IBAction func addPressed(_ sender: Any) {
@@ -128,6 +135,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         return UISwipeActionsConfiguration(actions: [action])
     }
     
+    // swipe right to edit
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let action = UIContextualAction(style: .normal,

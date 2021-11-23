@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ProjectsView: View {
-    @State var name = "Project 1"
-    @State var dueDate = Date()
-    @State var description = ""
+    @State var project: Projects?
     
     var body: some View {
         VStack{
             HStack{
-                Text(name)
+                Text((project?.name)!)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -24,43 +22,37 @@ struct ProjectsView: View {
                     .padding(.leading, 35)
                 Spacer()
             }
-            .padding(.bottom, 40)
+            .padding(.bottom, 45)
+            
+            // project description
             VStack{
+                
+                // due date
                 HStack{
+                    let dueDate = dateFormatter.string(from: project!.due!)
                     Image(systemName: "calendar")
                         .foregroundColor(Color.white)
                     Text("Due: ")
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                    VStack{
-                        Text("\(dueDate, formatter: dateFormatter)")
+                    Text("\(dueDate)")
                             .font(.headline)
                             .fontWeight(.medium)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.leading)
-                        
-                        HStack{
-                            Text("9 days away")
-                                    .font(.headline)
-                                    .fontWeight(.medium)
-                                    .foregroundColor(.white)
-                                    .multilineTextAlignment(.leading)
-                            Spacer()
-                        }
-                    }
-                    .padding(.top, 22.0)
 
                     Spacer()
                 }
-                .padding(.top, 20.0)
-                .padding(.bottom, 10)
+                .padding(.top, 15.0)
+                .padding(.bottom, 20)
                 .padding(.leading, 20)
                 
+                // project creator
                 HStack{
                     Image(systemName: "person.fill")
                         .foregroundColor(Color.white)
-                    Text("Project Lead: ")
+                    Text("Lead: ")
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -72,9 +64,10 @@ struct ProjectsView: View {
                     Spacer()
                 }
                 .padding(.top, 10.0)
-                .padding(.bottom, 10)
+                .padding(.bottom, 20)
                 .padding(.leading, 20)
                 
+                //team
                 HStack{
                     Image(systemName: "person.3.fill")
                         .foregroundColor(Color.white)
@@ -82,15 +75,63 @@ struct ProjectsView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                    Text("John Smith, Katie Perry and 3 more")
+                    Text("John Smith, and 3 more")
                         .font(.headline)
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                 }
                 .padding(.top, 10.0)
-                .padding(.bottom, 5)
+                .padding(.bottom, 20)
+                .padding(.leading, 20)
+                
+                HStack{
+                    Image(systemName: "checkmark")
+                        .foregroundColor(Color.white)
+                    Text("Tasks: ")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    VStack{
+                        Text("Update 1")
+                            .font(.headline)
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text("Update 2")
+                            .font(.headline)
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .padding(.leading, 10)
+                    Spacer()
+                }
+                .padding(.top, 10.0)
+                .padding(.bottom, 20)
+                .padding(.leading, 20)
+                
+                HStack{
+                    Image(systemName: "star.fill")
+                        .foregroundColor(Color.white)
+                    Text("Goals: ")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    Text("Breakthrough 1")
+                        .font(.headline)
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer()
+                }
+                .padding(.top, 10.0)
+                .padding(.bottom, 20)
                 .padding(.leading, 20)
                 
                 HStack{
@@ -103,20 +144,22 @@ struct ProjectsView: View {
                     Spacer()
                 }
                 .padding(.top, 10.0)
-                .padding(.bottom, 5)
                 .padding(.leading, 20)
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
-                    .font(.headline)
-                    .fontWeight(.medium)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.leading)
-                    .padding(.top, 5.0)
-                    .padding(.bottom, 15)
-                    .padding(.leading, 50)
-                    .padding(.trailing, 20)
+                HStack{
+                    Text((project?.about)!)
+                        .font(.headline)
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.leading)
+                        .padding(.top, 5.0)
+                        .padding(.bottom, 15)
+                        .padding(.leading, 50)
+                        .padding(.trailing, 20)
+                }
             }
             // i dont know why this says view but it builds...
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.728, saturation: 0.001, brightness: 0.242, opacity: 0.952)/*@END_MENU_TOKEN@*/)
+            .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
 
             Spacer()
         }
