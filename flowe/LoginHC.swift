@@ -49,7 +49,7 @@ struct LoginHome: View {
             Spacer(minLength: 0)
             
             // Logo
-            Image("temp_logo")
+            Image("flowe_logo_b")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.horizontal, 35) //DF
@@ -175,9 +175,8 @@ struct SignUpPage: View {
     var body: some View {
         
         VStack {
-            
             // Logo
-            Image("temp_logo")
+            Image("flowe_logo_w")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.horizontal, 35) //DF
