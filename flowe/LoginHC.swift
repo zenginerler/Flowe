@@ -52,8 +52,7 @@ struct LoginHome: View {
             Image("flowe_logo_b")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.horizontal, 35) //DF
-                .padding(.vertical)
+                .padding(.horizontal, 16)
             
             // Login Title & description
             HStack {
@@ -79,7 +78,7 @@ struct LoginHome: View {
                 
                 TextField("", text: $email)
                     .placeholder(when: email.isEmpty) {
-                        Text("EMAIL").foregroundColor(.gray)
+                        Text("EMAIL").foregroundColor(Color("custom_gray"))
                     }
             }.padding()
                 .background(Color.white.opacity(email == "" ? 0.06 : 0.24))
@@ -95,7 +94,7 @@ struct LoginHome: View {
                 
                 SecureField("", text: $password)
                     .placeholder(when: password.isEmpty) {
-                        Text("PASSWORD").foregroundColor(.gray)
+                        Text("PASSWORD").foregroundColor(Color("custom_gray"))
                     }
             }.padding()
                 .background(Color.white.opacity(password == "" ? 0.06 : 0.24))
@@ -128,7 +127,7 @@ struct LoginHome: View {
                     .foregroundColor(.black)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 150)
-                    .background(Color("color4"))
+                    .background(Color("custom_gray"))
                     .cornerRadius(15)
 
             }).padding(.top)
@@ -150,11 +149,11 @@ struct LoginHome: View {
                 NavigationLink(destination: SignUpPage(), label: {
                     Text("Signup")
                         .fontWeight(.heavy)
-                        .foregroundColor(Color("color4"))
+                        .foregroundColor(Color("custom_ivory"))
                 })
             }.padding(.vertical)
         }
-        .background(Color("color1").ignoresSafeArea(.all, edges: .all))
+        .background(Color("custom_blue").ignoresSafeArea(.all, edges: .all))
         .fullScreenCover(isPresented: $loginSuccessful) {
             // Custom Page Segue from SwiftUI to UIkit
             SegueSwiftUI(storyboard: "Main", VC: "SegueVC").ignoresSafeArea(.all)
@@ -168,6 +167,7 @@ struct SignUpPage: View {
     
     @State var email = ""
     @State var password = ""
+    @State var passwordConfirm = ""
     @State var statusText = ""
     
     @Environment(\.presentationMode) var presentationMode
@@ -175,14 +175,16 @@ struct SignUpPage: View {
     var body: some View {
         
         VStack {
+//            Spacer(minLength: 0)
+            
             // Logo
-            Image("flowe_logo_w")
+            Image("flowe_logo_b")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.horizontal, 35) //DF
-                .padding(.bottom)
+                .padding(.horizontal, 16)
+                .padding(.top)
             
-            // Login Title & description
+            // Sign Up Title & description
             HStack {
                 VStack (alignment: .leading, spacing: 12, content: {
                     Text("Sign Up")
@@ -206,7 +208,7 @@ struct SignUpPage: View {
                 
                 TextField("", text: $email)
                     .placeholder(when: email.isEmpty) {
-                        Text("EMAIL").foregroundColor(.gray)
+                        Text("EMAIL").foregroundColor(Color("custom_gray"))
                     }
             }.padding()
                 .background(Color.white.opacity(email == "" ? 0.06 : 0.24))
@@ -222,18 +224,42 @@ struct SignUpPage: View {
                 
                 SecureField("", text: $password)
                     .placeholder(when: password.isEmpty) {
-                        Text("PASSWORD").foregroundColor(.gray)
+                        Text("PASSWORD").foregroundColor(Color("custom_gray"))
                     }
             }.padding()
                 .background(Color.white.opacity(password == "" ? 0.06 : 0.24))
                 .cornerRadius(15)
                 .padding(.horizontal)
                 .padding(.top)
+
+            // Confirm Password Text Field
+            HStack{
+                Image(systemName: "lock")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .frame(width:35)
+                
+                SecureField("", text: $passwordConfirm)
+                    .placeholder(when: passwordConfirm.isEmpty) {
+                        Text("CONFIRM PASSWORD").foregroundColor(Color("custom_gray"))
+                    }
+            }.padding()
+                .background(Color.white.opacity(passwordConfirm == "" ? 0.06 : 0.24))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                .padding(.top)
             
-            // Login Button
+            // Sign Up Button
             Button (action: {
-                guard !email.isEmpty, !password.isEmpty else {
+                guard !email.isEmpty, !password.isEmpty, !passwordConfirm.isEmpty else {
                     print("Password or Email field is empty!")
+                    self.statusText = "Password or Email field is empty!"
+                    return
+                }
+                
+                if !(password == passwordConfirm) {
+                    print("Passwords do not match!")
+                    self.statusText = "Passwords do not match!"
                     return
                 }
                 
@@ -257,7 +283,7 @@ struct SignUpPage: View {
                     .foregroundColor(.black)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 150)
-                    .background(Color("color4"))
+                    .background(Color("custom_gray"))
                     .cornerRadius(15)
 
             }).padding(.top)
@@ -277,12 +303,12 @@ struct SignUpPage: View {
                 Button(action:{ self.presentationMode.wrappedValue.dismiss() }){
                     Text("Login")
                         .fontWeight(.heavy)
-                        .foregroundColor(Color("color4"))
+                        .foregroundColor(Color("custom_ivory"))
                 }
             }.padding(.vertical)
             
         }
-        .background(Color("color2").ignoresSafeArea(.all, edges: .all))
+        .background(Color("custom_blue").ignoresSafeArea(.all, edges: .all))
     }
 }
 
