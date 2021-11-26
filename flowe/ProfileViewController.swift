@@ -9,9 +9,6 @@ import UIKit
 import CoreData
 
 class ProfileViewController: UIViewController {
-
-    var user = ""
-    var userID:NSManagedObjectID? = nil
     
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var username: UILabel!
@@ -21,23 +18,31 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var aboutMe: UILabel!
     
+    lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var context = appDelegate.persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userVerification()
+        
+        theme()
+        
+        profilePicture.clipsToBounds = true
+        profilePicture.layer.cornerRadius =  profilePicture.frame.size.height / 2
+
         fillProfile()
         // Do any additional setup after loading the view.
     }
     
-    func fillProfile() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        let singleUser = context.object(with: userID!)
-        let personProfile = singleUser.value(forKey: "profile") as! NSOrderedSet
+    override func viewWillAppear(_ animated: Bool) {
+        fillProfile()
+        theme()
+    }
         
-        let profileNSObj = personProfile.firstObject as! NSManagedObject
-        self.username.text = "\(user)"
+    func fillProfile() {
+        let singleUser = context.object(with: Variables.userID!)
+        let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
+        
+        self.username.text = "\(Variables.username)"
         self.firstName.text = (profileNSObj.value(forKey: "firstName") as! String)
         self.lastName.text = (profileNSObj.value(forKey: "lastName") as! String)
         self.phoneNumber.text = (profileNSObj.value(forKey: "contactInfo") as! String)
@@ -45,38 +50,7 @@ class ProfileViewController: UIViewController {
         self.aboutMe.text = (profileNSObj.value(forKey: "aboutMe") as! String)
     }
     
-    func userVerification() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        var fetchedResults: [NSManagedObject]? = nil
-
-        let predicate = NSPredicate(format: "username MATCHES '\(user)'")
-        request.predicate = predicate
-
-        do {
-            try fetchedResults = context.fetch(request) as? [NSManagedObject]
-            if fetchedResults?.count == 1 {
-                userID = fetchedResults!.first!.objectID
-            } else {
-                debugPrint("Error finding user in CoreData")
-                abort()
-            }
-        } catch {
-            let nsError = error as NSError
-            NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
-            abort()
-        }
+    func theme() {
+        view.backgroundColor = Variables.backgroundColor
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "profileEditSegue" {
-            let profileEditVC: ProfileEditViewController = segue.destination as! ProfileEditViewController
-            profileEditVC.user = self.user
-            profileEditVC.userID = self.userID
-        }
-    }
-
-
 }
