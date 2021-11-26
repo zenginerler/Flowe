@@ -9,9 +9,6 @@ import UIKit
 import CoreData
 
 class ProfileViewController: UIViewController {
-
-    var user = ""
-    var userID:NSManagedObjectID? = nil
     
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var username: UILabel!
@@ -23,60 +20,95 @@ class ProfileViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        userVerification()
-        fillProfile()
-        // Do any additional setup after loading the view.
-    }
-    
-    func fillProfile() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+            super.viewDidLoad()
+            
+            profilePicture.clipsToBounds = true
+            profilePicture.layer.cornerRadius =  profilePicture.frame.size.height / 2
 
-        let singleUser = context.object(with: userID!)
-        let personProfile = singleUser.value(forKey: "profile") as! NSOrderedSet
-        
-        let profileNSObj = personProfile.firstObject as! NSManagedObject
-        self.username.text = "\(user)"
-        self.firstName.text = (profileNSObj.value(forKey: "firstName") as! String)
-        self.lastName.text = (profileNSObj.value(forKey: "lastName") as! String)
-        self.phoneNumber.text = (profileNSObj.value(forKey: "contactInfo") as! String)
-        self.email.text = (profileNSObj.value(forKey: "email") as! String)
-        self.aboutMe.text = (profileNSObj.value(forKey: "aboutMe") as! String)
-    }
-    
-    func userVerification() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+            userVerification()
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
 
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        var fetchedResults: [NSManagedObject]? = nil
+            let singleUser = context.object(with: Variables.userID!)
+            let profileObject = NSEntityDescription.insertNewObject(forEntityName: "Profile", into: context)
 
-        let predicate = NSPredicate(format: "username MATCHES '\(user)'")
-        request.predicate = predicate
+            profileObject.setValue(singleUser, forKey: "profile")
+            profileObject.setValue("This is about me", forKey: "aboutMe")
+            profileObject.setValue("123-456-789", forKey: "contactInfo")
+            profileObject.setValue("me@gmail.com", forKey: "email")
+            profileObject.setValue("Spongebob", forKey: "firstName")
+            profileObject.setValue("Squarepants", forKey: "lastName")
 
-        do {
-            try fetchedResults = context.fetch(request) as? [NSManagedObject]
-            if fetchedResults?.count == 1 {
-                userID = fetchedResults!.first!.objectID
-            } else {
-                debugPrint("Error finding user in CoreData")
+            print("-----")
+            print(profileObject.value(forKey: "firstName") as! String)
+            print("-----")
+            
+            do {
+                try context.save()
+            } catch {
+                let nsError = error as NSError
+                NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
                 abort()
             }
-        } catch {
-            let nsError = error as NSError
-            NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
-            abort()
+            
+            fillProfile()
+            // Do any additional setup after loading the view.
+        }
+        
+        func fillProfile() {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+
+            let singleUser = context.object(with: Variables.userID!)
+            let personProfiles = singleUser.value(forKey: "profile") as! NSOrderedSet
+            
+            let profileNSObj = personProfiles.firstObject! as! NSManagedObject
+            self.username.text = "\(Variables.username)"
+            self.firstName.text = (profileNSObj.value(forKey: "firstName") as! String)
+            self.lastName.text = (profileNSObj.value(forKey: "lastName") as! String)
+            self.phoneNumber.text = (profileNSObj.value(forKey: "contactInfo") as! String)
+            self.email.text = (profileNSObj.value(forKey: "email") as! String)
+            self.aboutMe.text = (profileNSObj.value(forKey: "aboutMe") as! String)
+        }
+        
+        func userVerification() {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+        
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+            var fetchedResults: [NSManagedObject]? = nil
+
+            let predicate = NSPredicate(format: "username MATCHES '\(Variables.username)'")
+            request.predicate = predicate
+
+            do {
+                try fetchedResults = context.fetch(request) as? [NSManagedObject]
+                if fetchedResults?.count == 1 {
+                    Variables.userID = fetchedResults!.first!.objectID
+                } else if fetchedResults?.count == 0 {
+                    let username = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
+                    username.setValue(Variables.username, forKey: "username")
+                    username.setValue(NSOrderedSet(), forKey: "profile")
+                    
+                    do {
+                        try context.save()
+                    } catch {
+                        let nsError = error as NSError
+                        NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
+                        abort()
+                    }
+                    
+                    Variables.userID = username.objectID
+                    
+                } else {
+                    debugPrint("Error finding user in CoreData")
+                    abort()
+                }
+            } catch {
+                let nsError = error as NSError
+                NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
+                abort()
+            }
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "profileEditSegue" {
-            let profileEditVC: ProfileEditViewController = segue.destination as! ProfileEditViewController
-            profileEditVC.user = self.user
-            profileEditVC.userID = self.userID
-        }
-    }
-
-
-}
