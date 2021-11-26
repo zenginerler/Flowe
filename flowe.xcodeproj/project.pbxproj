@@ -24,9 +24,9 @@
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
 		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
 		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
-		D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68552733A1E1001C7461 /* AppDelegate.swift */; };
+		D769BBB327512E4600EEF3BA /* SegueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68592733A1E1001C7461 /* SegueVC.swift */; };
+		D769BBB427512E9000EEF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68552733A1E1001C7461 /* AppDelegate.swift */; };
 		D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68572733A1E1001C7461 /* SceneDelegate.swift */; };
-		D7AF685A2733A1E1001C7461 /* SegueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68592733A1E1001C7461 /* SegueVC.swift */; };
 		D7AF685D2733A1E1001C7461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF685B2733A1E1001C7461 /* Main.storyboard */; };
 		D7AF68602733A1E1001C7461 /* flowe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */; };
 		D7AF68622733A1E1001C7461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7AF68612733A1E1001C7461 /* Assets.xcassets */; };
@@ -162,15 +162,15 @@
 				D7AF68572733A1E1001C7461 /* SceneDelegate.swift */,
 				74DB659C273B70440025CBCF /* Models */,
 				74DF780A274C4224005DF304 /* Projects */,
-				D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */,
+				ECC7ACBF2750BA6E000F8C5B /* Variables.swift */,
 				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
 				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
 				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
 				D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */,
-				ECC7ACBF2750BA6E000F8C5B /* Variables.swift */,
 				D7FC035D2743B91F0019E686 /* ProfileViewController.swift */,
-				D7AF685B2733A1E1001C7461 /* Main.storyboard */,
 				ECC7ACC12750C3A7000F8C5B /* SettingsViewController.swift */,
+				D7AF685B2733A1E1001C7461 /* Main.storyboard */,
+				D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */,
 				D7AF68592733A1E1001C7461 /* SegueVC.swift */,
 				D7AF68722733C64E001C7461 /* LoginHC.swift */,
 				D7AF68632733A1E1001C7461 /* LaunchScreen.storyboard */,
@@ -298,9 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7AF685A2733A1E1001C7461 /* SegueVC.swift in Sources */,
+				D769BBB427512E9000EEF3BA /* AppDelegate.swift in Sources */,
+				D769BBB327512E4600EEF3BA /* SegueVC.swift in Sources */,
 				D7AF68752733CC75001C7461 /* SegueSwiftUI.swift in Sources */,
-				D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */,
 				D7AF68732733C64E001C7461 /* LoginHC.swift in Sources */,
 				74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */,
 				74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */,
@@ -310,12 +310,10 @@
 				74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */,
 				74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */,
 				74DB65DC273C646A0025CBCF /* Tasks+CoreDataProperties.swift in Sources */,
-				D7AF685A2733A1E1001C7461 /* SegueVC.swift in Sources */,
 				74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */,
 				74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */,
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
-				D7AF68562733A1E1001C7461 /* AppDelegate.swift in Sources */,
 				74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */,
 				74DB65E0273C646A0025CBCF /* Goals+CoreDataProperties.swift in Sources */,
 				D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */,

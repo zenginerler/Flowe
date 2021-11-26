@@ -25,11 +25,11 @@ class SegueVC: UIViewController {
 //        childView.view.frame = theContainer.bounds
 //        theContainer.addSubview(childView.view)
         
-        
         homeButton.layer.cornerRadius = 10
         print(identify.userID)
     }
 
+    
     @IBAction func userInitiation(_ sender: Any) {
         let request = Users.fetchRequest() as NSFetchRequest<Users>
         var fetchedResults: [Users]?
