@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,7 +65,6 @@
         <!--Project View Controller-->
         <scene sceneID="sMl-KQ-6ml">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fi8-c6-elB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Mc9-Wy-1Su" customClass="ProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DNH-oF-4Xn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -108,13 +107,13 @@
                         <outlet property="projectsTableView" destination="m6O-EM-s0w" id="fwd-CC-Hoz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fi8-c6-elB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4839" y="3430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ijt-MF-Shg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fES-CJ-elE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ucL-1m-R9y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dcL-v9-cwc">
@@ -126,6 +125,7 @@
                         <segue destination="Mc9-Wy-1Su" kind="relationship" relationship="rootViewController" id="3Y2-6V-2hQ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fES-CJ-elE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4839" y="2683"/>
         </scene>
@@ -336,6 +336,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="gJm-9M-5oz">
+                        <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" id="yc8-A8-AKj"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="4c9-vU-OiQ">
                             <connections>
                                 <segue destination="zPO-pS-rWE" kind="push" identifier="profileEditSegue" id="Wja-2q-eim"/>
@@ -689,6 +690,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="network" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
