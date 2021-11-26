@@ -9,6 +9,11 @@ import UIKit
 import SwiftUI
 import FirebaseAuth
 
+// Global variable to track user email/ID
+struct identify {
+ static var userID = "nil"
+}
+
 struct LoginHC_Temp: View {
   var body: some View {
       NavigationView{
@@ -79,7 +84,8 @@ struct LoginHome: View {
                 TextField("", text: $email)
                     .placeholder(when: email.isEmpty) {
                         Text("EMAIL").foregroundColor(Color("custom_gray"))
-                    }
+                    }.autocapitalization(.none)
+                    .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(email == "" ? 0.06 : 0.24))
                 .cornerRadius(15)
@@ -95,7 +101,8 @@ struct LoginHome: View {
                 SecureField("", text: $password)
                     .placeholder(when: password.isEmpty) {
                         Text("PASSWORD").foregroundColor(Color("custom_gray"))
-                    }
+                    }.autocapitalization(.none)
+                    .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(password == "" ? 0.06 : 0.24))
                 .cornerRadius(15)
@@ -118,6 +125,7 @@ struct LoginHome: View {
                         return
                     }
                     print("signIn success!")
+                    identify.userID = email.lowercased()
                     self.loginSuccessful = true
                 }
                     
@@ -209,7 +217,8 @@ struct SignUpPage: View {
                 TextField("", text: $email)
                     .placeholder(when: email.isEmpty) {
                         Text("EMAIL").foregroundColor(Color("custom_gray"))
-                    }
+                    }.autocapitalization(.none)
+                    .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(email == "" ? 0.06 : 0.24))
                 .cornerRadius(15)
@@ -225,7 +234,8 @@ struct SignUpPage: View {
                 SecureField("", text: $password)
                     .placeholder(when: password.isEmpty) {
                         Text("PASSWORD").foregroundColor(Color("custom_gray"))
-                    }
+                    }.autocapitalization(.none)
+                    .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(password == "" ? 0.06 : 0.24))
                 .cornerRadius(15)
@@ -242,7 +252,8 @@ struct SignUpPage: View {
                 SecureField("", text: $passwordConfirm)
                     .placeholder(when: passwordConfirm.isEmpty) {
                         Text("CONFIRM PASSWORD").foregroundColor(Color("custom_gray"))
-                    }
+                    }.autocapitalization(.none)
+                    .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(passwordConfirm == "" ? 0.06 : 0.24))
                 .cornerRadius(15)

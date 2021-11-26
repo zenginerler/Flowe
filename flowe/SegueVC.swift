@@ -23,6 +23,7 @@ class SegueVC: UIViewController {
         
         
         homeButton.layer.cornerRadius = 10
+        print(identify.userID)
     }
 
 
