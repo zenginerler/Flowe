@@ -123,8 +123,7 @@
 				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				74DF780B274C4277005DF304 /* ProjectsView.swift */,
 			);
-			name = Projects;
-			path = ..;
+			path = Projects;
 			sourceTree = "<group>";
 		};
 		ABD5590F763861D2FE8D17CE /* Pods */ = {
