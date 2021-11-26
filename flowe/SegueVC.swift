@@ -31,7 +31,7 @@ class SegueVC: UIViewController {
 
     @IBAction func userInitiation(_ sender: Any) {
         let request = Users.fetchRequest() as NSFetchRequest<Users>
-        var fetchedResults: [NSManagedObject]? = nil
+        var fetchedResults: [Users]?
 
         let predicate = NSPredicate(format: "username MATCHES '\(Variables.username)'")
         request.predicate = predicate

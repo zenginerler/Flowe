@@ -9,9 +9,9 @@ import UIKit
 import CoreData
 
 class ProfileEditViewController: UIViewController {
-
-    var user = ""
-    var userID:NSManagedObjectID? = nil
+    
+    lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var context = appDelegate.persistentContainer.viewContext
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -28,14 +28,10 @@ class ProfileEditViewController: UIViewController {
     
     
     func fillTextFields() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        let singleUser = context.object(with: userID!)
-        let personProfile = singleUser.value(forKey: "profile") as! NSOrderedSet
-        
-        let profileNSObj = personProfile.firstObject as! NSManagedObject
-        self.usernameLabel.text = "\(user)"
+        let singleUser = context.object(with: Variables.userID!)
+        let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
+    
+        self.usernameLabel.text = "\(Variables.username)"
         self.firstNameTextField.text = (profileNSObj.value(forKey: "firstName") as! String)
         self.lastNameTextField.text = (profileNSObj.value(forKey: "lastName") as! String)
         self.phoneNumberTextField.text = (profileNSObj.value(forKey: "contactInfo") as! String)
@@ -44,13 +40,8 @@ class ProfileEditViewController: UIViewController {
     }
     
     @IBAction func saveProfile(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        let singleUser = context.object(with: userID!)
-        let personProfile = singleUser.value(forKey: "profile") as! NSOrderedSet
-        
-        let profileNSObj = personProfile.firstObject as! NSManagedObject
+        let singleUser = context.object(with: Variables.userID!)
+        let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
         
         profileNSObj.setValue(singleUser, forKey: "userProfile")
         profileNSObj.setValue(self.firstNameTextField.text, forKey: "firstName")
