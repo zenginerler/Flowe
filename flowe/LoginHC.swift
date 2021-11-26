@@ -118,9 +118,10 @@ struct LoginHome: View {
                         return
                     }
                     print("signIn success!")
+                    Variables.username = email
                     self.loginSuccessful = true
                 }
-                    
+                
             }, label: {
                 Text("LOGIN")
                     .fontWeight(.heavy)

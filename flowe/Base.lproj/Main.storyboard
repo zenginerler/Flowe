@@ -36,6 +36,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="userInitiation:" destination="0vj-hh-sRx" eventType="touchUpInside" id="9W1-NY-NSe"/>
                                     <segue destination="stO-GN-KmJ" kind="presentation" modalPresentationStyle="fullScreen" id="yba-1z-u2l"/>
                                 </connections>
                             </button>
