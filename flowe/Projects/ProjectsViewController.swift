@@ -201,6 +201,8 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         self.projectsTableView.reloadData()
+        projectsTableView.backgroundColor = .black
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

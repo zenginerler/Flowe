@@ -8,36 +8,73 @@
 import SwiftUI
 
 struct ProjectsView: View {
+    
     @State var project: Projects?
     
     var body: some View {
         VStack{
             HStack{
-                Text((project?.name)!)
+//                Text((project.name)!)
+//                    .font(.largeTitle)
+//                    .fontWeight(.bold)
+//                    .foregroundColor(.white)
+//                    .multilineTextAlignment(.leading)
+//                    .padding(.leading, 25)
+                Text("Project 1")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
-                    .padding(.top, 25.0)
                     .padding(.leading, 25)
+                    
                 Spacer()
-                // add buttons here
+                // edit button
+                Button(action: {
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                }) {
+                    Image(systemName: "pencil")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/Color.white/*@END_MENU_TOKEN@*/)
+                        
+                }
+                .padding(.trailing, 35)
+                
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Image(systemName: "trash.fill")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/Color.white/*@END_MENU_TOKEN@*/)
+                }
+                .padding(.trailing, 20)
             }
             .padding(.bottom, 45)
+            
             
             // project description
             VStack{
                 
                 // due date
                 HStack{
-                    let dueDate = dateFormatter.string(from: project!.due!)
+//                    let dueDate = dateFormatter.string(from: project!.due!)
                     Image(systemName: "calendar")
                         .foregroundColor(Color.white)
                     Text("Due: ")
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                    Text("\(dueDate)")
+//                    Text("\(dueDate)")
+//                            .font(.headline)
+//                            .fontWeight(.medium)
+//                            .foregroundColor(.white)
+//                            .multilineTextAlignment(.leading)
+                    Text("\(Date())")
                             .font(.headline)
                             .fontWeight(.medium)
                             .foregroundColor(.white)
@@ -147,26 +184,37 @@ struct ProjectsView: View {
                 .padding(.top, 10.0)
                 .padding(.leading, 20)
                 HStack{
-                    Text((project?.about)!)
+//                    Text((project.about)!)
+//                        .font(.headline)
+//                        .fontWeight(.medium)
+//                        .foregroundColor(.white)
+//                        .multilineTextAlignment(.leading)
+//                        .padding(.top, 5.0)
+//                        .padding(.bottom, 15)
+//                        .padding(.leading, 50)
+//                        .padding(.trailing, 20)
+                    Text("Loren ipsum")
                         .font(.headline)
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)
                         .padding(.top, 5.0)
                         .padding(.bottom, 15)
-                        .padding(.leading, 50)
-                        .padding(.trailing, 20)
+                        .padding(.leading, 52)
+                    Spacer()
+                        
                 }
             }
             // i dont know why this says view but it builds...
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.728, saturation: 0.001, brightness: 0.242, opacity: 0.952)/*@END_MENU_TOKEN@*/)
+            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.667, saturation: 0.051, brightness: 0.158)/*@END_MENU_TOKEN@*/)
+            
             .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
 
             Spacer()
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)
-        .background(Color(hue: 0.052, saturation: 0.673, brightness: 0.869))
+        .background(Color("custom_blue"))
     }
 }
 
