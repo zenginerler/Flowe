@@ -26,6 +26,7 @@
 		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
 		D769BBB327512E4600EEF3BA /* SegueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68592733A1E1001C7461 /* SegueVC.swift */; };
 		D769BBB427512E9000EEF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68552733A1E1001C7461 /* AppDelegate.swift */; };
+		D769BBB727527A2300EEF3BA /* workflow.json in Resources */ = {isa = PBXBuildFile; fileRef = D769BBB627527A2300EEF3BA /* workflow.json */; };
 		D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68572733A1E1001C7461 /* SceneDelegate.swift */; };
 		D7AF685D2733A1E1001C7461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF685B2733A1E1001C7461 /* Main.storyboard */; };
 		D7AF68602733A1E1001C7461 /* flowe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */; };
@@ -59,6 +60,7 @@
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D769BBB627527A2300EEF3BA /* workflow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = workflow.json; sourceTree = "<group>"; };
 		D7AF68522733A1E1001C7461 /* flowe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flowe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AF68552733A1E1001C7461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7AF68572733A1E1001C7461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D769BBB527527A0600EEF3BA /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D769BBB627527A2300EEF3BA /* workflow.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		D7AF68492733A1E1001C7461 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 				D7AF68722733C64E001C7461 /* LoginHC.swift */,
 				D7AF68632733A1E1001C7461 /* LaunchScreen.storyboard */,
 				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
+				D769BBB527527A0600EEF3BA /* Animations */,
 				D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */,
 				D7AF68662733A1E1001C7461 /* Info.plist */,
 				D7AF687627348335001C7461 /* GoogleService-Info.plist */,
@@ -243,6 +254,7 @@
 			files = (
 				D7AF68652733A1E1001C7461 /* LaunchScreen.storyboard in Resources */,
 				D7AF687727348335001C7461 /* GoogleService-Info.plist in Resources */,
+				D769BBB727527A2300EEF3BA /* workflow.json in Resources */,
 				D7AF68622733A1E1001C7461 /* Assets.xcassets in Resources */,
 				D7AF685D2733A1E1001C7461 /* Main.storyboard in Resources */,
 			);

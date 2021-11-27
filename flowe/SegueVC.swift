@@ -7,10 +7,13 @@
 
 import UIKit
 import CoreData
-//import SwiftUI
+import Lottie
+
 
 class SegueVC: UIViewController {
 
+    
+    @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var homeButton: UIButton!
     
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -18,7 +21,8 @@ class SegueVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        @IBOutlet weak var theContainer: UIView!
+//          import SwiftUI
+//          @IBOutlet weak var theContainer: UIView!
 //        // Necessary code to upload the swiftUI file (login.swift)
 //        let childView = UIHostingController(rootView: LoginUI())
 //        addChild(childView)
@@ -26,6 +30,15 @@ class SegueVC: UIViewController {
 //        theContainer.addSubview(childView.view)
         
         homeButton.layer.cornerRadius = 10
+        
+        // 1. Set animation content mode
+        animationView.contentMode = .scaleAspectFit
+        // 2. Set animation loop mode
+        animationView.loopMode = .loop
+        // 3. Adjust animation speed
+        animationView.animationSpeed = 1
+        // 4. Play animation
+        animationView.play()
     }
 
     

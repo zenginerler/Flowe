@@ -52,6 +52,13 @@
                                 <rect key="frame" x="0.0" y="174" width="414" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGL-35-8fc" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="459" width="414" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="workflow"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ggP-X8-mAn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,6 +70,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animationView" destination="CGL-35-8fc" id="0it-sk-K6w"/>
                         <outlet property="homeButton" destination="f3c-Sz-R9s" id="fj7-zr-C6h"/>
                     </connections>
                 </viewController>
