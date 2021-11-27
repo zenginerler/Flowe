@@ -39,7 +39,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="userInitiation:" destination="0vj-hh-sRx" eventType="touchUpInside" id="9W1-NY-NSe"/>
-                                    <segue destination="stO-GN-KmJ" kind="presentation" modalPresentationStyle="fullScreen" id="yba-1z-u2l"/>
+                                    <segue destination="stO-GN-KmJ" kind="presentation" identifier="getStarted" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="yba-1z-u2l"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Flowe!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-YX-ro1">
