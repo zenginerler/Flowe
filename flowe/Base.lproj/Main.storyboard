@@ -40,9 +40,8 @@
                                     <segue destination="stO-GN-KmJ" kind="presentation" modalPresentationStyle="fullScreen" id="yba-1z-u2l"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Flowe!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-YX-ro1">
-                                <rect key="frame" x="0.0" y="64" width="414" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Flowe!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-YX-ro1">
+                                <rect key="frame" x="81" y="73" width="252.5" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,6 +52,8 @@
                         <constraints>
                             <constraint firstItem="ggP-X8-mAn" firstAttribute="bottom" secondItem="f3c-Sz-R9s" secondAttribute="bottom" constant="100" id="4AL-hp-7du"/>
                             <constraint firstItem="f3c-Sz-R9s" firstAttribute="centerX" secondItem="ggP-X8-mAn" secondAttribute="centerX" id="Jce-ub-ArW"/>
+                            <constraint firstItem="rOG-YX-ro1" firstAttribute="centerX" secondItem="EPh-6O-wFC" secondAttribute="centerX" id="anC-4X-U6l"/>
+                            <constraint firstItem="rOG-YX-ro1" firstAttribute="centerY" secondItem="EPh-6O-wFC" secondAttribute="centerY" constant="-356.5" id="gwp-2S-7Mz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -705,15 +706,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
                                 <rect key="frame" x="46" y="146" width="173" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="What's your goal type?"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sFg-cg-iSr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ztp-8H-sZ4" firstAttribute="centerX" secondItem="XUR-RC-fol" secondAttribute="centerX" constant="-74.5" id="Xpp-6q-Rtm"/>
+                            <constraint firstItem="ztp-8H-sZ4" firstAttribute="centerY" secondItem="XUR-RC-fol" secondAttribute="centerY" constant="-286.5" id="q2t-wS-Yup"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOv-uP-0pr"/>
                 </viewController>
