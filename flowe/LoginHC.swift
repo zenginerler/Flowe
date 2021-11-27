@@ -9,10 +9,6 @@ import UIKit
 import SwiftUI
 import FirebaseAuth
 
-// Global variable to track user email/ID
-struct identify {
- static var userID = "nil"
-}
 
 struct LoginHC_Temp: View {
   var body: some View {
@@ -39,6 +35,7 @@ struct LoginHC_Previews: PreviewProvider {
         LoginHome()
     }
 }
+
 
 struct LoginHome: View {
     
@@ -125,7 +122,6 @@ struct LoginHome: View {
                         return
                     }
                     print("signIn success!")
-                    identify.userID = email.lowercased()
                     Variables.username = email.lowercased()
                     self.loginSuccessful = true
                 }
@@ -169,6 +165,7 @@ struct LoginHome: View {
         }
     }
 }
+
 
 struct SignUpPage: View {
     
@@ -323,6 +320,7 @@ struct SignUpPage: View {
         .background(Color("custom_blue").ignoresSafeArea(.all, edges: .all))
     }
 }
+
 
 // Additional customization for TextField place holders
 extension View {

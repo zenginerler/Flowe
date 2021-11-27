@@ -26,7 +26,6 @@ class SegueVC: UIViewController {
 //        theContainer.addSubview(childView.view)
         
         homeButton.layer.cornerRadius = 10
-        print(identify.userID)
     }
 
     
