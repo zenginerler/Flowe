@@ -7,5 +7,6 @@ target 'flowe' do
 
   # Pods for flowe
   pod 'Firebase/Auth'
-
+  pod 'lottie-ios'
+  
 end
