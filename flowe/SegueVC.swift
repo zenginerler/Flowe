@@ -12,7 +12,6 @@ import Lottie
 
 class SegueVC: UIViewController {
 
-    
     @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var homeButton: UIButton!
     
@@ -31,17 +30,27 @@ class SegueVC: UIViewController {
         
         homeButton.layer.cornerRadius = 10
         
-        // 1. Set animation content mode
+        // Lottie Animation Settings
         animationView.contentMode = .scaleAspectFit
-        // 2. Set animation loop mode
         animationView.loopMode = .loop
-        // 3. Adjust animation speed
         animationView.animationSpeed = 1
-        // 4. Play animation
         animationView.play()
+        
+        // Gesture settings:
+        let swipeLeftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipeLeft(recognizer:)))
+        swipeLeftRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeftRecognizer)
+    }
+    
+    // Change the page with right swipe
+    @IBAction func gestureSwipeLeft(recognizer: UISwipeGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.performSegue(withIdentifier: "getStarted", sender: nil)
+        }
     }
 
     
+    // Initialize User Defaults
     @IBAction func userInitiation(_ sender: Any) {
         let request = Users.fetchRequest() as NSFetchRequest<Users>
         var fetchedResults: [Users]?
