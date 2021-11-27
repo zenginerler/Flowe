@@ -648,7 +648,7 @@
         <!--GoalVC-->
         <scene sceneID="Szc-Uy-EAh">
             <objects>
-                <viewController title="GoalVC" id="zEI-Qh-Adi" sceneMemberID="viewController">
+                <viewController title="GoalVC" id="zEI-Qh-Adi" customClass="GoalListViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lud-j7-hQZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -709,7 +709,7 @@
         <!--GoalVC2-->
         <scene sceneID="dr8-aq-SFC">
             <objects>
-                <viewController title="GoalVC2" id="7xx-uI-YRX" sceneMemberID="viewController">
+                <viewController title="GoalVC2" id="7xx-uI-YRX" customClass="GoalViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUR-RC-fol">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -740,6 +740,9 @@
             <point key="canvasLocation" x="-2465" y="2683"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="CGL-35-8fc"/>
+    </designables>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
