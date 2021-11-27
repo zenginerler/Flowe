@@ -140,7 +140,6 @@
 		D769BBB527527A0600EEF3BA /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				D769BBB627527A2300EEF3BA /* workflow.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 				D7AF68632733A1E1001C7461 /* LaunchScreen.storyboard */,
 				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
 				D769BBB527527A0600EEF3BA /* Animations */,
+				D769BBB627527A2300EEF3BA /* workflow.json */,
 				D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */,
 				D7AF68662733A1E1001C7461 /* Info.plist */,
 				D7AF687627348335001C7461 /* GoogleService-Info.plist */,

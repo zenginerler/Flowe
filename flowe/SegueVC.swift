@@ -34,7 +34,6 @@ class SegueVC: UIViewController {
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
         animationView.animationSpeed = 1
-        animationView.play()
         
         // Gesture settings:
         let swipeLeftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipeLeft(recognizer:)))
@@ -47,6 +46,12 @@ class SegueVC: UIViewController {
         if recognizer.state == .ended {
             self.performSegue(withIdentifier: "getStarted", sender: nil)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        animationView.play()
     }
 
     

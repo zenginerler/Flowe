@@ -52,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="174" width="414" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGL-35-8fc" customClass="AnimationView" customModule="Lottie">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGL-35-8fc" customClass="AnimationView" customModule="Lottie">
                                 <rect key="frame" x="0.0" y="459" width="414" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
