@@ -14,27 +14,28 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
     let goalIdentifier = "goalIdentifier"
     let goalSegueIdentifier = "goalSegueIdentifier"
     
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return goallist.count
-//    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return goallist.count
+    }
 //
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: goalIdentifier, for: indexPath)
-//        let row = indexPath.row
-//        // put the value in table view from core data.
-//        let typee = goallist[row].value(forKey: "type")
-//        let contentt = goallist[row].value(forKey: "content")
-//        let goalintable = "\(typee ?? "")\n   \(contentt ?? "")"
-//        cell.textLabel?.text = goalintable
-//        return cell
-//    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: goalIdentifier, for: indexPath)
+        let row = indexPath.row
+        // put the value in table view from core data.
+        let typee = goallist[row].value(forKey: "type")
+        let contentt = goallist[row].value(forKey: "content")
+        let goalintable = "\(typee ?? "")\n   \(contentt ?? "")"
+        cell.textLabel?.text = goalintable
+        return cell
+    }
 //
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
@@ -59,33 +60,33 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
 //        } else if editingStyle == .insert {
 //        }
 //    }
-//    override func viewWillAppear(_ animated: Bool) {
-//        goallist = retrievePizza()
-//        self.tableView.reloadData()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        goallist = retrievePizza()
+        self.tableView.reloadData()
+    }
     
-//    func retrievePizza() -> [NSManagedObject] {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let context = appDelegate.persistentContainer.viewContext
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Goals")
-//        var fetchedResults:[NSManagedObject]? = nil
-//        do {
-//            try fetchedResults = context.fetch(request) as? [NSManagedObject]
-//        } catch {
-//            let nserror = error as NSError
-//            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-//            abort()
-//        }
-//        return(fetchedResults)!
-//    }
+    func retrievePizza() -> [NSManagedObject] {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Goals")
+        var fetchedResults:[NSManagedObject]? = nil
+        do {
+            try fetchedResults = context.fetch(request) as? [NSManagedObject]
+        } catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        return(fetchedResults)!
+    }
 //
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goalSegueIdentifier",
-//           let destination = segue.destination as? GoalViewController
-//        {
-//            destination.delegate = self
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goalSegueIdentifier",
+           let destination = segue.destination as? GoalViewController
+        {
+            destination.delegate = self
+        }
+    }
     
 
 }

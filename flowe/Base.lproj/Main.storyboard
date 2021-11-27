@@ -657,7 +657,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCell" id="PPy-cp-lTE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalIdentifier" id="PPy-cp-lTE">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PPy-cp-lTE" id="Qpc-YG-WZy">
@@ -693,13 +693,13 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7xx-uI-YRX" kind="show" id="U8y-tu-o5c"/>
+                                    <segue destination="7xx-uI-YRX" kind="show" identifier="goalSegueIdentifier" id="U8y-tu-o5c"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="iwz-T0-bnw" id="HZ2-ko-uLV"/>
+                        <outlet property="tableView" destination="iwz-T0-bnw" id="rfW-Rf-qeQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Li-os-gJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -724,6 +724,18 @@
                                 <rect key="frame" x="46" y="146" width="173" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="What's your goal type?"/>
+                                <connections>
+                                    <action selector="typeActionsheet:" destination="7xx-uI-YRX" eventType="touchUpInside" id="k1K-wP-JSG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
+                                <rect key="frame" x="78" y="727" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add my goal!"/>
+                                <connections>
+                                    <action selector="AddButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="vye-qe-e4G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sFg-cg-iSr"/>
@@ -734,6 +746,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOv-uP-0pr"/>
+                    <connections>
+                        <outlet property="goalContent" destination="dAI-ze-OIh" id="NFp-Hj-Qpc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMZ-gw-eDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

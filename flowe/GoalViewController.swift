@@ -16,14 +16,14 @@ class goal {
 class GoalViewController: UIViewController {
     var delegate: GoalListViewController!
     var type: String = ""
-    @IBOutlet weak var goalContent: UITextField!
     
+    @IBOutlet weak var goalContent: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func typeActionSheet(_ sender: Any) {
-        
+
+    @IBAction func typeActionsheet(_ sender: Any) {
         let actionsheet1 = UIAlertController(
             title: "Select type",
             message: "Choose a goal type:",
@@ -54,8 +54,8 @@ class GoalViewController: UIViewController {
         actionsheet1.addAction(SelfgrowthAction)
         
         present(actionsheet1, animated: true, completion: nil)
-        
     }
+    
     
     @IBAction func AddButton(_ sender: Any) {
         var newGoal: goal
@@ -81,4 +81,5 @@ class GoalViewController: UIViewController {
             abort()
         }
     }
+    
 }
