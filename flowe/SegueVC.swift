@@ -37,6 +37,9 @@ class SegueVC: UIViewController {
         let swipeLeftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipeLeft(recognizer:)))
         swipeLeftRecognizer.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeLeftRecognizer)
+        
+        // Initiate the user or retrieve the existing user data
+        userInitiation()
     }
     
     // Change the page with right swipe
@@ -53,7 +56,7 @@ class SegueVC: UIViewController {
 
     
     // Initialize User Defaults
-    @IBAction func userInitiation(_ sender: Any) {
+    func userInitiation() {
         let request = Users.fetchRequest() as NSFetchRequest<Users>
         var fetchedResults: [Users]?
 

@@ -38,7 +38,6 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="userInitiation:" destination="0vj-hh-sRx" eventType="touchUpInside" id="9W1-NY-NSe"/>
                                     <segue destination="stO-GN-KmJ" kind="presentation" identifier="getStarted" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="yba-1z-u2l"/>
                                 </connections>
                             </button>
@@ -250,50 +249,55 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWS-YA-f74" userLabel="Profile Info">
                                 <rect key="frame" x="0.0" y="348.5" width="414" height="547.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" phone number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cec-fl-tSP">
-                                        <rect key="frame" x="120" y="270" width="274" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" phone number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cec-fl-tSP">
+                                        <rect key="frame" x="119" y="270" width="275" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="275" id="0kg-Zu-k6T"/>
                                             <constraint firstAttribute="height" constant="40" id="Ti5-Fw-dtg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" last name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtp-if-FVg">
-                                        <rect key="frame" x="120" y="110" width="274" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" last name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtp-if-FVg">
+                                        <rect key="frame" x="119" y="110" width="275" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="275" id="K4G-rO-DDt"/>
                                             <constraint firstAttribute="height" constant="40" id="M10-yT-zIC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" first name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4t-gE-rux">
-                                        <rect key="frame" x="120" y="30" width="274" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" first name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4t-gE-rux">
+                                        <rect key="frame" x="119" y="30" width="275" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="275" id="Ar6-qb-EQF"/>
                                             <constraint firstAttribute="height" constant="40" id="ZoS-U4-ulU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-6B-KcC">
-                                        <rect key="frame" x="120" y="190" width="274" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" email" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-6B-KcC">
+                                        <rect key="frame" x="119" y="190" width="275" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Vwq-6D-Sx2"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="275" id="nSD-Uc-quP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" about me" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9Q-dx-hZm">
-                                        <rect key="frame" x="120" y="350" width="274" height="100"/>
+                                        <rect key="frame" x="119" y="350" width="275" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="275" id="VIo-3r-bwP"/>
                                             <constraint firstAttribute="height" constant="100" id="jdj-u5-sR0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
@@ -301,49 +305,44 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-Pn-fQN">
-                                        <rect key="frame" x="20" y="30" width="90" height="40"/>
+                                        <rect key="frame" x="20" y="30" width="89" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ngr-hZ-rZi"/>
-                                            <constraint firstAttribute="width" constant="90" id="nqI-2j-oPr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhj-mw-IPm">
-                                        <rect key="frame" x="20" y="110" width="90" height="40"/>
+                                        <rect key="frame" x="20" y="110" width="89" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="pCA-H7-fem"/>
-                                            <constraint firstAttribute="width" constant="90" id="wzG-nS-z7m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-Ay-5gB">
-                                        <rect key="frame" x="20" y="190" width="90" height="40"/>
+                                        <rect key="frame" x="20" y="190" width="89" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="F3k-qh-kqi"/>
-                                            <constraint firstAttribute="width" constant="90" id="d5V-FN-0Tr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tue-XU-Cl8">
-                                        <rect key="frame" x="20" y="270" width="90" height="40"/>
+                                        <rect key="frame" x="20" y="270" width="89" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="4Wj-oy-ETq"/>
-                                            <constraint firstAttribute="width" constant="90" id="ZCf-eH-2us"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ag-MM-pTQ">
-                                        <rect key="frame" x="20" y="350" width="90" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="About Me:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ag-MM-pTQ">
+                                        <rect key="frame" x="20" y="350" width="89" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="WJB-de-HBA"/>
                                             <constraint firstAttribute="height" constant="100" id="r17-7b-zad"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
