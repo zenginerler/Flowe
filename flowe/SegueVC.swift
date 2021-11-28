@@ -12,7 +12,8 @@ import Lottie
 
 class SegueVC: UIViewController {
 
-    @IBOutlet weak var animationView: AnimationView!
+    var animationView: AnimationView?
+    @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var homeButton: UIButton!
     
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -20,20 +21,17 @@ class SegueVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//          import SwiftUI
-//          @IBOutlet weak var theContainer: UIView!
-//        // Necessary code to upload the swiftUI file (login.swift)
-//        let childView = UIHostingController(rootView: LoginUI())
-//        addChild(childView)
-//        childView.view.frame = theContainer.bounds
-//        theContainer.addSubview(childView.view)
-        
+
         homeButton.layer.cornerRadius = 10
         
         // Lottie Animation Settings
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop
-        animationView.animationSpeed = 1
+        animationView = .init(name: "workflow")
+        animationView?.contentMode = .scaleAspectFit
+        animationView?.loopMode = .loop
+        animationView?.animationSpeed = 1
+        animationView?.frame = wrapperView.bounds
+        wrapperView.addSubview(animationView!)
+        
         
         // Gesture settings:
         let swipeLeftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipeLeft(recognizer:)))
@@ -50,7 +48,7 @@ class SegueVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        animationView.play()
+        animationView?.play()
     }
 
     

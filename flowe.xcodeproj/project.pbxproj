@@ -139,6 +139,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D70F661F27533DFF00D0053E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D769BBB627527A2300EEF3BA /* workflow.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		D7AF68492733A1E1001C7461 = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +190,7 @@
 				D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */,
 				D7AF687627348335001C7461 /* GoogleService-Info.plist */,
 				D7AF68662733A1E1001C7461 /* Info.plist */,
-				D769BBB627527A2300EEF3BA /* workflow.json */,
+				D70F661F27533DFF00D0053E /* Animations */,
 			);
 			path = flowe;
 			sourceTree = "<group>";

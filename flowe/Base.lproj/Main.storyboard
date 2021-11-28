@@ -52,12 +52,10 @@
                                 <rect key="frame" x="0.0" y="174" width="414" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGL-35-8fc" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="459" width="414" height="260"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jb5-1z-Bht">
+                                <rect key="frame" x="0.0" y="470" width="414" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="workflow"/>
-                                </userDefinedRuntimeAttributes>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ggP-X8-mAn"/>
@@ -70,8 +68,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="animationView" destination="CGL-35-8fc" id="0it-sk-K6w"/>
                         <outlet property="homeButton" destination="f3c-Sz-R9s" id="fj7-zr-C6h"/>
+                        <outlet property="wrapperView" destination="jb5-1z-Bht" id="P9q-Zh-AhO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUe-LV-gRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -436,7 +434,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="afF-zR-PBN" userLabel="Main Stack View">
                                 <rect key="frame" x="5" y="108" width="404" height="366"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMW-Nf-4Bt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMW-Nf-4Bt">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -863,9 +861,6 @@
             <point key="canvasLocation" x="-2465" y="2683"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="CGL-35-8fc"/>
-    </designables>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
