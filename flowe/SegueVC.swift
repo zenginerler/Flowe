@@ -50,7 +50,6 @@ class SegueVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         animationView.play()
     }
 
@@ -69,17 +68,17 @@ class SegueVC: UIViewController {
             if fetchedResults?.count == 1 {
                 Variables.userID = fetchedResults!.first!.objectID
             } else if fetchedResults?.count == 0 {
-                let username = Users(context: self.context)
-                username.username = Variables.username
+                let currentUser = Users(context: self.context)
+                currentUser.username = Variables.username
                 
                 let defaultProfile = Profile(context: self.context)
-                defaultProfile.firstName = "Please Edit First Name"
-                defaultProfile.lastName = "Please Edit Last Name"
-                defaultProfile.email = "Please Edit Email"
-                defaultProfile.aboutMe = "Please Edit About Me"
-                defaultProfile.contactInfo = "Please Edit Phone Number"
-                defaultProfile.userProfile = username
-                username.profile = defaultProfile
+                defaultProfile.firstName = "not specified"
+                defaultProfile.lastName = "not specified"
+                defaultProfile.email = Variables.username
+                defaultProfile.aboutMe = "not specified"
+                defaultProfile.contactInfo = "not specified"
+                defaultProfile.userProfile = currentUser
+                currentUser.profile = defaultProfile
 
                 do {
                     try context.save()
@@ -89,7 +88,7 @@ class SegueVC: UIViewController {
                     abort()
                 }
 
-                Variables.userID = username.objectID
+                Variables.userID = currentUser.objectID
 
             } else {
                 debugPrint("Error finding user in CoreData")
@@ -104,3 +103,7 @@ class SegueVC: UIViewController {
     
 }
 
+// String splitter
+func strSplit(str: String, seperator: String) -> [String] {
+    return str.components(separatedBy: seperator)
+}

@@ -139,13 +139,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D769BBB527527A0600EEF3BA /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
 		D7AF68492733A1E1001C7461 = {
 			isa = PBXGroup;
 			children = (
@@ -176,21 +169,20 @@
 				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
 				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
 				9EA0A6182752A7F300CDA55C /* calendarViewController.swift */,
-				D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */,
 				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
-				D7FC035D2743B91F0019E686 /* ProfileViewController.swift */,
+				D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */,
 				ECC7ACC12750C3A7000F8C5B /* SettingsViewController.swift */,
+				D7FC035D2743B91F0019E686 /* ProfileViewController.swift */,
 				D7AF685B2733A1E1001C7461 /* Main.storyboard */,
 				D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */,
 				D7AF68592733A1E1001C7461 /* SegueVC.swift */,
 				D7AF68722733C64E001C7461 /* LoginHC.swift */,
 				D7AF68632733A1E1001C7461 /* LaunchScreen.storyboard */,
 				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
-				D769BBB527527A0600EEF3BA /* Animations */,
-				D769BBB627527A2300EEF3BA /* workflow.json */,
 				D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */,
-				D7AF68662733A1E1001C7461 /* Info.plist */,
 				D7AF687627348335001C7461 /* GoogleService-Info.plist */,
+				D7AF68662733A1E1001C7461 /* Info.plist */,
+				D769BBB627527A2300EEF3BA /* workflow.json */,
 			);
 			path = flowe;
 			sourceTree = "<group>";

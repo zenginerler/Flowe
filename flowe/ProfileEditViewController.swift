@@ -23,7 +23,6 @@ class ProfileEditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillTextFields()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -49,6 +48,17 @@ class ProfileEditViewController: UIViewController {
         profileNSObj.setValue(self.phoneNumberTextField.text, forKey: "contactInfo")
         profileNSObj.setValue(self.emailTextField.text, forKey: "email")
         profileNSObj.setValue(self.aboutMeTextField.text, forKey: "aboutMe")
+        
+        // Commit the changes
+        do {
+            try singleUser.managedObjectContext?.save()
+        } catch {
+            // If an error occurs
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
     }
     
 
