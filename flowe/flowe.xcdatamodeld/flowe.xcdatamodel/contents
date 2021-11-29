@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Goals" representedClassName="Goals" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
@@ -24,6 +24,10 @@
         <relationship name="assignedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="assignedProjects" inverseEntity="Users"/>
         <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="createdProjects" inverseEntity="Users"/>
     </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES" codeGenerationType="class">
+        <attribute name="backgroundColor" optional="YES" attributeType="String"/>
+        <relationship name="settingsBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="createdSettings" inverseEntity="Users"/>
+    </entity>
     <entity name="Tasks" representedClassName="Tasks" syncable="YES">
         <attribute name="dayDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="monthDue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -34,6 +38,7 @@
         <attribute name="username" optional="YES" attributeType="String"/>
         <relationship name="assignedProjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Projects" inverseName="assignedTo" inverseEntity="Projects"/>
         <relationship name="createdProjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Projects" inverseName="createdBy" inverseEntity="Projects"/>
+        <relationship name="createdSettings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Settings" inverseName="settingsBy" inverseEntity="Settings"/>
         <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="userProfile" inverseEntity="Profile"/>
     </entity>
     <elements>
@@ -41,6 +46,7 @@
         <element name="Profile" positionX="96.5985107421875" positionY="194.6828002929688" width="128" height="133"/>
         <element name="Projects" positionX="-327.4286499023438" positionY="-68.54510498046875" width="128" height="179"/>
         <element name="Tasks" positionX="-130.6796264648438" positionY="-36.32534790039062" width="128" height="89"/>
-        <element name="Users" positionX="-142.7080078125" positionY="203.6631469726562" width="128" height="89"/>
+        <element name="Users" positionX="-142.7080078125" positionY="203.6631469726562" width="128" height="104"/>
+        <element name="Settings" positionX="-126" positionY="90" width="128" height="59"/>
     </elements>
 </model>

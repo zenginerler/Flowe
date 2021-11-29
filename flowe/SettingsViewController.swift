@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import CoreData
 
 class SettingsViewController: UIViewController {
 
+    lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var context = appDelegate.persistentContainer.viewContext
+    
+    var pageTheme = ""
     
     @IBOutlet weak var themeSegment: UISegmentedControl!
     @IBOutlet weak var jingleSegment: UISegmentedControl!
@@ -16,18 +21,47 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDefaultSegments()
+        
     }
     
+    func setDefaultSegments() {
+        let singleUser = context.object(with: Variables.userID!)
+        let settingsNSObj = singleUser.value(forKey: "createdSettings") as! NSManagedObject
+
+        pageTheme = (settingsNSObj.value(forKey: "backgroundColor") as! String)
+        
+        if pageTheme == "light" {
+            themeSegment.selectedSegmentIndex = 0
+        } else if pageTheme == "dark" {
+            themeSegment.selectedSegmentIndex = 1
+        }
+    }
     
     @IBAction func themeChange(_ sender: Any) {
+        let currentUser = Users(context: self.context)
+        currentUser.username = Variables.username
+        
+        let defaultTheme = Settings(context: self.context)
+        defaultTheme.backgroundColor = "light"
+        currentUser.createdSettings = defaultTheme
+
+        do {
+            try context.save()
+        } catch {
+            let nsError = error as NSError
+            NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
+            abort()
+        }
+        
         switch themeSegment.selectedSegmentIndex {
-       case 0:
-           Variables.backgroundColor = UIColor.white
-       case 1:
-           Variables.backgroundColor = UIColor.black
-       default:
-           Variables.backgroundColor = UIColor.white
-       }
+           case 0:
+               Variables.backgroundColor = UIColor.white
+           case 1:
+               Variables.backgroundColor = UIColor.black
+           default:
+               Variables.backgroundColor = UIColor.white
+           }
     }
     
     @IBAction func jingleChange(_ sender: Any) {

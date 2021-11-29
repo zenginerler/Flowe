@@ -38,6 +38,8 @@
 		D7AF687727348335001C7461 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7AF687627348335001C7461 /* GoogleService-Info.plist */; };
 		D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */; };
 		D7FC035E2743B91F0019E686 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC035D2743B91F0019E686 /* ProfileViewController.swift */; };
+		EC560D1527557AAC00AE3C8B /* Settings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560D1327557AAB00AE3C8B /* Settings+CoreDataProperties.swift */; };
+		EC560D1627557AAC00AE3C8B /* Settings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC560D1427557AAC00AE3C8B /* Settings+CoreDataClass.swift */; };
 		ECC7ACC02750BA6E000F8C5B /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7ACBF2750BA6E000F8C5B /* Variables.swift */; };
 		ECC7ACC22750C3A7000F8C5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7ACC12750C3A7000F8C5B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		D7FC035D2743B91F0019E686 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E4331AD384E2E3913B787025 /* Pods-flowe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowe.release.xcconfig"; path = "Target Support Files/Pods-flowe/Pods-flowe.release.xcconfig"; sourceTree = "<group>"; };
+		EC560D1327557AAB00AE3C8B /* Settings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Settings+CoreDataProperties.swift"; path = "/Users/hiranmano/Desktop/College/Year 4/Mobile Computing/Flowe/flowe/Models/Settings+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		EC560D1427557AAC00AE3C8B /* Settings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Settings+CoreDataClass.swift"; path = "/Users/hiranmano/Desktop/College/Year 4/Mobile Computing/Flowe/flowe/Models/Settings+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		ECC7ACBF2750BA6E000F8C5B /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		ECC7ACC12750C3A7000F8C5B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,8 @@
 		74DB659C273B70440025CBCF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EC560D1427557AAC00AE3C8B /* Settings+CoreDataClass.swift */,
+				EC560D1327557AAB00AE3C8B /* Settings+CoreDataProperties.swift */,
 				74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */,
 				74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */,
 				74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */,
@@ -320,6 +326,7 @@
 				74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */,
 				74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */,
 				74DB65DF273C646A0025CBCF /* Goals+CoreDataClass.swift in Sources */,
+				EC560D1527557AAC00AE3C8B /* Settings+CoreDataProperties.swift in Sources */,
 				74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */,
 				74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */,
 				74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */,
@@ -327,6 +334,7 @@
 				74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */,
 				74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */,
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
+				EC560D1627557AAC00AE3C8B /* Settings+CoreDataClass.swift in Sources */,
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
 				9EA0A6192752A7F300CDA55C /* calendarViewController.swift in Sources */,
 				74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */,
