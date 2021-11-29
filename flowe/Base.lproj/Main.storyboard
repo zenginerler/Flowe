@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -710,11 +710,22 @@
                                     </switch>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3J-zm-tzb">
+                                <rect key="frame" x="165.5" y="421" width="83" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign-Out"/>
+                                <connections>
+                                    <action selector="signOutButton:" destination="by8-Kd-EAU" eventType="touchUpInside" id="npm-IE-qMh"/>
+                                    <segue destination="y7x-Pi-rBS" kind="presentation" identifier="signOutSegue" modalPresentationStyle="fullScreen" id="x69-or-Z6s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pdN-5r-Duf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="h3J-zm-tzb" firstAttribute="centerX" secondItem="q2J-7L-V19" secondAttribute="centerX" id="4t3-dI-ldI"/>
                             <constraint firstItem="pdN-5r-Duf" firstAttribute="trailing" secondItem="nXL-tO-gpy" secondAttribute="trailing" constant="125" id="IhU-Hc-sJO"/>
+                            <constraint firstItem="h3J-zm-tzb" firstAttribute="top" secondItem="nXL-tO-gpy" secondAttribute="bottom" constant="58.5" id="csZ-dM-hDc"/>
                             <constraint firstItem="nXL-tO-gpy" firstAttribute="top" secondItem="pdN-5r-Duf" secondAttribute="top" constant="20" id="dln-cW-FVs"/>
                             <constraint firstItem="nXL-tO-gpy" firstAttribute="leading" secondItem="pdN-5r-Duf" secondAttribute="leading" constant="20" id="gsK-ov-TPZ"/>
                         </constraints>

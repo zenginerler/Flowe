@@ -50,5 +50,10 @@ class SettingsViewController: UIViewController {
             Variables.sleep = "sun.png"
         }
     }
+    
+    @IBAction func signOutButton(_ sender: Any) {
+        Variables.username = ""
+    }
+    
 
 }
