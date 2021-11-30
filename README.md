@@ -42,12 +42,12 @@ One of the following:
 - [ ] Page VC
 
 Two of the following:
-- [ ] Alerts
+- [x] Alerts
 - [ ] Popovers
-- [ ] Stack Views
+- [x] Stack Views
 - [ ] Scroll Views
 - [ ] Haptics
-- [ ] User Defaults
+- [x] User Defaults
 
 At least one of the following per team member:
 - [ ] Local notifications
