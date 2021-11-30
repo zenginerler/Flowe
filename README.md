@@ -68,9 +68,9 @@ At least one of the following per team member:
 - FIXME: 3
 
 #### Michael Walters
-- FIXME: 1
-- FIXME: 2
-- FIXME: 3
+- Backend core data organization
+- Projects tab/ project view
+- Notifications for projects due
 
 #### Hiran Manoharan
 - FIXME: 1
