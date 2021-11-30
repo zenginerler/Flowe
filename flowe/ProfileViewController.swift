@@ -13,12 +13,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var ProfileInfoView: UIView!
     
     @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var usernameText: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var firstName: UILabel!
     @IBOutlet weak var lastName: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var aboutMe: UILabel!
+    
+    @IBOutlet weak var firstNameText: UILabel!
+    @IBOutlet weak var lastNameText: UILabel!
+    @IBOutlet weak var emailText: UILabel!
+    @IBOutlet weak var phoneText: UILabel!
+    @IBOutlet weak var aboutText: UILabel!
+    
     
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
@@ -66,6 +74,56 @@ class ProfileViewController: UIViewController {
     }
     
     func theme() {
-        view.backgroundColor = Variables.backgroundColor
+        if Variables.pageTheme == "light" {
+            view.backgroundColor = UIColor.white
+            
+            self.usernameText.textColor = UIColor.black
+            self.username.textColor = UIColor.black
+            self.firstName.textColor = UIColor.black
+            self.lastName.textColor = UIColor.black
+            self.phoneNumber.textColor = UIColor.black
+            self.email.textColor = UIColor.black
+            self.aboutMe.textColor = UIColor.black
+            
+            self.firstNameText.textColor = UIColor.black
+            self.lastNameText.textColor = UIColor.black
+            self.emailText.textColor = UIColor.black
+            self.phoneText.textColor = UIColor.black
+            self.aboutText.textColor = UIColor.black
+            
+            
+            self.firstName.backgroundColor = UIColor.white
+            self.lastName.backgroundColor = UIColor.white
+            self.phoneNumber.backgroundColor = UIColor.white
+            self.email.backgroundColor = UIColor.white
+            self.aboutMe.backgroundColor = UIColor.white
+            
+            navigationController?.navigationBar.titleTextAttributes = Variables.black
+            
+        } else if Variables.pageTheme == "dark" {
+            view.backgroundColor = UIColor.darkGray
+            
+            self.usernameText.textColor = UIColor.white
+            self.username.textColor = UIColor.white
+            self.firstName.textColor = UIColor.white
+            self.lastName.textColor = UIColor.white
+            self.phoneNumber.textColor = UIColor.white
+            self.email.textColor = UIColor.white
+            self.aboutMe.textColor = UIColor.white
+            
+            self.firstNameText.textColor = UIColor.white
+            self.lastNameText.textColor = UIColor.white
+            self.emailText.textColor = UIColor.white
+            self.phoneText.textColor = UIColor.white
+            self.aboutText.textColor = UIColor.white
+            
+            self.firstName.backgroundColor = UIColor.black
+            self.lastName.backgroundColor = UIColor.black
+            self.phoneNumber.backgroundColor = UIColor.black
+            self.email.backgroundColor = UIColor.black
+            self.aboutMe.backgroundColor = UIColor.black
+        
+            navigationController?.navigationBar.titleTextAttributes = Variables.white
+        }
     }
 }

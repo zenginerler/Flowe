@@ -15,52 +15,46 @@ class SettingsViewController: UIViewController {
     
     var pageTheme = ""
     
+    @IBOutlet weak var colorText: UILabel!
+    @IBOutlet weak var jingleText: UILabel!
+    @IBOutlet weak var sleepText: UILabel!
+    
+
+    
     @IBOutlet weak var themeSegment: UISegmentedControl!
     @IBOutlet weak var jingleSegment: UISegmentedControl!
     @IBOutlet weak var sleepSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setDefaultSegments()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setDefaultSegments()
+        theme()
     }
     
     func setDefaultSegments() {
-        let singleUser = context.object(with: Variables.userID!)
-        let settingsNSObj = singleUser.value(forKey: "createdSettings") as! NSManagedObject
-
-        pageTheme = (settingsNSObj.value(forKey: "backgroundColor") as! String)
-        
-        if pageTheme == "light" {
+        if Variables.pageTheme == "light" {
             themeSegment.selectedSegmentIndex = 0
-        } else if pageTheme == "dark" {
+        } else if Variables.pageTheme == "dark" {
             themeSegment.selectedSegmentIndex = 1
         }
     }
     
     @IBAction func themeChange(_ sender: Any) {
-        let currentUser = Users(context: self.context)
-        currentUser.username = Variables.username
-        
-        let defaultTheme = Settings(context: self.context)
-        defaultTheme.backgroundColor = "light"
-        currentUser.createdSettings = defaultTheme
-
-        do {
-            try context.save()
-        } catch {
-            let nsError = error as NSError
-            NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
-            abort()
-        }
-        
         switch themeSegment.selectedSegmentIndex {
            case 0:
-               Variables.backgroundColor = UIColor.white
+                Variables.pageTheme = "light"
+                theme()
            case 1:
-               Variables.backgroundColor = UIColor.black
+                Variables.pageTheme = "dark"
+                theme()
            default:
-               Variables.backgroundColor = UIColor.white
+                Variables.pageTheme = "light"
+                theme()
            }
     }
     
@@ -87,6 +81,40 @@ class SettingsViewController: UIViewController {
     
     @IBAction func signOutButton(_ sender: Any) {
         Variables.username = ""
+    }
+    
+    func theme() {
+        if Variables.pageTheme == "light" {
+            view.backgroundColor = UIColor.white
+            
+            self.colorText.textColor = UIColor.black
+            self.jingleText.textColor = UIColor.black
+            self.sleepText.textColor = UIColor.black
+            
+            self.themeSegment.setTitleTextAttributes(Variables.black, for: .normal)
+            self.themeSegment.setTitleTextAttributes(Variables.black, for: .selected)
+            
+            self.jingleSegment.setTitleTextAttributes(Variables.black, for: .normal)
+            self.jingleSegment.setTitleTextAttributes(Variables.black, for: .selected)
+            
+            navigationController?.navigationBar.titleTextAttributes = Variables.black
+            
+        } else if Variables.pageTheme == "dark" {
+            view.backgroundColor = Variables.gray
+            
+            self.colorText.textColor = UIColor.white
+            self.jingleText.textColor = UIColor.white
+            self.sleepText.textColor = UIColor.white
+            
+            self.themeSegment.setTitleTextAttributes(Variables.white, for: .normal)
+            self.themeSegment.setTitleTextAttributes(Variables.black, for: .selected)
+            
+            self.jingleSegment.setTitleTextAttributes(Variables.white, for: .normal)
+            self.jingleSegment.setTitleTextAttributes(Variables.black, for: .selected)
+        
+            navigationController?.navigationBar.titleTextAttributes = Variables.white
+        }
+            
     }
     
 

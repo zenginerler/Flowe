@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDG-jb-Yw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2465.217391304348" y="1232.8125"/>
+            <point key="canvasLocation" x="-2413" y="1223"/>
         </scene>
         <!--Workflow-->
         <scene sceneID="XrY-VK-FDT">
@@ -416,12 +416,18 @@
                     <connections>
                         <outlet property="ProfileInfoView" destination="DWS-YA-f74" id="eGY-b4-cPB"/>
                         <outlet property="aboutMe" destination="J9Q-dx-hZm" id="HLx-Ou-Acj"/>
+                        <outlet property="aboutText" destination="9Ag-MM-pTQ" id="0kI-7G-lh5"/>
                         <outlet property="email" destination="LQS-6B-KcC" id="XMO-rM-wEW"/>
+                        <outlet property="emailText" destination="TlF-Ay-5gB" id="B92-49-Pg9"/>
                         <outlet property="firstName" destination="C4t-gE-rux" id="jBc-5G-bPd"/>
+                        <outlet property="firstNameText" destination="sIu-Pn-fQN" id="CXl-dR-cGR"/>
                         <outlet property="lastName" destination="rtp-if-FVg" id="twr-cG-fKw"/>
+                        <outlet property="lastNameText" destination="xhj-mw-IPm" id="fwD-SU-rEv"/>
                         <outlet property="phoneNumber" destination="Cec-fl-tSP" id="bmi-aN-PlZ"/>
+                        <outlet property="phoneText" destination="Tue-XU-Cl8" id="Q8C-kL-dwO"/>
                         <outlet property="profilePicture" destination="VC9-kA-oMt" id="yn9-Hj-ZS4"/>
                         <outlet property="username" destination="AzR-Bz-cCp" id="Rf9-dd-hDc"/>
+                        <outlet property="usernameText" destination="AzR-Bz-cCp" id="28E-vx-Rko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4v-4S-41Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -640,7 +646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFS-Rm-n0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="1233"/>
+            <point key="canvasLocation" x="-186" y="1233"/>
         </scene>
         <!--ProjectsHoistingController-->
         <scene sceneID="zLA-ph-xCh">
@@ -728,18 +734,22 @@
                             <constraint firstItem="h3J-zm-tzb" firstAttribute="top" secondItem="nXL-tO-gpy" secondAttribute="bottom" constant="58.5" id="csZ-dM-hDc"/>
                             <constraint firstItem="nXL-tO-gpy" firstAttribute="top" secondItem="pdN-5r-Duf" secondAttribute="top" constant="20" id="dln-cW-FVs"/>
                             <constraint firstItem="nXL-tO-gpy" firstAttribute="leading" secondItem="pdN-5r-Duf" secondAttribute="leading" constant="20" id="gsK-ov-TPZ"/>
+                            <constraint firstItem="h3J-zm-tzb" firstAttribute="centerX" secondItem="q2J-7L-V19" secondAttribute="centerX" id="kyA-Io-db5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Flowe Settings" id="Lew-r3-I26"/>
                     <connections>
+                        <outlet property="colorText" destination="AUg-fj-feD" id="cOa-NC-jMV"/>
                         <outlet property="jingleSegment" destination="AeS-hg-Bmx" id="rBi-Qd-4Rn"/>
+                        <outlet property="jingleText" destination="vWZ-Tm-m16" id="QoY-6B-Jw9"/>
                         <outlet property="sleepSwitch" destination="d7z-rc-CHS" id="MZd-p5-aav"/>
+                        <outlet property="sleepText" destination="GaS-JY-Ld7" id="9KO-bf-fxC"/>
                         <outlet property="themeSegment" destination="hzZ-wc-vq6" id="ObE-zs-Jzh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqg-7x-tPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="1964"/>
+            <point key="canvasLocation" x="899" y="1961"/>
         </scene>
         <!--Workflow-->
         <scene sceneID="Y4I-S2-qLX">
