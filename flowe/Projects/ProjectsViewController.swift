@@ -82,18 +82,18 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         let selectAction = UIAlertAction(title: "Ok",
                                          style: .default,
                                          handler: {
-                                [self] _ in
-                                let newProject = Projects(context: self.context)
-                                newProject.due = self.datePicker.date
-                                newProject.name = alert.textFields![0].text
-                                newProject.about = alert.textFields![2].text
-                                do {
-                                    try self.context.save()
-                                }catch{
-                                    print("There was an error in saving the Project")
-                                }
-                                self.getProjects()
-                            })
+            [self] _ in
+            let newProject = Projects(context: self.context)
+            newProject.due = self.datePicker.date
+            newProject.name = alert.textFields![0].text
+            newProject.about = alert.textFields![2].text
+            do {
+                try self.context.save()
+            }catch{
+                print("There was an error in saving the Project")
+            }
+            self.getProjects()
+        })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(selectAction)
@@ -137,7 +137,6 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     // swipe right to edit
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
         let action = UIContextualAction(style: .normal,
                                         title: "Edit",
                                         handler: { (action, view, completionHandler) in

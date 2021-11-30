@@ -51,7 +51,7 @@ struct LoginHome: View {
             Spacer(minLength: 0)
             
             // Logo
-            Image("flowe_logo_b")
+            Image("flowe_logo_w")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.horizontal, 16)
