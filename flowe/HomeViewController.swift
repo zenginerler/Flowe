@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     var timer = Timer()
     var seconds = 10
     var pomo: Pomodoro?
+    var count = 0
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var RemainTimeLabel: UILabel!
     @IBOutlet weak var numPomoLabel: UILabel!
@@ -31,27 +32,20 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
+        work = true
         seconds = 10
         timer.invalidate()
         statusLabel.backgroundColor = UIColor .red
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(HomeViewController.timerClass), userInfo: nil, repeats: true)
-        
-        if seconds == 0 {
-//            statusLabel.backgroundColor = UIColor .green
-//            self.pomo.num += 1
-//            numPomoLabel.text = String(self.pomo.num)
-        }
-        
     }
     
     
     @IBAction func breakButton(_ sender: Any) {
+        work = false
         seconds = 5 
         timer.invalidate()
         statusLabel.backgroundColor = UIColor .green
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(HomeViewController.timerClass), userInfo: nil, repeats: true)
-        
-    
     }
     
     @objc func timerClass() {
@@ -62,9 +56,9 @@ class HomeViewController: UIViewController {
             if work == true {
                 statusLabel.backgroundColor = UIColor .green
                 work = false
-                self.pomo?.num += 1
-                print("pomonum", self.pomo?.num)
-                
+                count += 1
+                print("count", count)
+                numPomoLabel.text = "\(count)"
             }
             else {
                 statusLabel.backgroundColor = UIColor .red
