@@ -23,7 +23,6 @@
 		74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DF780B274C4277005DF304 /* ProjectsView.swift */; };
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
 		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
-		9EA0A6192752A7F300CDA55C /* calendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0A6182752A7F300CDA55C /* calendarViewController.swift */; };
 		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
 		D769BBB327512E4600EEF3BA /* SegueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68592733A1E1001C7461 /* SegueVC.swift */; };
 		D769BBB427512E9000EEF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF68552733A1E1001C7461 /* AppDelegate.swift */; };
@@ -61,7 +60,6 @@
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EA0A6182752A7F300CDA55C /* calendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarViewController.swift; sourceTree = "<group>"; };
 		D769BBB627527A2300EEF3BA /* workflow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = workflow.json; sourceTree = "<group>"; };
 		D7AF68522733A1E1001C7461 /* flowe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flowe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AF68552733A1E1001C7461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				ECC7ACBF2750BA6E000F8C5B /* Variables.swift */,
 				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
 				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
-				9EA0A6182752A7F300CDA55C /* calendarViewController.swift */,
 				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
 				D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */,
 				ECC7ACC12750C3A7000F8C5B /* SettingsViewController.swift */,
@@ -328,7 +325,6 @@
 				74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */,
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
-				9EA0A6192752A7F300CDA55C /* calendarViewController.swift in Sources */,
 				74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */,
 				74DB65E0273C646A0025CBCF /* Goals+CoreDataProperties.swift in Sources */,
 				D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */,
