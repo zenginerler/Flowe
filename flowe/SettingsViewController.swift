@@ -13,13 +13,9 @@ class SettingsViewController: UIViewController {
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
     
-    var pageTheme = ""
-    
     @IBOutlet weak var colorText: UILabel!
     @IBOutlet weak var jingleText: UILabel!
     @IBOutlet weak var sleepText: UILabel!
-    
-
     
     @IBOutlet weak var themeSegment: UISegmentedControl!
     @IBOutlet weak var jingleSegment: UISegmentedControl!
@@ -27,8 +23,8 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setDefaultSegments()
+        Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +33,9 @@ class SettingsViewController: UIViewController {
     }
     
     func setDefaultSegments() {
-        if Variables.pageTheme == "light" {
+        if Variables.defaults.string(forKey: Variables.kUserTheme) == "light" {
             themeSegment.selectedSegmentIndex = 0
-        } else if Variables.pageTheme == "dark" {
+        } else if Variables.defaults.string(forKey: Variables.kUserTheme) == "dark" {
             themeSegment.selectedSegmentIndex = 1
         }
     }
@@ -48,12 +44,15 @@ class SettingsViewController: UIViewController {
         switch themeSegment.selectedSegmentIndex {
            case 0:
                 Variables.pageTheme = "light"
+            Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
                 theme()
            case 1:
                 Variables.pageTheme = "dark"
+                Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
                 theme()
            default:
                 Variables.pageTheme = "light"
+                Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
                 theme()
            }
     }
@@ -84,7 +83,7 @@ class SettingsViewController: UIViewController {
     }
     
     func theme() {
-        if Variables.pageTheme == "light" {
+        if Variables.defaults.string(forKey: Variables.kUserTheme) == "light" {
             view.backgroundColor = UIColor.white
             
             self.colorText.textColor = UIColor.black
@@ -99,7 +98,7 @@ class SettingsViewController: UIViewController {
             
             navigationController?.navigationBar.titleTextAttributes = Variables.black
             
-        } else if Variables.pageTheme == "dark" {
+        } else if Variables.defaults.string(forKey: Variables.kUserTheme) == "dark" {
             view.backgroundColor = Variables.gray
             
             self.colorText.textColor = UIColor.white

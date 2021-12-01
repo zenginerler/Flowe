@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 class goal {
     var type_g = ""
@@ -16,7 +17,10 @@ class goal {
 class GoalViewController: UIViewController {
     var delegate: GoalListViewController!
     var type: String = ""
+    let eventStore = EKEventStore()
+    var savedEventId:String = ""
     
+    @IBOutlet weak var journalStatusLabel: UILabel!
     @IBOutlet weak var goalContent: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +84,44 @@ class GoalViewController: UIViewController {
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
+        
     }
+    
+    func createEvent(title:String, startDate:NSDate, endDate:NSDate) {
+        
+        let event = EKEvent(eventStore: eventStore)
+        
+        event.title = title
+        event.startDate = startDate as Date?
+        event.endDate = endDate as Date?
+        event.calendar = eventStore.defaultCalendarForNewEvents
+        
+        do {
+            try eventStore.save(event, span: .thisEvent)
+            savedEventId = event.eventIdentifier
+            journalStatusLabel.text = "Event added to calendar"
+        } catch {
+            print("Error")
+        }
+    }
+    
+    
+    @IBAction func addToCalendarButton(_ sender: Any) {
+        
+        let startDate = NSDate()
+        let endDate = startDate.addingTimeInterval(60*60)
+        
+        if (EKEventStore.authorizationStatus(for: .event) != .authorized) {
+            eventStore.requestAccess(to: .event, completion: {
+                granted, error in
+                self.createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
+            })
+        } else {
+            createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
+        }
+        
+    }
+    
+
     
 }
