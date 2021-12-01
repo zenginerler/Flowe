@@ -142,7 +142,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="c2v-aD-P6h"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Goals"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Journal"/>
                                 <connections>
                                     <segue destination="zEI-Qh-Adi" kind="show" id="GxE-aZ-Hll"/>
                                 </connections>
@@ -222,6 +222,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="reset pomo achieved"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="t2y-3n-C6O" eventType="touchUpInside" id="zBA-wq-h5v"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m5K-9q-6gs"/>
