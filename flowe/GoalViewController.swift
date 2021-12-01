@@ -62,17 +62,6 @@ class GoalViewController: UIViewController {
     
     
     @IBAction func AddButton(_ sender: Any) {
-        let startDate = NSDate()
-        let endDate = startDate.addingTimeInterval(60*60)
-        
-        if (EKEventStore.authorizationStatus(for: .event) != .authorized) {
-            eventStore.requestAccess(to: .event, completion: {
-                granted, error in
-                self.createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
-            })
-        } else {
-            createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
-        }
         var newGoal: goal
         newGoal = goal()
         newGoal.type_g = self.type
@@ -115,6 +104,24 @@ class GoalViewController: UIViewController {
             print("Error")
         }
     }
+    
+    
+    @IBAction func addToCalendarButton(_ sender: Any) {
+        
+        let startDate = NSDate()
+        let endDate = startDate.addingTimeInterval(60*60)
+        
+        if (EKEventStore.authorizationStatus(for: .event) != .authorized) {
+            eventStore.requestAccess(to: .event, completion: {
+                granted, error in
+                self.createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
+            })
+        } else {
+            createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
+        }
+        
+    }
+    
 
     
 }
