@@ -158,7 +158,7 @@ struct LoginHome: View {
                 })
             }.padding(.vertical)
         }
-        .background(Color("custom_blue").ignoresSafeArea(.all, edges: .all))
+        .background(Image("bg_light").ignoresSafeArea(.all, edges: .all))
         .fullScreenCover(isPresented: $loginSuccessful) {
             // Custom Page Segue from SwiftUI to UIkit
             SegueSwiftUI(storyboard: "Main", VC: "SegueVC").ignoresSafeArea(.all)
@@ -317,7 +317,7 @@ struct SignUpPage: View {
             }.padding(.vertical)
             
         }
-        .background(Color("custom_blue").ignoresSafeArea(.all, edges: .all))
+        .background(Image("bg_dark").ignoresSafeArea(.all, edges: .all))
     }
 }
 
