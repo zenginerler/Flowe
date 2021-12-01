@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController {
     }
     
     func theme() {
-        if Variables.pageTheme == "light" {
+        if Variables.defaults.string(forKey: Variables.kUserTheme) == "light" {
             view.backgroundColor = UIColor.white
             
             self.usernameText.textColor = UIColor.black
@@ -100,7 +100,7 @@ class ProfileViewController: UIViewController {
             
             navigationController?.navigationBar.titleTextAttributes = Variables.black
             
-        } else if Variables.pageTheme == "dark" {
+        } else if Variables.defaults.string(forKey: Variables.kUserTheme) == "dark" {
             view.backgroundColor = UIColor.darkGray
             
             self.usernameText.textColor = UIColor.white
