@@ -17,12 +17,18 @@ class HomeViewController: UIViewController {
     var minutes = 25
     var pomo: Pomodoro?
     var count = 0
+    var work: Bool = true
+    
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var RemainTimeLabel: UILabel!
     @IBOutlet weak var numPomoLabel: UILabel!
-    var work: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        darkModeCheck()
     }
     
     @IBAction func calendarButtonPress(_ sender: Any) {
@@ -79,8 +85,16 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
-    
+    func darkModeCheck() {
+        // Update the the theme according to user settings
+        if (Variables.appTheme == 1) {
+            overrideUserInterfaceStyle = .light
+        } else if (Variables.appTheme == 2) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            print("\nTheme ERROR")
+        }
+    }
     
     
     

@@ -20,7 +20,6 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var addProjectButton: UIBarButtonItem!
     
     var projects: [Projects]?
-    
     var row = 0
     let userCalendar = Calendar(identifier: .gregorian)
     let formatter = DateFormatter()
@@ -36,6 +35,15 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         formatter.dateStyle = .full
         formatter.timeStyle = .none
         getProjects()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.projectsTableView.reloadData()
+        darkModeCheck()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.projectsTableView.reloadData()
     }
     
     func getProjects() {
@@ -198,14 +206,15 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         self.inputView?.endEditing(true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.projectsTableView.reloadData()
-        projectsTableView.backgroundColor = .black
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.projectsTableView.reloadData()
+    func darkModeCheck() {
+        // Update the the theme according to user settings
+        if (Variables.appTheme == 1) {
+            overrideUserInterfaceStyle = .light
+        } else if (Variables.appTheme == 2) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            print("\nTheme ERROR")
+        }
     }
 
 }

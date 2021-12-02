@@ -25,6 +25,9 @@ class ProfileEditViewController: UIViewController {
         fillTextFields()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        darkModeCheck()
+    }
     
     func fillTextFields() {
         let singleUser = context.object(with: Variables.userID!)
@@ -60,6 +63,16 @@ class ProfileEditViewController: UIViewController {
         }
         
     }
-    
+
+    func darkModeCheck() {
+        // Update the the theme according to user settings
+        if (Variables.appTheme == 1) {
+            overrideUserInterfaceStyle = .light
+        } else if (Variables.appTheme == 2) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            print("\nTheme ERROR")
+        }
+    }
 
 }

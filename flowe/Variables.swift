@@ -15,13 +15,7 @@ class Variables: UIViewController {
     static var userID:NSManagedObjectID? = nil
     
     // Color Variables
-    static let kUserTheme = "pageTheme"
-    static var pageTheme = "light"
-    static let defaults = UserDefaults.standard
-    
-    static let white = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    static let black = [NSAttributedString.Key.foregroundColor: UIColor.black]
-    static let gray = UIColor.darkGray
+    static var appTheme = 1 // Default app theme = .light
     
     //Jingle Variable
     static var jingle = "song 1"

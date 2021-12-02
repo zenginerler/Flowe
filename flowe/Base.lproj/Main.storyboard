@@ -27,7 +27,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3c-Sz-R9s">
                                 <rect key="frame" x="27" y="776" width="360" height="60"/>
-                                <color key="backgroundColor" name="custom_test"/>
+                                <color key="backgroundColor" name="custom_crayola"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="xNS-eQ-4Wo"/>
                                     <constraint firstAttribute="height" constant="60" id="zD7-34-Gxk"/>
@@ -82,7 +82,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ukK-xv-nHw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -228,7 +228,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m5K-9q-6gs"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fJO-8Y-JCI" firstAttribute="centerY" secondItem="Pge-ek-9Da" secondAttribute="centerY" constant="-37.5" id="30d-em-ea2"/>
                             <constraint firstItem="mLa-FA-4uS" firstAttribute="centerX" secondItem="Pge-ek-9Da" secondAttribute="centerX" id="FAp-A2-NWY"/>
@@ -681,7 +681,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ena-Rj-TKX">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="projectCell" rowHeight="105" id="0B6-EY-J5q">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="105"/>
@@ -741,7 +741,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-tO-gpy">
-                                <rect key="frame" x="20" y="108" width="269" height="254.5"/>
+                                <rect key="frame" x="20" y="108" width="269" height="265"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUg-fj-feD">
                                         <rect key="frame" x="0.0" y="0.0" width="269" height="20.5"/>
@@ -776,22 +776,44 @@
                                             <action selector="jingleChange:" destination="by8-Kd-EAU" eventType="valueChanged" id="q5W-hS-Mnp"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-JY-Ld7">
-                                        <rect key="frame" x="0.0" y="183" width="269" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7z-rc-CHS">
-                                        <rect key="frame" x="0.0" y="223.5" width="271" height="31"/>
-                                        <connections>
-                                            <action selector="sleepChange:" destination="by8-Kd-EAU" eventType="valueChanged" id="nwX-3L-S2Y"/>
-                                        </connections>
-                                    </switch>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfV-T2-h82">
+                                        <rect key="frame" x="0.0" y="183" width="269" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-JY-Ld7">
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7z-rc-CHS">
+                                                <rect key="frame" x="220" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="sleepChange:" destination="by8-Kd-EAU" eventType="valueChanged" id="nwX-3L-S2Y"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8T-90-o7K">
+                                        <rect key="frame" x="0.0" y="234" width="269" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFc-t0-wa6">
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="DarkMode Switch" translatesAutoresizingMaskIntoConstraints="NO" id="Rey-Xb-Je9">
+                                                <rect key="frame" x="220" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="changeTheme:" destination="by8-Kd-EAU" eventType="valueChanged" id="woI-nd-JGS"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3J-zm-tzb">
-                                <rect key="frame" x="165.5" y="421" width="83" height="31"/>
+                                <rect key="frame" x="165.5" y="431.5" width="83" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign-Out"/>
                                 <connections>
@@ -819,6 +841,7 @@
                         <outlet property="sleepSwitch" destination="d7z-rc-CHS" id="MZd-p5-aav"/>
                         <outlet property="sleepText" destination="GaS-JY-Ld7" id="9KO-bf-fxC"/>
                         <outlet property="themeSegment" destination="hzZ-wc-vq6" id="ObE-zs-Jzh"/>
+                        <outlet property="themeSwitch" destination="Rey-Xb-Je9" id="Yc4-0B-GJO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqg-7x-tPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -828,7 +851,7 @@
         <!--Workflow-->
         <scene sceneID="Y4I-S2-qLX">
             <objects>
-                <viewController id="bkI-AP-2fI" customClass="GoalViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bkI-AP-2fI" customClass="WorkflowVC" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQA-LF-FU4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -972,11 +995,11 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="temp_profile" width="360" height="360"/>
+        <namedColor name="custom_crayola">
+            <color red="0.20392156862745098" green="0.47058823529411764" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="custom_ivory">
             <color red="0.94901960784313721" green="0.93725490196078431" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="custom_test">
-            <color red="0.20392156862745098" green="0.47058823529411764" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
