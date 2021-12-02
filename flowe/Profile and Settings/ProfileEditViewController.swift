@@ -46,11 +46,41 @@ class ProfileEditViewController: UIViewController {
         let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
         
         profileNSObj.setValue(singleUser, forKey: "userProfile")
-        profileNSObj.setValue(self.firstNameTextField.text, forKey: "firstName")
-        profileNSObj.setValue(self.lastNameTextField.text, forKey: "lastName")
-        profileNSObj.setValue(self.phoneNumberTextField.text, forKey: "contactInfo")
-        profileNSObj.setValue(self.emailTextField.text, forKey: "email")
-        profileNSObj.setValue(self.aboutMeTextField.text, forKey: "aboutMe")
+        
+        if self.firstNameTextField.text!.isEmpty{
+            profileNSObj.setValue(self.firstNameTextField.placeholder, forKey: "firstName")
+        }
+        else {
+            profileNSObj.setValue(self.firstNameTextField.text, forKey: "firstName")
+        }
+        
+        if self.lastNameTextField.text!.isEmpty{
+            profileNSObj.setValue(self.lastNameTextField.placeholder, forKey: "lastName")
+        }
+        else {
+            profileNSObj.setValue(self.lastNameTextField.text, forKey: "lastName")
+        }
+        
+        if self.phoneNumberTextField.text!.isEmpty{
+            profileNSObj.setValue(self.phoneNumberTextField.placeholder, forKey: "contactInfo")
+        }
+        else {
+            profileNSObj.setValue(self.phoneNumberTextField.text, forKey: "contactInfo")
+        }
+        
+        if self.emailTextField.text!.isEmpty{
+            profileNSObj.setValue(self.emailTextField.placeholder, forKey: "email")
+        }
+        else {
+            profileNSObj.setValue(self.emailTextField.text, forKey: "email")
+        }
+        
+        if self.aboutMeTextField.text!.isEmpty{
+            profileNSObj.setValue(self.aboutMeTextField.placeholder, forKey: "aboutMe")
+        }
+        else {
+            profileNSObj.setValue(self.aboutMeTextField.text, forKey: "aboutMe")
+        }
         
         // Commit the changes
         do {
@@ -62,6 +92,13 @@ class ProfileEditViewController: UIViewController {
             abort()
         }
         
+    }
+    
+    func fieldIsBlank (field: UITextField) -> Bool{
+        if field.state.isEmpty{
+            return true
+        }
+        return false
     }
 
     func darkModeCheck() {
