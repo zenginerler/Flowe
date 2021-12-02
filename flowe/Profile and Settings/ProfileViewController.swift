@@ -51,11 +51,11 @@ class ProfileViewController: UIViewController {
         let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
         
         self.username.text = "\(strSplit(str: Variables.username, seperator: "@")[0])"
-        self.firstName.text = (profileNSObj.value(forKey: "firstName") as! String)
-        self.lastName.text = (profileNSObj.value(forKey: "lastName") as! String)
-        self.phoneNumber.text = (profileNSObj.value(forKey: "contactInfo") as! String)
-        self.email.text = (profileNSObj.value(forKey: "email") as! String)
-        self.aboutMe.text = (profileNSObj.value(forKey: "aboutMe") as! String)
+        self.firstName.text = "  \(profileNSObj.value(forKey: "firstName") as! String)"
+        self.lastName.text = "  \(profileNSObj.value(forKey: "lastName") as! String)"
+        self.phoneNumber.text = "  \(profileNSObj.value(forKey: "contactInfo") as! String)"
+        self.email.text = "  \(profileNSObj.value(forKey: "email") as! String)"
+        self.aboutMe.text = "  \(profileNSObj.value(forKey: "aboutMe") as! String)"
     }
     
     func assignBackground() {

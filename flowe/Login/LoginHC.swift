@@ -85,6 +85,7 @@ struct LoginHome: View {
                     .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(email == "" ? 0.06 : 0.24))
+                .foregroundColor(Color.white)
                 .cornerRadius(15)
                 .padding(.horizontal)
             
@@ -102,6 +103,7 @@ struct LoginHome: View {
                     .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(password == "" ? 0.06 : 0.24))
+                .foregroundColor(Color.white)
                 .cornerRadius(15)
                 .padding(.horizontal)
                 .padding(.top)
@@ -144,7 +146,7 @@ struct LoginHome: View {
             // Forgot my password button
             Button (action: {}, label: {
                 Text("Forgot my password")
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
             }).padding(.top, 8)
             
             Spacer(minLength: 0)
@@ -223,6 +225,7 @@ struct SignUpPage: View {
                     .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(email == "" ? 0.06 : 0.24))
+                .foregroundColor(.white)
                 .cornerRadius(15)
                 .padding(.horizontal)
             
@@ -240,6 +243,7 @@ struct SignUpPage: View {
                     .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(password == "" ? 0.06 : 0.24))
+                .foregroundColor(.white)
                 .cornerRadius(15)
                 .padding(.horizontal)
                 .padding(.top)
@@ -258,6 +262,7 @@ struct SignUpPage: View {
                     .disableAutocorrection(true)
             }.padding()
                 .background(Color.white.opacity(passwordConfirm == "" ? 0.06 : 0.24))
+                .foregroundColor(.white)
                 .cornerRadius(15)
                 .padding(.horizontal)
                 .padding(.top)

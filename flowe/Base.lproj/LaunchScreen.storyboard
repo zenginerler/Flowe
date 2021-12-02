@@ -40,7 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loading_logo" width="3000" height="3000"/>
+        <image name="loading_logo" width="1024" height="1024"/>
         <namedColor name="custom_blue">
             <color red="0.047058823529411764" green="0.3843137254901961" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
