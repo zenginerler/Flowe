@@ -124,6 +124,10 @@ struct LoginHome: View {
                     print("signIn success!")
                     Variables.username = email.lowercased()
                     self.loginSuccessful = true
+                    
+                    // Reset the values after login
+                    email = ""
+                    password = ""
                 }
                 
             }, label: {
@@ -184,7 +188,7 @@ struct SignUpPage: View {
 //            Spacer(minLength: 0)
             
             // Logo
-            Image("flowe_logo_b")
+            Image("flowe_logo_w")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.horizontal, 16)

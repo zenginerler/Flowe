@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var colorText: UILabel!
     @IBOutlet weak var jingleText: UILabel!
     @IBOutlet weak var sleepText: UILabel!
+    @IBOutlet weak var signOutButton: UIButton!
     
     @IBOutlet weak var themeSegment: UISegmentedControl!
     @IBOutlet weak var jingleSegment: UISegmentedControl!
@@ -24,6 +25,9 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signOutButton.layer.masksToBounds = true
+        signOutButton.layer.cornerRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +87,14 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func signOutButton(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        
+        // Reset App settings
         Variables.username = ""
+        Variables.userID = nil
+        Variables.appTheme = 1
+        Variables.jingle = "song 1"
+        Variables.sleep = "sun.png"
     }
     
     func darkModeCheck() {

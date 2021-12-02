@@ -20,7 +20,7 @@ class WorkflowVC: UIViewController {
     }
     
     func assignbackground() {
-          let background = UIImage(named: "bg_wave")
+          let background = UIImage()
 
           var imageView : UIImageView!
           imageView = UIImageView(frame: view.bounds)
@@ -36,8 +36,10 @@ class WorkflowVC: UIViewController {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_dark")
         } else {
             print("\nTheme ERROR")
         }

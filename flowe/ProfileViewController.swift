@@ -34,13 +34,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assignBackground()
-        
-        // Profile Picture Adjustments
-        profilePicture.clipsToBounds = true
-        profilePicture.layer.cornerRadius = profilePicture.frame.height/2
-        ProfileInfoView.layer.borderWidth = 1
-        
-        // Round Label Borders
+
+        // Round Label & Image Borders
         roundBorders()
 
         fillProfile()
@@ -64,7 +59,7 @@ class ProfileViewController: UIViewController {
     }
     
     func assignBackground() {
-          let background = UIImage(named: "bg_wave")
+          let background = UIImage()
 
           var imageView : UIImageView!
           imageView = UIImageView(frame: view.bounds)
@@ -77,6 +72,12 @@ class ProfileViewController: UIViewController {
       }
  
     func roundBorders() {
+        // Profile Picture Adjustments
+        profilePicture.clipsToBounds = true
+        profilePicture.layer.cornerRadius = profilePicture.frame.height/2
+//        ProfileInfoView.layer.borderWidth = 1
+        
+        // Label Adjustments
         username.layer.masksToBounds = true
         username.layer.cornerRadius = 6
         firstName.layer.masksToBounds = true
@@ -95,8 +96,10 @@ class ProfileViewController: UIViewController {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_profile_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_profile_dark")
         } else {
             print("\nTheme ERROR")
         }

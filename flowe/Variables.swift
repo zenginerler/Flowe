@@ -11,7 +11,7 @@ import CoreData
 
 class Variables: UIViewController {
     // Username string variable
-    static var username = "nothing"
+    static var username = ""
     static var userID:NSManagedObjectID? = nil
     
     // Color Variables
