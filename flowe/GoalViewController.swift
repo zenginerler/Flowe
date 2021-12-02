@@ -22,10 +22,14 @@ class GoalViewController: UIViewController {
     
     @IBOutlet weak var journalStatusLabel: UILabel!
     @IBOutlet weak var goalContent: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        darkModeCheck()
+    }
 
     @IBAction func typeActionsheet(_ sender: Any) {
         let actionsheet1 = UIAlertController(
@@ -122,6 +126,15 @@ class GoalViewController: UIViewController {
         
     }
     
-
+    func darkModeCheck() {
+        // Update the the theme according to user settings
+        if (Variables.appTheme == 1) {
+            overrideUserInterfaceStyle = .light
+        } else if (Variables.appTheme == 2) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            print("\nTheme ERROR")
+        }
+    }
     
 }

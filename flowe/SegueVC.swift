@@ -49,6 +49,10 @@ class SegueVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        darkModeCheck()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animationView?.play()
@@ -99,6 +103,16 @@ class SegueVC: UIViewController {
             let nsError = error as NSError
             NSLog("Unresolved error \(nsError), \(nsError.userInfo)")
             abort()
+        }
+    }
+    func darkModeCheck() {
+        // Update the the theme according to user settings
+        if (Variables.appTheme == 1) {
+            overrideUserInterfaceStyle = .light
+        } else if (Variables.appTheme == 2) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            print("\nTheme ERROR")
         }
     }
     

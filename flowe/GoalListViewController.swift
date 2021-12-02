@@ -11,21 +11,28 @@ import CoreData
 var goallist: [NSManagedObject] = []
 
 class GoalListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     let goalIdentifier = "goalIdentifier"
     let goalSegueIdentifier = "goalSegueIdentifier"
-    
-    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        goallist = retrievePizza()
+        self.tableView.reloadData()
+        
+        darkModeCheck()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return goallist.count
     }
-//
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: goalIdentifier, for: indexPath)
         let row = indexPath.row
@@ -36,7 +43,7 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel?.text = goalintable
         return cell
     }
-//
+
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
 //            goallist.remove(at: indexPath.row)
@@ -60,10 +67,6 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
 //        } else if editingStyle == .insert {
 //        }
 //    }
-    override func viewWillAppear(_ animated: Bool) {
-        goallist = retrievePizza()
-        self.tableView.reloadData()
-    }
     
     func retrievePizza() -> [NSManagedObject] {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -79,7 +82,7 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
         }
         return(fetchedResults)!
     }
-//
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goalSegueIdentifier",
            let destination = segue.destination as? GoalViewController
@@ -88,5 +91,15 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func darkModeCheck() {
+        // Update the the theme according to user settings
+        if (Variables.appTheme == 1) {
+            overrideUserInterfaceStyle = .light
+        } else if (Variables.appTheme == 2) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            print("\nTheme ERROR")
+        }
+    }
 
 }

@@ -3,7 +3,7 @@ CS 329E - Mobile Development Final Project
 
 Name of project: Flowe  
 Team members: Mehmet Zenginerler, Michael Walters, Hiran Manoharan, Yixing Ma  
-Dependencies: Xcode 13.1, Swift 5  
+Dependencies: Xcode 13.1, Swift 5, IOS 13+  
 
 
 ## Special Instructions:
@@ -32,7 +32,7 @@ Two major elements used:
 
 Minor Elements used
 - [x] Two additional view types such as sliders, segmented controllers, etc. The two we implemented are:  
-  - [ ] FIXME: 1
+  - [X] Segmented Controllers
   - [ ] FIXME: 2
 
 One of the following:
@@ -63,9 +63,10 @@ At least one of the following per team member:
 ## Work Distribution
 
 #### Mehmet Zenginerler
-- FIXME: 1
-- FIXME: 2
-- FIXME: 3
+- Login & Onboarding Page
+- Firebase & Pod Functionality
+- Animation & Background Integration
+- Overall Bug Fixes
 
 #### Michael Walters
 - Backend core data organization

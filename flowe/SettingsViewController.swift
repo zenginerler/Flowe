@@ -16,44 +16,52 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var colorText: UILabel!
     @IBOutlet weak var jingleText: UILabel!
     @IBOutlet weak var sleepText: UILabel!
+    @IBOutlet weak var signOutButton: UIButton!
     
     @IBOutlet weak var themeSegment: UISegmentedControl!
     @IBOutlet weak var jingleSegment: UISegmentedControl!
     @IBOutlet weak var sleepSwitch: UISwitch!
+    @IBOutlet weak var themeSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setDefaultSegments()
-        Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
+        
+        signOutButton.layer.masksToBounds = true
+        signOutButton.layer.cornerRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setDefaultSegments()
-        theme()
+        // Remember the dark mode button state
+        if (Variables.appTheme == 1) {
+            themeSwitch.isOn = false
+        } else {
+            themeSwitch.isOn = true
+        }
+        darkModeCheck()
     }
     
-    func setDefaultSegments() {
-        if Variables.defaults.string(forKey: Variables.kUserTheme) == "light" {
-            themeSegment.selectedSegmentIndex = 0
-        } else if Variables.defaults.string(forKey: Variables.kUserTheme) == "dark" {
-            themeSegment.selectedSegmentIndex = 1
+    @IBAction func changeTheme(_ sender: Any) {
+        if #available(iOS 13.0, *){
+            if (themeSwitch.isOn) {
+                Variables.appTheme = 2 // .dark
+            } else {
+                Variables.appTheme = 1 // .light
+            }
+        } else {
+            // pop up an alert if ios-13 isn't available
+            print("dark mode requires IOS 13+")
         }
+        darkModeCheck()
     }
     
     @IBAction func themeChange(_ sender: Any) {
         switch themeSegment.selectedSegmentIndex {
            case 0:
-                Variables.pageTheme = "light"
-            Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
-                theme()
+            print("option 1")
            case 1:
-                Variables.pageTheme = "dark"
-                Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
-                theme()
+            print("option 2")
            default:
-                Variables.pageTheme = "light"
-                Variables.defaults.set(Variables.pageTheme, forKey: Variables.kUserTheme)
-                theme()
+            print("default option")
            }
     }
     
@@ -79,42 +87,25 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func signOutButton(_ sender: Any) {
-        Variables.username = ""
-    }
-    
-    func theme() {
-        if Variables.defaults.string(forKey: Variables.kUserTheme) == "light" {
-            view.backgroundColor = UIColor.white
-            
-            self.colorText.textColor = UIColor.black
-            self.jingleText.textColor = UIColor.black
-            self.sleepText.textColor = UIColor.black
-            
-            self.themeSegment.setTitleTextAttributes(Variables.black, for: .normal)
-            self.themeSegment.setTitleTextAttributes(Variables.black, for: .selected)
-            
-            self.jingleSegment.setTitleTextAttributes(Variables.black, for: .normal)
-            self.jingleSegment.setTitleTextAttributes(Variables.black, for: .selected)
-            
-            navigationController?.navigationBar.titleTextAttributes = Variables.black
-            
-        } else if Variables.defaults.string(forKey: Variables.kUserTheme) == "dark" {
-            view.backgroundColor = Variables.gray
-            
-            self.colorText.textColor = UIColor.white
-            self.jingleText.textColor = UIColor.white
-            self.sleepText.textColor = UIColor.white
-            
-            self.themeSegment.setTitleTextAttributes(Variables.white, for: .normal)
-            self.themeSegment.setTitleTextAttributes(Variables.black, for: .selected)
-            
-            self.jingleSegment.setTitleTextAttributes(Variables.white, for: .normal)
-            self.jingleSegment.setTitleTextAttributes(Variables.black, for: .selected)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         
-            navigationController?.navigationBar.titleTextAttributes = Variables.white
-        }
-            
+        // Reset App settings
+        Variables.username = ""
+        Variables.userID = nil
+        Variables.appTheme = 1
+        Variables.jingle = "song 1"
+        Variables.sleep = "sun.png"
     }
     
-
+    func darkModeCheck() {
+        // Update the the theme according to user settings
+        if (Variables.appTheme == 1) {
+            overrideUserInterfaceStyle = .light
+        } else if (Variables.appTheme == 2) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            print("\nTheme ERROR")
+        }
+    }
+    
 }
