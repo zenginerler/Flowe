@@ -13,10 +13,10 @@ class WorkflowVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let childView = UIHostingController(rootView: WorkflowSwiftUIView())
-        addChild(childView)
-        childView.view.frame = theContainer.bounds
-        theContainer.addSubview(childView.view)
+//        let childView = UIHostingController(rootView: WorkflowSwiftUIView())
+//        addChild(childView)
+//        childView.view.frame = theContainer.bounds
+//        theContainer.addSubview(childView.view)
         assignbackground()
         
     }

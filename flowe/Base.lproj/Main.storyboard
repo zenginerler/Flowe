@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -333,7 +333,7 @@
         <!--Workflow-->
         <scene sceneID="XrY-VK-FDT">
             <objects>
-                <navigationController id="8y6-Ya-Z1h" sceneMemberID="viewController">
+                <navigationController id="8y6-Ya-Z1h" customClass="ChildHostingController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Workflow" image="pencil" catalog="system" selectedImage="pencil" id="XT5-Kv-gnA">
                         <color key="badgeColor" systemColor="labelColor"/>
                     </tabBarItem>
@@ -341,9 +341,6 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="bkI-AP-2fI" kind="relationship" relationship="rootViewController" id="t1h-xY-RVv"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbc-Fm-CMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -937,32 +934,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqg-7x-tPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="899" y="1961"/>
-        </scene>
-        <!--Workflow-->
-        <scene sceneID="Y4I-S2-qLX">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bei-IU-L6l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="bkI-AP-2fI" customClass="WorkflowVC" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rQA-LF-FU4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNl-ve-5MB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="aGT-a2-Bcg"/>
-                        <color key="backgroundColor" name="custom_bg"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Workflow" id="q6s-1q-tVQ"/>
-                    <connections>
-                        <outlet property="theContainer" destination="BNl-ve-5MB" id="8Ng-Ul-pFm"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-1315.9420289855072" y="1233.4821428571429"/>
         </scene>
         <!--GoalVC-->
         <scene sceneID="Szc-Uy-EAh">

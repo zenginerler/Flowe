@@ -105,6 +105,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		74287A60275966A3004E94E5 /* Workflow */ = {
+			isa = PBXGroup;
+			children = (
+				EC560D1B2759493400AE3C8B /* WorkflowSwiftUIView.swift */,
+				D7749A4027582C540070219B /* WorkflowVC.swift */,
+			);
+			path = Workflow;
+			sourceTree = "<group>";
+		};
+		74287A61275966BB004E94E5 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
+				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
+				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		74287A63275966E8004E94E5 /* Profile and Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC035D2743B91F0019E686 /* ProfileViewController.swift */,
+				D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */,
+				ECC7ACC12750C3A7000F8C5B /* SettingsViewController.swift */,
+			);
+			path = "Profile and Settings";
+			sourceTree = "<group>";
+		};
+		74287A642759673F004E94E5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */,
+				D7AF68592733A1E1001C7461 /* SegueVC.swift */,
+				D7AF68722733C64E001C7461 /* LoginHC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		74DB659C273B70440025CBCF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,20 +214,13 @@
 				D7AF68572733A1E1001C7461 /* SceneDelegate.swift */,
 				74DB659C273B70440025CBCF /* Models */,
 				74DF780A274C4224005DF304 /* Projects */,
-				ECC7ACBF2750BA6E000F8C5B /* Variables.swift */,
-				74DB65E3273C66240025CBCF /* HomeViewController.swift */,
-				74DB65E1273C66240025CBCF /* GoalViewController.swift */,
-				74DB65E2273C66240025CBCF /* GoalListViewController.swift */,
-				D7FC035D2743B91F0019E686 /* ProfileViewController.swift */,
-				D7FC035B2743B9160019E686 /* ProfileEditViewController.swift */,
-				ECC7ACC12750C3A7000F8C5B /* SettingsViewController.swift */,
+				74287A61275966BB004E94E5 /* Homepage */,
+				74287A63275966E8004E94E5 /* Profile and Settings */,
+				74287A642759673F004E94E5 /* Login */,
+				74287A60275966A3004E94E5 /* Workflow */,
 				D7AF685B2733A1E1001C7461 /* Main.storyboard */,
-				EC560D1B2759493400AE3C8B /* WorkflowSwiftUIView.swift */,
-				D7749A4027582C540070219B /* WorkflowVC.swift */,
-				D7AF68742733CC75001C7461 /* SegueSwiftUI.swift */,
-				D7AF68592733A1E1001C7461 /* SegueVC.swift */,
-				D7AF68722733C64E001C7461 /* LoginHC.swift */,
 				D7AF68632733A1E1001C7461 /* LaunchScreen.storyboard */,
+				ECC7ACBF2750BA6E000F8C5B /* Variables.swift */,
 				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
 				D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */,
 				D7AF687627348335001C7461 /* GoogleService-Info.plist */,

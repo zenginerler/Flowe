@@ -18,3 +18,15 @@ struct WorkflowSwiftUIView_Previews: PreviewProvider {
         WorkflowSwiftUIView()
     }
 }
+
+class ChildHostingController: UIHostingController<WorkflowSwiftUIView> {
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder,rootView: WorkflowSwiftUIView());
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
