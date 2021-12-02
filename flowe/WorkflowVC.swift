@@ -8,9 +8,15 @@
 import UIKit
 
 class WorkflowVC: UIViewController {
-
+    
+    @IBOutlet weak var theContainer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let childView = UIHostingController(rootView: WorkflowSwiftUIView())
+        addChild(childView)
+        childView.view.frame = theContainer.bounds
+        theContainer.addSubview(childView.view)
         assignbackground()
         
     }
