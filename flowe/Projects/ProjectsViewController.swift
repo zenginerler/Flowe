@@ -157,11 +157,11 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
                                               message: "Are you sure you want to send this project to the archive? You can always recover this project from the archives.",
                                               preferredStyle: .alert)
                 
-                let selectAction = UIAlertAction(title: "Delete",
+                let selectAction = UIAlertAction(title: "Send to Archives",
                                                  style: .destructive,
                                                  handler: {
                                                     [self] _ in
-                                                    self.context.delete(projectToRemove)
+                                                    projectToRemove.finished = true
                                                     do {
                                                         try self.context.save()
                                                     }catch{
@@ -175,7 +175,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
                 alert.addAction(cancelAction)
             self.present(alert, animated: true)
         })
-        action.image = UIImage(systemName: "trash")
+        action.image = UIImage(systemName: "archivebox.fill")
         return UISwipeActionsConfiguration(actions: [action])
     }
     
