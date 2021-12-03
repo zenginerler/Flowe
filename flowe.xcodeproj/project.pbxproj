@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		74287A6A2759B41F004E94E5 /* projects.json in Resources */ = {isa = PBXBuildFile; fileRef = 74287A692759B41F004E94E5 /* projects.json */; };
 		74287A6C275A8403004E94E5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74287A6B275A8402004E94E5 /* NotificationView.swift */; };
+		742D79F2275AB0B700D2B6B1 /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D79F0275AB0B700D2B6B1 /* Projects+CoreDataClass.swift */; };
+		742D79F3275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D79F1275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift */; };
 		74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */; };
 		74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */; };
-		74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */; };
-		74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */; };
 		74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */; };
 		74DB65DC273C646A0025CBCF /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */; };
 		74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */; };
@@ -50,10 +50,10 @@
 		6100470B089EA2F9A9B982AC /* Pods-flowe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowe.debug.xcconfig"; path = "Target Support Files/Pods-flowe/Pods-flowe.debug.xcconfig"; sourceTree = "<group>"; };
 		74287A692759B41F004E94E5 /* projects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = projects.json; sourceTree = "<group>"; };
 		74287A6B275A8402004E94E5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		742D79F0275AB0B700D2B6B1 /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Projects+CoreDataClass.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/Projects+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		742D79F1275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Projects+CoreDataProperties.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/Projects+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
-		74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -155,10 +155,10 @@
 			children = (
 				74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */,
 				74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */,
-				74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */,
-				74DB65D0273C646A0025CBCF /* Projects+CoreDataProperties.swift */,
 				74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */,
 				74DB65D2273C646A0025CBCF /* Tasks+CoreDataProperties.swift */,
+				742D79F0275AB0B700D2B6B1 /* Projects+CoreDataClass.swift */,
+				742D79F1275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift */,
 				74DB65D3273C646A0025CBCF /* Profile+CoreDataClass.swift */,
 				74DB65D4273C646A0025CBCF /* Profile+CoreDataProperties.swift */,
 				74DB65D5273C646A0025CBCF /* Goals+CoreDataClass.swift */,
@@ -369,9 +369,8 @@
 				74DB65DD273C646A0025CBCF /* Profile+CoreDataClass.swift in Sources */,
 				74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */,
 				74DB65DC273C646A0025CBCF /* Tasks+CoreDataProperties.swift in Sources */,
-				74DB65DA273C646A0025CBCF /* Projects+CoreDataProperties.swift in Sources */,
 				EC560D1E2759912C00AE3C8B /* Tasks.swift in Sources */,
-				74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */,
+				742D79F2275AB0B700D2B6B1 /* Projects+CoreDataClass.swift in Sources */,
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7749A4127582C540070219B /* WorkflowVC.swift in Sources */,
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
@@ -381,6 +380,7 @@
 				ECC7ACC02750BA6E000F8C5B /* Variables.swift in Sources */,
 				74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */,
 				ECC7ACC22750C3A7000F8C5B /* SettingsViewController.swift in Sources */,
+				742D79F3275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift in Sources */,
 				74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */,
 				D7FC035E2743B91F0019E686 /* ProfileViewController.swift in Sources */,
 				EC560D1C2759493400AE3C8B /* WorkflowSwiftUIView.swift in Sources */,

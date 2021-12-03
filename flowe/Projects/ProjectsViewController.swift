@@ -46,11 +46,19 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         formatter.dateStyle = .full
         formatter.timeStyle = .none
         getProjects()
+        wrapperView.backgroundColor = view.backgroundColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if Variables.removeProject {
+            projects![row].finished = true
             projects?.remove(at: row)
+            do {
+                try self.context.save()
+            }catch{
+                print("There was an error in saving the Project")
+            }
+            self.getProjects()
             Variables.removeProject = false
         }
         self.projectsTableView.reloadData()
@@ -63,7 +71,17 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func getProjects() {
-        try! projects = self.context.fetch(Projects.fetchRequest())
+        do{
+            let request = Projects.fetchRequest() as NSFetchRequest<Projects>
+            let owner = NSPredicate(format: "owner == %@", Variables.username)
+            let finished = NSPredicate(format: "finished == %d", false)
+            let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [owner,finished])
+            request.predicate = compound
+            try self.projects = self.context.fetch(request)
+        }
+        catch{
+            
+        }
         //Update UI in queue
         DispatchQueue.main.async {
             self.projectsTableView.reloadData()
@@ -111,6 +129,8 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
             newProject.due = self.datePicker.date
             newProject.name = alert.textFields![0].text
             newProject.about = alert.textFields![2].text
+            newProject.owner = Variables.username
+            newProject.finished = false
             do {
                 try self.context.save()
             }catch{
