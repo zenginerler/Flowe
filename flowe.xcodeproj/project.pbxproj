@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74287A6A2759B41F004E94E5 /* projects.json in Resources */ = {isa = PBXBuildFile; fileRef = 74287A692759B41F004E94E5 /* projects.json */; };
 		74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */; };
 		74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */; };
 		74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		6100470B089EA2F9A9B982AC /* Pods-flowe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowe.debug.xcconfig"; path = "Target Support Files/Pods-flowe/Pods-flowe.debug.xcconfig"; sourceTree = "<group>"; };
+		74287A692759B41F004E94E5 /* projects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = projects.json; sourceTree = "<group>"; };
 		74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D769BBB627527A2300EEF3BA /* workflow.json */,
+				74287A692759B41F004E94E5 /* projects.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				D7AF68652733A1E1001C7461 /* LaunchScreen.storyboard in Resources */,
 				D7AF687727348335001C7461 /* GoogleService-Info.plist in Resources */,
 				D769BBB727527A2300EEF3BA /* workflow.json in Resources */,
+				74287A6A2759B41F004E94E5 /* projects.json in Resources */,
 				D7AF68622733A1E1001C7461 /* Assets.xcassets in Resources */,
 				D7AF685D2733A1E1001C7461 /* Main.storyboard in Resources */,
 			);

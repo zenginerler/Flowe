@@ -757,8 +757,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ena-Rj-TKX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ena-Rj-TKX">
+                                <rect key="frame" x="0.0" y="236" width="414" height="577"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="custom_bg"/>
                                 <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -776,14 +777,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Chz-nu-TzL">
+                                <rect key="frame" x="101" y="108" width="212" height="111"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="Kcm-7m-O4a"/>
+                                    <constraint firstAttribute="height" constant="111" id="lLE-w5-hAc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LQM-zf-vm8"/>
                         <color key="backgroundColor" name="custom_bg"/>
                         <constraints>
-                            <constraint firstItem="LQM-zf-vm8" firstAttribute="bottom" secondItem="ena-Rj-TKX" secondAttribute="bottom" id="224-a1-kpV"/>
-                            <constraint firstItem="ena-Rj-TKX" firstAttribute="top" secondItem="LQM-zf-vm8" secondAttribute="top" id="8dm-jW-FE6"/>
-                            <constraint firstItem="LQM-zf-vm8" firstAttribute="trailing" secondItem="ena-Rj-TKX" secondAttribute="trailing" id="8n2-vu-x9j"/>
-                            <constraint firstItem="ena-Rj-TKX" firstAttribute="leading" secondItem="LQM-zf-vm8" secondAttribute="leading" id="Bbp-cC-QQ9"/>
+                            <constraint firstItem="Chz-nu-TzL" firstAttribute="centerX" secondItem="LQM-zf-vm8" secondAttribute="centerX" id="Vut-RN-6Dn"/>
+                            <constraint firstItem="Chz-nu-TzL" firstAttribute="top" secondItem="LQM-zf-vm8" secondAttribute="top" constant="20" id="X9c-tM-HSA"/>
+                            <constraint firstItem="Chz-nu-TzL" firstAttribute="leading" secondItem="LQM-zf-vm8" secondAttribute="leading" constant="101" id="rvn-Lx-X2J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Projects" id="pW2-Tf-PN8">
@@ -796,11 +804,12 @@
                     <connections>
                         <outlet property="addProjectButton" destination="A8d-zm-iLC" id="NEZ-VR-qFp"/>
                         <outlet property="projectsTableView" destination="ena-Rj-TKX" id="Kaw-Zw-dO7"/>
+                        <outlet property="wrapperView" destination="Chz-nu-TzL" id="dVX-8H-O6k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFS-Rm-n0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186" y="1233"/>
+            <point key="canvasLocation" x="-186.95652173913044" y="1232.8125"/>
         </scene>
         <!--ProjectsHoistingController-->
         <scene sceneID="zLA-ph-xCh">

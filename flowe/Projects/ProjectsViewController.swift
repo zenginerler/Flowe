@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 import CoreData
 import SwiftUI
+import Lottie
 
 class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -18,6 +19,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var projectsTableView: UITableView!
     @IBOutlet weak var addProjectButton: UIBarButtonItem!
+    @IBOutlet weak var wrapperView: UIView!
     
     var projects: [Projects]?
     var row = 0
@@ -27,9 +29,19 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     let datePicker = UIDatePicker()
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
+    
+    var animationView: AnimationView?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Lottie Animation Settings
+        animationView = .init(name: "projects")
+        animationView?.contentMode = .scaleAspectFit
+        animationView?.loopMode = .loop
+        animationView?.animationSpeed = 1
+        animationView?.frame = wrapperView.bounds
+        wrapperView.addSubview(animationView!)
         projectsTableView.delegate = self
         projectsTableView.dataSource = self
         formatter.dateStyle = .full
@@ -44,6 +56,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidAppear(_ animated: Bool) {
         self.projectsTableView.reloadData()
+        animationView?.play()
     }
     
     func getProjects() {

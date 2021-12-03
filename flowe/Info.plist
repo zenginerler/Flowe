@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string>permission?</string>
+	<string>Please allow Flowe to access the calendar.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Please allow Flowe to access your reminders.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -91,15 +91,8 @@ class ProfileEditViewController: UIViewController {
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
-        
     }
     
-    func fieldIsBlank (field: UITextField) -> Bool{
-        if field.state.isEmpty{
-            return true
-        }
-        return false
-    }
 
     func darkModeCheck() {
         // Update the the theme according to user settings

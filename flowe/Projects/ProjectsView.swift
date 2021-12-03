@@ -186,10 +186,12 @@ struct ProjectsView: View {
                     .multilineTextAlignment(.leading)
                     .padding(.leading, 25)
                 Spacer()
+                Spacer()
                 // edit button
                 // delete button
             }
             .padding(.bottom, 45)
+            .padding(.top, 40)
 
             // project details
             VStack{
@@ -209,92 +211,6 @@ struct ProjectsView: View {
                     Spacer()
                 }
                 .padding(.top, 15.0)
-                .padding(.bottom, 20)
-                .padding(.leading, 20)
-
-                // project creator
-                HStack{
-                    Image(systemName: "person.fill")
-                        .foregroundColor(Color.white)
-                    Text("Lead: ")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    Text("John Smith")
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.leading)
-                    Spacer()
-                }
-                .padding(.top, 10.0)
-                .padding(.bottom, 20)
-                .padding(.leading, 20)
-
-                //team
-                HStack{
-                    Image(systemName: "person.3.fill")
-                        .foregroundColor(Color.white)
-                    Text("Team: ")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    Text("John Smith, and 3 more")
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Spacer()
-                }
-                .padding(.top, 10.0)
-                .padding(.bottom, 20)
-                .padding(.leading, 20)
-
-                HStack{
-                    Image(systemName: "checkmark")
-                        .foregroundColor(Color.white)
-                    Text("Tasks: ")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    VStack{
-                        Text("Update 1")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                        Text("Update 2")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .padding(.leading, 10)
-                    Spacer()
-                }
-                .padding(.top, 10.0)
-                .padding(.bottom, 20)
-                .padding(.leading, 20)
-
-                HStack{
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.white)
-                    Text("Goals: ")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    Text("Breakthrough 1")
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Spacer()
-                }
-                .padding(.top, 10.0)
                 .padding(.bottom, 20)
                 .padding(.leading, 20)
 
@@ -324,6 +240,45 @@ struct ProjectsView: View {
             // i dont know why this says view but it builds...
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.667, saturation: 0.051, brightness: 0.158)/*@END_MENU_TOKEN@*/)
             .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
+            Spacer()
+            
+            Button (action: {
+                // code here
+            }, label: {
+                Text("Add Reminder")
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 150)
+                    .background(Color("custom_gray"))
+                    .cornerRadius(15)
+            }).padding(.top)
+                
+            Button (action: {
+                // code here
+            }, label: {
+                Text("Add to Calendar")
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 150)
+                    .background(Color("custom_gray"))
+                    .cornerRadius(15)
+            }).padding(.top)
+            
+            Button (action: {
+                // code here
+            }, label: {
+                Text("Mark as Complete")
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 150)
+                    .background(Color.green)
+                    .cornerRadius(15)
+            }).padding(.top)
+            
+            Spacer()
             Spacer()
         }
         .padding(.leading, 20)
