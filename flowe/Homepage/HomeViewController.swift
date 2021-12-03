@@ -110,10 +110,10 @@ class HomeViewController: UIViewController {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_home_light")
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_1_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_home_dark")
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_1_dark")
         } else {
             print("\nTheme ERROR")
         }

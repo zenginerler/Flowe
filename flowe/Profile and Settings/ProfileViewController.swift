@@ -96,10 +96,10 @@ class ProfileViewController: UIViewController {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_profile_light")
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_2_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_profile_dark")
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_2_dark")
         } else {
             print("\nTheme ERROR")
         }

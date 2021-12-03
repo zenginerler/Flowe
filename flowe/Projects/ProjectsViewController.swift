@@ -31,7 +31,6 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     lazy var context = appDelegate.persistentContainer.viewContext
     
     var animationView: AnimationView?
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +49,10 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if Variables.removeProject {
+            projects?.remove(at: row)
+            Variables.removeProject = false
+        }
         self.projectsTableView.reloadData()
         darkModeCheck()
     }

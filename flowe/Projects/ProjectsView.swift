@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import UIKit
+import Lottie
 
 struct ProjectsView: View {
     
     @State var project: Projects?
     @Environment(\.managedObjectContext) var managedObjectContext
     @State private var showingAlert = false
+    @State var lightMode = Color(hue: 0.618, saturation: 0.546, brightness: 0.702)
+    @State var darkMode = Color(hue: 0.618, saturation: 0.546, brightness: 0.702)
+    
+    @State var reminderTapped = false
+    @State var calendarTapped = false
+    @State var completeTapped = false
     
     var body: some View {
         
@@ -242,8 +250,10 @@ struct ProjectsView: View {
             .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
             Spacer()
             
+            
+            
             Button (action: {
-                // code here
+                self.reminderTapped = true
             }, label: {
                 Text("Add Reminder")
                     .fontWeight(.heavy)
@@ -255,7 +265,7 @@ struct ProjectsView: View {
             }).padding(.top)
                 
             Button (action: {
-                // code here
+                self.calendarTapped = true
             }, label: {
                 Text("Add to Calendar")
                     .fontWeight(.heavy)
@@ -267,7 +277,9 @@ struct ProjectsView: View {
             }).padding(.top)
             
             Button (action: {
-                // code here
+                self.completeTapped = true
+                Variables.removeProject = true
+                
             }, label: {
                 Text("Mark as Complete")
                     .fontWeight(.heavy)
@@ -277,13 +289,20 @@ struct ProjectsView: View {
                     .background(Color.green)
                     .cornerRadius(15)
             }).padding(.top)
-            
             Spacer()
             Spacer()
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)
-        .background(Color("custom_blue"))
+        .background(Color(hue: 0.618, saturation: 0.546, brightness: 0.702))
+        .fullScreenCover(isPresented: $reminderTapped) {
+            // Custom Page Segue from SwiftUI to UIkit
+            SegueSwiftUI(storyboard: "Main", VC: "SegueVC").ignoresSafeArea(.all)
+        }
+        .fullScreenCover(isPresented: $calendarTapped) {
+            // Custom Page Segue from SwiftUI to UIkit
+            SegueSwiftUI(storyboard: "Main", VC: "SegueVC").ignoresSafeArea(.all)
+        }
          //end test vstack - comment at this line
     }
 }

@@ -22,4 +22,7 @@ class Variables: UIViewController {
     
     // Sleep icon
     static var sleep = "sun.png"
+    
+    // remove project variable
+    static var removeProject = false
 }

@@ -78,7 +78,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="fJL-DL-OBO">
             <objects>
-                <tabBarController id="stO-GN-KmJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="stO-GN-KmJ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ukK-xv-nHw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -749,10 +749,10 @@
             </objects>
             <point key="canvasLocation" x="1858" y="1233"/>
         </scene>
-        <!--Projects-->
+        <!--Project View Controller-->
         <scene sceneID="zRu-QW-1ab">
             <objects>
-                <viewController id="iD5-DE-8rn" customClass="ProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectViewController" id="iD5-DE-8rn" customClass="ProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o4M-XX-b3a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -794,7 +794,7 @@
                             <constraint firstItem="Chz-nu-TzL" firstAttribute="leading" secondItem="LQM-zf-vm8" secondAttribute="leading" constant="101" id="rvn-Lx-X2J"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Projects" id="pW2-Tf-PN8">
+                    <navigationItem key="navigationItem" id="pW2-Tf-PN8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="A8d-zm-iLC">
                             <connections>
                                 <action selector="addPressed:" destination="iD5-DE-8rn" id="1vb-X1-wtb"/>

@@ -153,7 +153,7 @@ struct LoginHome: View {
             
             // Sign up Text & Button
             HStack(spacing: 5){
-                Text("Don't you have an account?")
+                Text("Don't have an account?")
                     .foregroundColor(Color.white.opacity(0.6))
                 
                 // Add the SignUpPage to the NavigationView Stack:

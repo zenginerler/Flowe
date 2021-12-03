@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74287A6A2759B41F004E94E5 /* projects.json in Resources */ = {isa = PBXBuildFile; fileRef = 74287A692759B41F004E94E5 /* projects.json */; };
+		74287A6C275A8403004E94E5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74287A6B275A8402004E94E5 /* NotificationView.swift */; };
 		74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */; };
 		74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */; };
 		74DB65D9273C646A0025CBCF /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		6100470B089EA2F9A9B982AC /* Pods-flowe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowe.debug.xcconfig"; path = "Target Support Files/Pods-flowe/Pods-flowe.debug.xcconfig"; sourceTree = "<group>"; };
 		74287A692759B41F004E94E5 /* projects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = projects.json; sourceTree = "<group>"; };
+		74287A6B275A8402004E94E5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65CF273C646A0025CBCF /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */,
 				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				74DF780B274C4277005DF304 /* ProjectsView.swift */,
+				74287A6B275A8402004E94E5 /* NotificationView.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				EC560D1C2759493400AE3C8B /* WorkflowSwiftUIView.swift in Sources */,
 				74DB65DE273C646A0025CBCF /* Profile+CoreDataProperties.swift in Sources */,
 				D7AF68602733A1E1001C7461 /* flowe.xcdatamodeld in Sources */,
+				74287A6C275A8403004E94E5 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
