@@ -19,7 +19,7 @@ struct ProjectsView: View {
     
     @State var reminderTapped = false
     @State var calendarTapped = false
-    @State var completeTapped = false
+    @State private var completeTapped: Bool = false
     
     var body: some View {
         
@@ -249,11 +249,8 @@ struct ProjectsView: View {
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.667, saturation: 0.051, brightness: 0.158)/*@END_MENU_TOKEN@*/)
             .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
             Spacer()
-            
-            
-            
             Button (action: {
-                self.reminderTapped = true
+                self.reminderTapped.toggle()
             }, label: {
                 Text("Add Reminder")
                     .fontWeight(.heavy)
@@ -263,7 +260,7 @@ struct ProjectsView: View {
                     .background(Color("custom_gray"))
                     .cornerRadius(15)
             }).padding(.top)
-                
+            
             Button (action: {
                 self.calendarTapped = true
             }, label: {
@@ -277,7 +274,9 @@ struct ProjectsView: View {
             }).padding(.top)
             
             Button (action: {
-                self.completeTapped = true
+                withAnimation{
+                    self.completeTapped = true
+                }
                 Variables.removeProject = true
                 
             }, label: {
@@ -290,7 +289,13 @@ struct ProjectsView: View {
                     .cornerRadius(15)
             }).padding(.top)
             Spacer()
+            if completeTapped {
+                NotificationView()
+                    .offset(y: -UIScreen.main.bounds.height/6)
+                    .transition(.asymmetric(insertion: .scale, removal: .slide))
+            }
             Spacer()
+
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)
