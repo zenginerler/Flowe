@@ -11,6 +11,7 @@
 		74287A6C275A8403004E94E5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74287A6B275A8402004E94E5 /* NotificationView.swift */; };
 		742D79F2275AB0B700D2B6B1 /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D79F0275AB0B700D2B6B1 /* Projects+CoreDataClass.swift */; };
 		742D79F3275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D79F1275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift */; };
+		742D79F5275ABEE500D2B6B1 /* ProjectArchiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D79F4275ABEE500D2B6B1 /* ProjectArchiveVC.swift */; };
 		74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */; };
 		74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */; };
 		74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */; };
@@ -52,6 +53,7 @@
 		74287A6B275A8402004E94E5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		742D79F0275AB0B700D2B6B1 /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Projects+CoreDataClass.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/Projects+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		742D79F1275AB0B700D2B6B1 /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Projects+CoreDataProperties.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/Projects+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		742D79F4275ABEE500D2B6B1 /* ProjectArchiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectArchiveVC.swift; sourceTree = "<group>"; };
 		74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */,
+				742D79F4275ABEE500D2B6B1 /* ProjectArchiveVC.swift */,
 				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				74DF780B274C4277005DF304 /* ProjectsView.swift */,
 				74287A6B275A8402004E94E5 /* NotificationView.swift */,
@@ -359,6 +362,7 @@
 			files = (
 				D769BBB427512E9000EEF3BA /* AppDelegate.swift in Sources */,
 				D769BBB327512E4600EEF3BA /* SegueVC.swift in Sources */,
+				742D79F5275ABEE500D2B6B1 /* ProjectArchiveVC.swift in Sources */,
 				D7AF68752733CC75001C7461 /* SegueSwiftUI.swift in Sources */,
 				D7AF68732733C64E001C7461 /* LoginHC.swift in Sources */,
 				74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */,

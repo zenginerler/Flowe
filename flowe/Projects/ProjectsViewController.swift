@@ -154,7 +154,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
             
             // alert to confirm the delete action
             let alert = UIAlertController(title: "Remove \(projectToRemove.name ?? "")",
-                                              message: "Are you sure you want to remove this project? This action is irreversible.",
+                                              message: "Are you sure you want to send this project to the archive? You can always recover this project from the archives.",
                                               preferredStyle: .alert)
                 
                 let selectAction = UIAlertAction(title: "Delete",

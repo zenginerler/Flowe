@@ -749,7 +749,7 @@
             </objects>
             <point key="canvasLocation" x="1858" y="1233"/>
         </scene>
-        <!--Project View Controller-->
+        <!--Projects-->
         <scene sceneID="zRu-QW-1ab">
             <objects>
                 <viewController storyboardIdentifier="ProjectViewController" id="iD5-DE-8rn" customClass="ProjectViewController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
@@ -778,23 +778,40 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Chz-nu-TzL">
-                                <rect key="frame" x="101" y="108" width="212" height="111"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="20" y="108" width="125" height="111"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="212" id="Kcm-7m-O4a"/>
-                                    <constraint firstAttribute="height" constant="111" id="lLE-w5-hAc"/>
+                                    <constraint firstAttribute="height" constant="111" id="gAC-4D-5JK"/>
+                                    <constraint firstAttribute="width" constant="125" id="nh9-c8-0i3"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-Mz-m03">
+                                <rect key="frame" x="219" y="140" width="164" height="67"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.64313725490196072" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="xC2-3A-kdf"/>
+                                    <constraint firstAttribute="width" constant="164" id="yNm-0g-8MI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Project Archive">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="65s-d3-Xu2" kind="show" id="fng-Hk-x3x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LQM-zf-vm8"/>
                         <color key="backgroundColor" name="custom_bg"/>
                         <constraints>
-                            <constraint firstItem="Chz-nu-TzL" firstAttribute="centerX" secondItem="LQM-zf-vm8" secondAttribute="centerX" id="Vut-RN-6Dn"/>
-                            <constraint firstItem="Chz-nu-TzL" firstAttribute="top" secondItem="LQM-zf-vm8" secondAttribute="top" constant="20" id="X9c-tM-HSA"/>
-                            <constraint firstItem="Chz-nu-TzL" firstAttribute="leading" secondItem="LQM-zf-vm8" secondAttribute="leading" constant="101" id="rvn-Lx-X2J"/>
+                            <constraint firstItem="Chz-nu-TzL" firstAttribute="leading" secondItem="LQM-zf-vm8" secondAttribute="leading" constant="20" id="3N2-yu-IWA"/>
+                            <constraint firstItem="LQM-zf-vm8" firstAttribute="trailing" secondItem="WGc-Mz-m03" secondAttribute="trailing" constant="31" id="8x5-ak-vRE"/>
+                            <constraint firstItem="WGc-Mz-m03" firstAttribute="top" secondItem="LQM-zf-vm8" secondAttribute="top" constant="52" id="Pdb-kQ-M4R"/>
+                            <constraint firstItem="Chz-nu-TzL" firstAttribute="top" secondItem="LQM-zf-vm8" secondAttribute="top" constant="20" id="VI2-u7-NGA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pW2-Tf-PN8">
+                    <navigationItem key="navigationItem" title="Projects" id="pW2-Tf-PN8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="A8d-zm-iLC">
                             <connections>
                                 <action selector="addPressed:" destination="iD5-DE-8rn" id="1vb-X1-wtb"/>
@@ -809,7 +826,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFS-Rm-n0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186.95652173913044" y="1232.8125"/>
+            <point key="canvasLocation" x="-201" y="1233"/>
         </scene>
         <!--ProjectsHoistingController-->
         <scene sceneID="zLA-ph-xCh">
@@ -819,7 +836,7 @@
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWk-G0-h65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="1961"/>
+            <point key="canvasLocation" x="226" y="1961"/>
         </scene>
         <!--Flowe Settings-->
         <scene sceneID="rVB-zv-Yux">
@@ -1066,7 +1083,64 @@
             </objects>
             <point key="canvasLocation" x="-2465.217391304348" y="2682.5892857142858"/>
         </scene>
+        <!--Project Archive-->
+        <scene sceneID="Fyw-FZ-n9P">
+            <objects>
+                <viewController storyboardIdentifier="ProjectArchiveVC" id="65s-d3-Xu2" customClass="ProjectArchiveVC" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJG-aM-GnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="imY-Qf-RU7">
+                                <rect key="frame" x="0.0" y="236" width="414" height="577"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="custom_bg"/>
+                                <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="archiveCell" rowHeight="105" id="JPn-cQ-Qz3">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JPn-cQ-Qz3" id="fEw-fu-9ul">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="custom_bg"/>
+                                        <connections>
+                                            <segue destination="08Y-eK-BW6" kind="show" destinationCreationSelector="shoowArchivedProject:" id="w4d-Y1-zKY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayC-5g-BsP">
+                                <rect key="frame" x="20" y="108" width="125" height="111"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="3sE-Ze-AiR"/>
+                                    <constraint firstAttribute="width" constant="125" id="r8E-ha-VqI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ESm-v0-0Rs"/>
+                        <color key="backgroundColor" name="custom_bg"/>
+                        <constraints>
+                            <constraint firstItem="ayC-5g-BsP" firstAttribute="top" secondItem="ESm-v0-0Rs" secondAttribute="top" constant="20" id="fFF-1t-TdK"/>
+                            <constraint firstItem="ayC-5g-BsP" firstAttribute="leading" secondItem="ESm-v0-0Rs" secondAttribute="leading" constant="20" id="ty1-BB-LH6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Project Archive" id="oIT-tc-FTv"/>
+                    <connections>
+                        <outlet property="projectsTableView" destination="imY-Qf-RU7" id="Qfb-ck-A2V"/>
+                        <outlet property="wrapperView" destination="ayC-5g-BsP" id="cqR-Yz-nrG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yb-le-92Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-512" y="1961"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="w4d-Y1-zKY"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
@@ -1098,6 +1172,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

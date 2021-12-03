@@ -288,12 +288,19 @@ struct ProjectsView: View {
                     .background(Color.green)
                     .cornerRadius(15)
             }).padding(.top)
-            Spacer()
             if completeTapped {
                 NotificationView()
+                    .onAppear {
+                        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+                            withAnimation(.default) {
+                                self.completeTapped.toggle()
+                            }
+                        }
+                    }
                     .offset(y: -UIScreen.main.bounds.height/6)
                     .transition(.asymmetric(insertion: .scale, removal: .slide))
             }
+            Spacer()
             Spacer()
 
         }
