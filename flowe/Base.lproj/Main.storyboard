@@ -1110,8 +1110,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="uOv-uP-0pr"/>
                     <connections>
+                        <outlet property="dateTextField" destination="tU7-f3-imH" id="lhp-cj-vgX"/>
                         <outlet property="goalContent" destination="dAI-ze-OIh" id="NFp-Hj-Qpc"/>
                         <outlet property="journalStatusLabel" destination="cNb-nJ-EEe" id="4jt-Q4-IR9"/>
+                        <outlet property="titleTextField" destination="9ba-XR-nTX" id="Yd3-4z-DsK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMZ-gw-eDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

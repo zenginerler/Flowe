@@ -20,6 +20,8 @@ class GoalViewController: UIViewController {
     let eventStore = EKEventStore()
     var savedEventId:String = ""
     
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var journalStatusLabel: UILabel!
     @IBOutlet weak var goalContent: UITextField!
     
