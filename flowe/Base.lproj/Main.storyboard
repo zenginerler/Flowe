@@ -256,6 +256,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN4-w9-LAX">
+                                <rect key="frame" x="259" y="274" width="135" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="Gns-kT-CUJ"/>
+                                    <constraint firstAttribute="width" constant="135" id="YXY-ND-cNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9U-8H-qyh">
                                 <rect key="frame" x="134" y="449" width="205" height="40"/>
                                 <constraints>
@@ -289,16 +299,13 @@
                                     <constraint firstAttribute="width" constant="122" id="szJ-3o-TTM"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN4-w9-LAX">
-                                <rect key="frame" x="259" y="274" width="135" height="143"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flowe_icon_w" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-ag-0X6">
+                                <rect key="frame" x="73" y="102" width="57" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="143" id="Gns-kT-CUJ"/>
-                                    <constraint firstAttribute="width" constant="135" id="YXY-ND-cNr"/>
+                                    <constraint firstAttribute="height" constant="58" id="Hmz-No-h19"/>
+                                    <constraint firstAttribute="width" constant="57" id="RHq-Dc-RLP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m5K-9q-6gs"/>
                         <color key="backgroundColor" name="custom_bg"/>
@@ -307,6 +314,8 @@
                             <constraint firstItem="hxe-QX-DAH" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="260" id="6L8-DQ-xbj"/>
                             <constraint firstItem="Mv7-0m-5AC" firstAttribute="centerX" secondItem="m5K-9q-6gs" secondAttribute="centerX" id="7c1-6G-Ifk"/>
                             <constraint firstItem="WvM-my-4SU" firstAttribute="centerX" secondItem="Pge-ek-9Da" secondAttribute="centerX" id="A8d-Nf-Srr"/>
+                            <constraint firstItem="QBN-ag-0X6" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="14" id="LFL-R4-phD"/>
+                            <constraint firstItem="QBN-ag-0X6" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="73" id="R9e-8x-SBv"/>
                             <constraint firstItem="dof-67-SdR" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="40" id="RFz-B0-VEf"/>
                             <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="WvM-my-4SU" secondAttribute="trailing" constant="20" id="SjZ-zy-j5x"/>
                             <constraint firstItem="mLa-FA-4uS" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="650" id="ZTg-Lb-AIg"/>
@@ -1220,6 +1229,7 @@
     <resources>
         <image name="archivebox.fill" catalog="system" width="128" height="106"/>
         <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <image name="flowe_icon_w" width="3000" height="3000"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="network" catalog="system" width="128" height="121"/>
