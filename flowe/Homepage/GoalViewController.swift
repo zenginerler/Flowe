@@ -78,10 +78,10 @@ class GoalViewController: UIViewController {
         let goall = NSEntityDescription.insertNewObject(
             forEntityName: "Goals", into: context)
         
-        
         // store values in Core data
         goall.setValue(newGoal.type_g, forKey: "type")
         goall.setValue(newGoal.content_g, forKey: "content")
+        
         print(goall)
         do {
             try context.save()

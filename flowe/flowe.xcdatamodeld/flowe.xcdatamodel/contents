@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Goals" representedClassName="Goals" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
@@ -46,7 +48,7 @@
         <relationship name="userWorkflow" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="workflow" inverseEntity="Users"/>
     </entity>
     <elements>
-        <element name="Goals" positionX="-130.35546875" positionY="83.468994140625" width="128" height="59"/>
+        <element name="Goals" positionX="-130.35546875" positionY="83.468994140625" width="128" height="89"/>
         <element name="Profile" positionX="96.5985107421875" positionY="194.6828002929688" width="128" height="133"/>
         <element name="Projects" positionX="-327.4286499023438" positionY="-68.54510498046875" width="128" height="209"/>
         <element name="Tasks" positionX="-130.6796264648438" positionY="-36.32534790039062" width="128" height="89"/>
