@@ -7,42 +7,75 @@
 
 import SwiftUI
 
-var myTasks = [dailyTasks(id: 1, date: "date 1", task: "task 1"),
-               dailyTasks(id: 2, date: "date 2", task: "task 2"),
-               dailyTasks(id: 3, date: "date 3", task: "task 3"),
-               dailyTasks(id: 4, date: "date 4", task: "task 4")]
-
-struct ListRow: View {
-    var eachTask: dailyTasks
-    var body: some View {
-        HStack {
-            Text(eachTask.date)
-            Text(eachTask.task)
-        }
-    }
-}
-
 struct WorkflowSwiftUIView: View {
-    var taskToDo: [dailyTasks]
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(
+      entity: Workflow.entity(),
+      sortDescriptors: [
+        NSSortDescriptor(keyPath: \Workflow.title, ascending: true)
+      ]
+    ) var tasksList: FetchedResults<Workflow>
+
+    @State var isPresented = false
+
     var body: some View {
-        NavigationView {
-            List(taskToDo){
-                task in ListRow(eachTask: task)
-            }
-        }.navigationBarTitle(Text("Daily Tasks"))
+      NavigationView {
+        List {
+          ForEach(tasksList, id: \.title) {
+            TaskRow(taskObject: $0)
+          }
+          .onDelete(perform: deleteTask)
+        }
+        .sheet(isPresented: $isPresented) {
+          AddTask { title, task, date in
+            self.addTask(title: title, task: task, date: date)
+            self.isPresented = false
+          }
+        }
+        .navigationBarTitle(Text("Daily Tasks"))
+        .navigationBarItems(trailing:
+          Button(action: { self.isPresented.toggle() }) {
+            Image(systemName: "plus")
+          }
+        )
+      }
+    }
+
+    func deleteTask(at offsets: IndexSet) {
+      offsets.forEach { index in
+        let toDo = self.tasksList[index]
+        self.managedObjectContext.delete(toDo)
+      }
+      saveContext()
+    }
+
+    func addTask(title: String, task: String, date: Date) {
+      let newTask = Workflow(context: managedObjectContext)
+      newTask.title = title
+      newTask.task = task
+      newTask.date = date
+      saveContext()
+    }
+
+    func saveContext() {
+      do {
+        try managedObjectContext.save()
+      } catch {
+        print("Error saving managed object context: \(error)")
+      }
     }
 }
 
 struct WorkflowSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkflowSwiftUIView(taskToDo: myTasks)
+        WorkflowSwiftUIView()
     }
 }
 
 class ChildHostingController: UIHostingController<WorkflowSwiftUIView> {
 
     required init?(coder: NSCoder) {
-        super.init(coder: coder,rootView: WorkflowSwiftUIView(taskToDo: myTasks));
+        super.init(coder: coder,rootView: WorkflowSwiftUIView());
     }
 
     override func viewDidLoad() {
