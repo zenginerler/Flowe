@@ -79,6 +79,8 @@ At least one of the following per team member:
 - FIXME: 3
 
 #### Yixing Ma
-- FIXME: 1
-- FIXME: 2
-- FIXME: 3
+- Journal
+- Pomodoro, if need help just ask
+- Implementing animation
+- Calendar
+- HomePage
