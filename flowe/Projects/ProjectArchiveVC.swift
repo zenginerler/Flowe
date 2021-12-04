@@ -32,7 +32,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Lottie Animation Settings
-        animationView = .init(name: "projects")
+        animationView = .init(name: "lightbulb")
         animationView?.contentMode = .scaleAspectFit
         animationView?.loopMode = .loop
         animationView?.animationSpeed = 1
@@ -42,6 +42,9 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         projectsTableView.dataSource = self
         formatter.dateStyle = .full
         formatter.timeStyle = .none
+        view.backgroundColor = UIColor.init(named: "custom_logo_blues")
+        projectsTableView.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
+        projectsTableView.layer.cornerRadius = 8
         getProjects()
         wrapperView.backgroundColor = view.backgroundColor
     }
@@ -84,6 +87,8 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         let project = self.projects![indexPath.row]
         let dueDate = formatter.string(from: project.due!)
         let name = project.name!
+        cell.layer.cornerRadius = 8
+        cell.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
         cell.textLabel?.font = UIFont(name:"Sinhala Sangam MN", size: 20.0)
         cell.textLabel?.text = "\(name)\nDue: \(dueDate)"
         return cell
@@ -164,6 +169,35 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         action.backgroundColor = UIColor.orange
         return UISwipeActionsConfiguration(actions: [action])
     }
+    
+    // trash button to remove all projects permanantly
+    @IBAction func removeAllProjects(_ sender: Any) {
+            // alert to delete all of the project info
+            let alert = UIAlertController(title: "WARNING",
+                                          message: "This action will remove ALL archived projects. Press DELETE ALL to continue.",
+                                          preferredStyle: .alert)
+            let selectAction = UIAlertAction(title: "DELETE ALL",
+                                             style: .destructive,
+                                             handler: {
+                [self] _ in
+//                let deleteRequest = NSBatchDeleteRequest(fetchRequest: Projects.fetchRequest())
+                do {
+                    for projectToDelete in projects! {
+                        self.context.delete(projectToDelete)
+                    }
+                    try context.save()
+                        
+                } catch {
+                }
+                self.getProjects()
+            })
+        
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                [self] _ in self.projectsTableView.reloadData()})
+            alert.addAction(selectAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        }
     
     func darkModeCheck() {
         // Update the the theme according to user settings

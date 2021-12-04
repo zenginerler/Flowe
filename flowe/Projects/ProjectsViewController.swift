@@ -107,7 +107,6 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
 //        cell.layer.borderWidth = 3
 //        cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.cornerRadius = 8
-        
         cell.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
         cell.textLabel?.font = UIFont(name:"Sinhala Sangam MN", size: 20.0)
         cell.textLabel?.text = "\(name)\nDue: \(dueDate)"
