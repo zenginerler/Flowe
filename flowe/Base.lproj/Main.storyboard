@@ -810,7 +810,7 @@
                                     <constraint firstAttribute="width" constant="374" id="qlV-89-pWo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start a New Project">
+                                <buttonConfiguration key="configuration" style="plain" title="+  Start a New Project">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>

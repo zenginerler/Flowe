@@ -10,6 +10,7 @@
 		74287A6A2759B41F004E94E5 /* projects.json in Resources */ = {isa = PBXBuildFile; fileRef = 74287A692759B41F004E94E5 /* projects.json */; };
 		74287A6C275A8403004E94E5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74287A6B275A8402004E94E5 /* NotificationView.swift */; };
 		742D79F5275ABEE500D2B6B1 /* ProjectArchiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D79F4275ABEE500D2B6B1 /* ProjectArchiveVC.swift */; };
+		744CD9E8275BF77A00B605A0 /* DeleteProjectNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744CD9E7275BF77A00B605A0 /* DeleteProjectNotificationView.swift */; };
 		74AEB24F275B178700E31D6E /* lightbulb.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AEB24E275B178700E31D6E /* lightbulb.json */; };
 		74AEB251275B3C2700E31D6E /* archive.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AEB250275B3C2700E31D6E /* archive.json */; };
 		74AEB253275B3EE800E31D6E /* archive_up.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AEB252275B3EE800E31D6E /* archive_up.json */; };
@@ -59,6 +60,7 @@
 		74287A692759B41F004E94E5 /* projects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = projects.json; sourceTree = "<group>"; };
 		74287A6B275A8402004E94E5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		742D79F4275ABEE500D2B6B1 /* ProjectArchiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectArchiveVC.swift; sourceTree = "<group>"; };
+		744CD9E7275BF77A00B605A0 /* DeleteProjectNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectNotificationView.swift; sourceTree = "<group>"; };
 		74AEB24E275B178700E31D6E /* lightbulb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lightbulb.json; sourceTree = "<group>"; };
 		74AEB250275B3C2700E31D6E /* archive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archive.json; sourceTree = "<group>"; };
 		74AEB252275B3EE800E31D6E /* archive_up.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archive_up.json; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				74DF780B274C4277005DF304 /* ProjectsView.swift */,
 				74AEB254275BD28A00E31D6E /* ArchiveView.swift */,
+				744CD9E7275BF77A00B605A0 /* DeleteProjectNotificationView.swift */,
 				74287A6B275A8402004E94E5 /* NotificationView.swift */,
 			);
 			path = Projects;
@@ -406,6 +409,7 @@
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
 				EC560D2E275AE38C00AE3C8B /* TaskRow.swift in Sources */,
 				74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */,
+				744CD9E8275BF77A00B605A0 /* DeleteProjectNotificationView.swift in Sources */,
 				74DB65E0273C646A0025CBCF /* Goals+CoreDataProperties.swift in Sources */,
 				D7AF68582733A1E1001C7461 /* SceneDelegate.swift in Sources */,
 				ECC7ACC02750BA6E000F8C5B /* Variables.swift in Sources */,

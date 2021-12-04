@@ -45,11 +45,18 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         view.backgroundColor = UIColor.init(named: "custom_logo_blues")
         projectsTableView.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
         projectsTableView.layer.cornerRadius = 8
-        getProjects()
         wrapperView.backgroundColor = view.backgroundColor
+        getProjects()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if Variables.deleteProject {
+            self.context.delete(projects![row])
+            try self.context.save()
+            Variables.deleteProject = false
+        }
+        getProjects()
+
         self.projectsTableView.reloadData()
         darkModeCheck()
     }
@@ -142,7 +149,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
             
             let projectToEdit = self.projects![indexPath.row]
             
-            // alert to edit the project info
+            // alert to confirm restoration
             let alert = UIAlertController(title: "Restore \(projectToEdit.name ?? "")?",
                                           message: "Do you want to restore \(projectToEdit.name ?? "") to active projects?",
                                           preferredStyle: .alert)

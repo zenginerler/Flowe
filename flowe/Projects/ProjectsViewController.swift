@@ -56,16 +56,16 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if Variables.removeProject {
-            projects![row].finished = true
-            projects?.remove(at: row)
-            do {
-                try self.context.save()
-            }catch{
-                print("There was an error in saving the Project")
-            }
-            Variables.removeProject = false
-        }
+//        if Variables.removeProject {
+//            projects![row].finished = true
+//            projects?.remove(at: row)
+//            do {
+//                try self.context.save()
+//            }catch{
+//                print("There was an error in saving the Project")
+//            }
+//            Variables.removeProject = false
+//        }
         self.getProjects()
         self.projectsTableView.reloadData()
         darkModeCheck()
