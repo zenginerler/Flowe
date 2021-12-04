@@ -34,31 +34,31 @@ class GoalViewController: UIViewController {
     @IBAction func typeActionsheet(_ sender: Any) {
         let actionsheet1 = UIAlertController(
             title: "Select type",
-            message: "Choose a goal type:",
+            message: "Choose a journal type:",
             preferredStyle: .actionSheet)
         
         let WorkAction = UIAlertAction(
-            title: "Work",
+            title: "Daily",
             style: .default,
-            handler:{_ in self.type = "Work"})
+            handler:{_ in self.type = "Daily"})
         actionsheet1.addAction(WorkAction)
         
         let RelationshipAction = UIAlertAction(
-            title: "Relationship",
+            title: "Vent",
             style: .default,
-            handler:{_ in self.type = "Relationship"})
+            handler:{_ in self.type = "Vent"})
         actionsheet1.addAction(RelationshipAction)
         
         let EducationAction = UIAlertAction(
-            title: "Education",
+            title: "Gratitude",
             style: .default,
-            handler:{_ in self.type = "Education"})
+            handler:{_ in self.type = "Gratitude"})
         actionsheet1.addAction(EducationAction)
         
         let SelfgrowthAction = UIAlertAction(
-            title: "Self Growth",
+            title: "Expectation",
             style: .default,
-            handler:{_ in self.type = "Self Growth"})
+            handler:{_ in self.type = "Expectation"})
         actionsheet1.addAction(SelfgrowthAction)
         
         present(actionsheet1, animated: true, completion: nil)
