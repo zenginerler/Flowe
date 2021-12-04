@@ -121,8 +121,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJO-8Y-JCI">
-                                <rect key="frame" x="72" y="128" width="120" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJO-8Y-JCI">
+                                <rect key="frame" x="72" y="200" width="120" height="120"/>
                                 <color key="backgroundColor" name="custom_ivory"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="RKq-DK-Aea"/>
@@ -133,8 +133,8 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLa-FA-4uS">
-                                <rect key="frame" x="222" y="128" width="120" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLa-FA-4uS">
+                                <rect key="frame" x="222" y="200" width="120" height="120"/>
                                 <color key="backgroundColor" name="custom_ivory"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="A7o-gS-U54"/>
@@ -148,8 +148,8 @@
                                     <segue destination="zEI-Qh-Adi" kind="show" id="GxE-aZ-Hll"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dof-67-SdR">
-                                <rect key="frame" x="72" y="278" width="120" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dof-67-SdR">
+                                <rect key="frame" x="72" y="348" width="120" height="120"/>
                                 <color key="backgroundColor" name="custom_ivory"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="1iA-lF-oJz"/>
@@ -163,8 +163,8 @@
                                     <action selector="calendarButtonPress:" destination="t2y-3n-C6O" eventType="touchUpInside" id="5ts-qD-QzT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDc-OO-zod">
-                                <rect key="frame" x="222" y="278" width="120" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDc-OO-zod">
+                                <rect key="frame" x="222" y="348" width="120" height="120"/>
                                 <color key="backgroundColor" name="custom_ivory"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="0gI-fB-4vs"/>
@@ -216,7 +216,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9U-8H-qyh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9U-8H-qyh">
                                                 <rect key="frame" x="169" y="0.0" width="205" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Hs6-Er-15y"/>
@@ -291,6 +291,9 @@
                                     <action selector="resetButton:" destination="t2y-3n-C6O" eventType="touchUpInside" id="zBA-wq-h5v"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-Nf-jQP">
+                                <rect key="frame" x="0.0" y="74" width="414" height="128"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m5K-9q-6gs"/>
                         <color key="backgroundColor" name="custom_bg"/>
@@ -305,6 +308,8 @@
                             <constraint firstItem="mLa-FA-4uS" firstAttribute="centerX" secondItem="Pge-ek-9Da" secondAttribute="centerX" constant="75" id="Rqh-dJ-hLa"/>
                             <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="WvM-my-4SU" secondAttribute="trailing" constant="20" id="SjZ-zy-j5x"/>
                             <constraint firstItem="laR-4Y-8wU" firstAttribute="centerX" secondItem="Pge-ek-9Da" secondAttribute="centerX" id="THT-hA-0vI"/>
+                            <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="bgF-Nf-jQP" secondAttribute="trailing" id="Udm-pD-TX6"/>
+                            <constraint firstItem="bgF-Nf-jQP" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" id="e2h-PD-Wut"/>
                             <constraint firstItem="laR-4Y-8wU" firstAttribute="top" secondItem="Mv7-0m-5AC" secondAttribute="bottom" constant="10" id="fj2-tw-hZ3"/>
                             <constraint firstItem="fJO-8Y-JCI" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="40" id="foZ-AJ-jnm"/>
                             <constraint firstItem="Mv7-0m-5AC" firstAttribute="centerX" secondItem="Pge-ek-9Da" secondAttribute="centerX" id="orE-Qc-WIM"/>
@@ -1149,6 +1154,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="temp_profile" width="360" height="360"/>
+        <image name="welcome" width="860" height="312"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
