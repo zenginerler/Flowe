@@ -18,7 +18,6 @@ struct ProjectsView: View {
     @State var darkMode = Color(hue: 0.618, saturation: 0.546, brightness: 0.702)
     
     @State var reminderTapped = false
-    @State var calendarTapped = false
     @State private var completeTapped: Bool = false
     
     var body: some View {
@@ -84,26 +83,27 @@ struct ProjectsView: View {
                     Spacer()
                 }
             }
-            // i dont know why this says view but it builds...
             .background(Color("custom_logo_light_blues"))
             .cornerRadius(12.0)
             Spacer()
+            if completeTapped {
+                NotificationView()
+                    .onAppear {
+                        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+                            withAnimation(.default) {
+                                self.completeTapped.toggle()
+                            }
+                        }
+                    }
+                    .offset(y: -UIScreen.main.bounds.height/6)
+                    .transition(.asymmetric(insertion: .scale, removal: .slide))
+            }
+            
+// Buttons
             Button (action: {
                 self.reminderTapped.toggle()
             }, label: {
                 Text("Add Reminder")
-                    .fontWeight(.heavy)
-                    .foregroundColor(.black)
-                    .padding(.vertical)
-                    .frame(width: UIScreen.main.bounds.width - 150)
-                    .background(Color("custom_gray"))
-                    .cornerRadius(15)
-            }).padding(.top)
-            
-            Button (action: {
-                self.calendarTapped = true
-            }, label: {
-                Text("Add to Calendar")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
                     .padding(.vertical)
@@ -120,11 +120,9 @@ struct ProjectsView: View {
                         try managedObjectContext.save()
                     }
                     catch{
-                        
                     }
                 }
 //                Variables.removeProject = true
-                
             }, label: {
                 Text("Mark as Complete")
                     .fontWeight(.heavy)
@@ -134,18 +132,6 @@ struct ProjectsView: View {
                     .background(Color("custom_green"))
                     .cornerRadius(15)
             }).padding(.top)
-            if completeTapped {
-                NotificationView()
-                    .onAppear {
-                        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-                            withAnimation(.default) {
-                                self.completeTapped.toggle()
-                            }
-                        }
-                    }
-                    .offset(y: -UIScreen.main.bounds.height/6)
-                    .transition(.asymmetric(insertion: .scale, removal: .slide))
-            }
             Spacer()
             Spacer()
         }
@@ -153,10 +139,6 @@ struct ProjectsView: View {
         .padding(.trailing, 20)
         .background(Color("custom_logo_blues"))
         .fullScreenCover(isPresented: $reminderTapped) {
-            // Custom Page Segue from SwiftUI to UIkit
-            SegueSwiftUI(storyboard: "Main", VC: "SegueVC").ignoresSafeArea(.all)
-        }
-        .fullScreenCover(isPresented: $calendarTapped) {
             // Custom Page Segue from SwiftUI to UIkit
             SegueSwiftUI(storyboard: "Main", VC: "SegueVC").ignoresSafeArea(.all)
         }
