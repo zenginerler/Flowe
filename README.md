@@ -38,7 +38,7 @@ Minor Elements used
 One of the following:
 - [x] Table View
 - [ ] Collection View
-- [ ] Tab VC
+- [x] Tab VC
 - [ ] Page VC
 
 Two of the following:
@@ -50,7 +50,7 @@ Two of the following:
 - [x] User Defaults
 
 At least one of the following per team member:
-- [ ] Local notifications
+- [x] Local notifications
 - [ ] Core Graphics
 - [x] Gesture Recognition
 - [x] Animation
@@ -70,8 +70,10 @@ At least one of the following per team member:
 
 #### Michael Walters
 - Backend core data organization
-- Projects tab/ project view
+- Projects tab/ project view/ project archive view
 - Notifications for projects due
+- Cosmetics
+- Background images created by Carla Davis
 
 #### Hiran Manoharan
 - Profile/Edit Profile page
