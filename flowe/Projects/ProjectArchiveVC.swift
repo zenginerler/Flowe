@@ -51,9 +51,14 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewWillAppear(_ animated: Bool) {
         if Variables.deleteProject {
-            self.context.delete(projects![row])
-            try self.context.save()
-            Variables.deleteProject = false
+            do{
+                self.context.delete(projects![row])
+                try self.context.save()
+                Variables.deleteProject = false
+            }
+            catch {
+                
+            }
         }
         getProjects()
 
@@ -84,6 +89,10 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return projects!.count
     }
@@ -95,6 +104,9 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         let dueDate = formatter.string(from: project.due!)
         let name = project.name!
         cell.layer.cornerRadius = 8
+        let viewColor = UIView()
+        viewColor.backgroundColor = UIColor.init(named: "custom_orange")
+        cell.selectedBackgroundView = viewColor
         cell.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
         cell.textLabel?.font = UIFont(name:"Sinhala Sangam MN", size: 20.0)
         cell.textLabel?.text = "\(name)\nDue: \(dueDate)"

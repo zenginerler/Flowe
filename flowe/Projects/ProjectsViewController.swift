@@ -98,6 +98,10 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         return projects!.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = projectsTableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
@@ -108,6 +112,9 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
 //        cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.cornerRadius = 8
         cell.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
+        let viewColor = UIView()
+        viewColor.backgroundColor = UIColor.init(named: "custom_orange")
+        cell.selectedBackgroundView = viewColor
         cell.textLabel?.font = UIFont(name:"Sinhala Sangam MN", size: 20.0)
         cell.textLabel?.text = "\(name)\nDue: \(dueDate)"
         return cell
