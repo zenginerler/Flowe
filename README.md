@@ -74,9 +74,9 @@ At least one of the following per team member:
 - Notifications for projects due
 
 #### Hiran Manoharan
-- FIXME: 1
-- FIXME: 2
-- FIXME: 3
+- Profile/Edit Profile page
+- Settings Page
+- Workflow page
 
 #### Yixing Ma
 - Journal
