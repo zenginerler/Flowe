@@ -13,6 +13,7 @@
 		74AEB24F275B178700E31D6E /* lightbulb.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AEB24E275B178700E31D6E /* lightbulb.json */; };
 		74AEB251275B3C2700E31D6E /* archive.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AEB250275B3C2700E31D6E /* archive.json */; };
 		74AEB253275B3EE800E31D6E /* archive_up.json in Resources */ = {isa = PBXBuildFile; fileRef = 74AEB252275B3EE800E31D6E /* archive_up.json */; };
+		74AEB255275BD28B00E31D6E /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AEB254275BD28A00E31D6E /* ArchiveView.swift */; };
 		74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */; };
 		74DB65D8273C646A0025CBCF /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */; };
 		74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */; };
@@ -61,6 +62,7 @@
 		74AEB24E275B178700E31D6E /* lightbulb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lightbulb.json; sourceTree = "<group>"; };
 		74AEB250275B3C2700E31D6E /* archive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archive.json; sourceTree = "<group>"; };
 		74AEB252275B3EE800E31D6E /* archive_up.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = archive_up.json; sourceTree = "<group>"; };
+		74AEB254275BD28A00E31D6E /* ArchiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		74DB65CD273C64690025CBCF /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74DB65CE273C64690025CBCF /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74DB65D1273C646A0025CBCF /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				742D79F4275ABEE500D2B6B1 /* ProjectArchiveVC.swift */,
 				74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */,
 				74DF780B274C4277005DF304 /* ProjectsView.swift */,
+				74AEB254275BD28A00E31D6E /* ArchiveView.swift */,
 				74287A6B275A8402004E94E5 /* NotificationView.swift */,
 			);
 			path = Projects;
@@ -388,6 +391,7 @@
 				D7AF68752733CC75001C7461 /* SegueSwiftUI.swift in Sources */,
 				EC560D25275ADB1900AE3C8B /* Projects+CoreDataClass.swift in Sources */,
 				D7AF68732733C64E001C7461 /* LoginHC.swift in Sources */,
+				74AEB255275BD28B00E31D6E /* ArchiveView.swift in Sources */,
 				EC560D22275AD9E500AE3C8B /* Projects+CoreDataClass.swift in Sources */,
 				74DB65E4273C66240025CBCF /* GoalViewController.swift in Sources */,
 				74DB65D7273C646A0025CBCF /* Users+CoreDataClass.swift in Sources */,

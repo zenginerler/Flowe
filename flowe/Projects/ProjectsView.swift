@@ -302,7 +302,6 @@ struct ProjectsView: View {
             }
             Spacer()
             Spacer()
-
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)

@@ -13,8 +13,8 @@ import Lottie
 
 class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBSegueAction func shoowArchivedProject(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: ProjectsView(project: projects![row]))
+    @IBSegueAction func showArchivedProject(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: ArchiveView(project: projects![row]))
     }
     
     @IBOutlet weak var projectsTableView: UITableView!
@@ -32,7 +32,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Lottie Animation Settings
-        animationView = .init(name: "archive_up")
+        animationView = .init(name: "archive")
         animationView?.contentMode = .scaleAspectFit
         animationView?.loopMode = .loop
         animationView?.animationSpeed = 1
