@@ -124,6 +124,42 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         return UISwipeActionsConfiguration(actions: [action])
     }
     
+    // swipe right to restor to archive
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal,
+                                        title: "Edit",
+                                        handler: { (action, view, completionHandler) in
+            
+            let projectToEdit = self.projects![indexPath.row]
+            
+            // alert to edit the project info
+            let alert = UIAlertController(title: "Restore \(projectToEdit.name ?? "")?",
+                                          message: "Do you want to restore \(projectToEdit.name ?? "") to active projects?",
+                                          preferredStyle: .alert)
+            let selectAction = UIAlertAction(title: "Confirm",
+                                             style: .default,
+                                             handler: {
+                [self] _ in
+                projectToEdit.finished = false
+                do {
+                    try self.context.save()
+                }catch{
+                    print("There was an error in saving the Project")
+                }
+                self.getProjects()
+            })
+        
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                [self] _ in self.projectsTableView.reloadData()})
+            alert.addAction(selectAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        })
+        action.image = UIImage(systemName: "pencil")
+        action.backgroundColor = UIColor.orange
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
     func darkModeCheck() {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {

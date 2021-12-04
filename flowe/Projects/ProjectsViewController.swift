@@ -20,6 +20,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var projectsTableView: UITableView!
     @IBOutlet weak var addProjectButton: UIBarButtonItem!
     @IBOutlet weak var wrapperView: UIView!
+    @IBOutlet weak var archiveButton: UIButton!
     
     var projects: [Projects]?
     var row = 0
@@ -35,7 +36,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Lottie Animation Settings
-        animationView = .init(name: "projects")
+        animationView = .init(name: "lightbulb")
         animationView?.contentMode = .scaleAspectFit
         animationView?.loopMode = .loop
         animationView?.animationSpeed = 1
