@@ -285,7 +285,7 @@ struct ProjectsView: View {
                     .foregroundColor(.black)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 150)
-                    .background(Color.green)
+                    .background(Color("custom_green"))
                     .cornerRadius(15)
             }).padding(.top)
             if completeTapped {

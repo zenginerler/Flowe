@@ -186,6 +186,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
             self.present(alert, animated: true)
         })
         action.image = UIImage(systemName: "archivebox.fill")
+        action.backgroundColor = UIColor.init(named: "custom_red")
         return UISwipeActionsConfiguration(actions: [action])
     }
     
@@ -231,7 +232,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
             self.present(alert, animated: true)
         })
         action.image = UIImage(systemName: "pencil")
-        action.backgroundColor = UIColor.orange
+        action.backgroundColor = UIColor.init(named: "custom_orange")
         return UISwipeActionsConfiguration(actions: [action])
     }
     

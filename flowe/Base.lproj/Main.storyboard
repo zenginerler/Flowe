@@ -84,9 +84,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="custom_bg"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <tabBarAppearance key="standardAppearance">
                             <color key="backgroundColor" name="custom_logo_light_blues"/>
+                            <color key="selectionIndicatorTintColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
@@ -788,7 +789,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="custom_bg"/>
                                         <connections>
-                                            <segue destination="08Y-eK-BW6" kind="show" destinationCreationSelector="showProject:" id="AYW-R9-pgh"/>
+                                            <segue destination="08Y-eK-BW6" kind="presentation" destinationCreationSelector="showProject:" id="AYW-R9-pgh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1195,7 +1196,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Archive" id="MRX-NT-CgH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="RyK-wz-wtN">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash.fill" catalog="system" id="RyK-wz-wtN">
                             <color key="tintColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="removeAllProjects:" destination="qSu-bh-fMT" id="Snv-aG-3P0"/>
@@ -1221,6 +1222,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="temp_profile" width="360" height="360"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="welcome" width="860" height="312"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

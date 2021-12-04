@@ -130,6 +130,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
             self.present(alert, animated: true)
         })
         action.image = UIImage(systemName: "trash")
+        action.backgroundColor = UIColor.init(named: "custom_red")
         return UISwipeActionsConfiguration(actions: [action])
     }
     
@@ -165,8 +166,8 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
             alert.addAction(cancelAction)
             self.present(alert, animated: true)
         })
-        action.image = UIImage(systemName: "pencil")
-        action.backgroundColor = UIColor.orange
+        action.image = UIImage(systemName: "arrowshape.turn.up.left.fill")
+        action.backgroundColor = UIColor.init(named: "custom_green")
         return UISwipeActionsConfiguration(actions: [action])
     }
     

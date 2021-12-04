@@ -252,12 +252,12 @@ struct ArchiveView: View {
                     self.removeTapped = true
                 }
             }, label: {
-                Text("Mark as Complete")
+                Text("Remove Peramantly")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 150)
-                    .background(Color.green)
+                    .background(Color("custom_red"))
                     .cornerRadius(15)
             }).padding(.top)
             if removeTapped {
