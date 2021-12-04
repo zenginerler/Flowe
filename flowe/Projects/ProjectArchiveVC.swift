@@ -32,7 +32,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Lottie Animation Settings
-        animationView = .init(name: "lightbulb")
+        animationView = .init(name: "archive_up")
         animationView?.contentMode = .scaleAspectFit
         animationView?.loopMode = .loop
         animationView?.animationSpeed = 1

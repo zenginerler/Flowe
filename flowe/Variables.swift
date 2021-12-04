@@ -25,4 +25,6 @@ class Variables: UIViewController {
     
     // remove project variable
     static var removeProject = false
+    
+    // 
 }
