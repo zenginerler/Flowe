@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 import EventKit
+import Lottie
+
 class Pomodoro {
     var num = 0
 }
@@ -24,19 +26,40 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var button_TR: UIButton!
     @IBOutlet weak var button_BL: UIButton!
     @IBOutlet weak var button_BR: UIButton!
+    @IBOutlet weak var wrapperView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var RemainTimeLabel: UILabel!
     @IBOutlet weak var numPomoLabel: UILabel!
     
+    lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var context = appDelegate.persistentContainer.viewContext
+    
+    var animationView: AnimationView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         assignBackground()
         customizeButtons()
+        getFirstName()
+        nameLabel.text = "\(Variables.firstName)!"
+        
+        //Lottie animation settings
+        animationView = .init(name: "hello")
+        animationView?.contentMode = .scaleAspectFit
+        animationView?.loopMode = .loop
+        animationView?.animationSpeed = 1
+        animationView?.frame = wrapperView.bounds
+        wrapperView.addSubview(animationView!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         darkModeCheck()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        animationView?.play()
     }
     
     @IBAction func calendarButtonPress(_ sender: Any) {
@@ -120,19 +143,26 @@ class HomeViewController: UIViewController {
     }
     
     func customizeButtons() {
-        self.button_TL.applyGradient(colours: [.yellow, .orange])
-        self.button_TR.applyGradient(colours: [.orange, .red])
-        self.button_BL.applyGradient(colours: [.systemPink, .purple])
-        self.button_BR.applyGradient(colours: [.purple, .blue])
+//        self.button_TL.applyGradient(colours: [.yellow, .orange])
+        self.button_TR.backgroundColor = UIColor.init(named: "custom_orange")
+        self.button_BL.backgroundColor = UIColor.init(named: "custom_orange")
+        
+//        self.button_BR.applyGradient(colours: [.purple, .blue])
 
-        button_TL.layer.masksToBounds = true
+//        button_TL.layer.masksToBounds = true
         button_TR.layer.masksToBounds = true
         button_BL.layer.masksToBounds = true
-        button_BR.layer.masksToBounds = true
-        button_TL.layer.cornerRadius = 10
+//        button_BR.layer.masksToBounds = true
+//        button_TL.layer.cornerRadius = 10
         button_TR.layer.cornerRadius = 10
         button_BL.layer.cornerRadius = 10
-        button_BR.layer.cornerRadius = 10
+//        button_BR.layer.cornerRadius = 10
+    }
+    
+    func getFirstName () {
+        let singleUser = context.object(with: Variables.userID!)
+        let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
+        Variables.firstName = "\(profileNSObj.value(forKey: "firstName") as! String)"
     }
     
     

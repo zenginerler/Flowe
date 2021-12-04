@@ -38,6 +38,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         animationView?.animationSpeed = 1
         animationView?.frame = wrapperView.bounds
         wrapperView.addSubview(animationView!)
+        
         projectsTableView.delegate = self
         projectsTableView.dataSource = self
         formatter.dateStyle = .full
@@ -61,7 +62,6 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
             }
         }
         getProjects()
-
         self.projectsTableView.reloadData()
         darkModeCheck()
     }

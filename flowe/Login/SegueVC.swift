@@ -84,6 +84,7 @@ class SegueVC: UIViewController {
                 defaultProfile.contactInfo = "not specified"
                 defaultProfile.userProfile = currentUser
                 currentUser.profile = defaultProfile
+                
 
                 do {
                     try context.save()
@@ -115,6 +116,7 @@ class SegueVC: UIViewController {
             print("\nTheme ERROR")
         }
     }
+    
     
 }
 

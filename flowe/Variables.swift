@@ -13,6 +13,7 @@ class Variables: UIViewController {
     // Username string variable
     static var username = ""
     static var userID:NSManagedObjectID? = nil
+    static var firstName = "New User"
     
     // Color Variables
     static var appTheme = 1 // Default app theme = .light
