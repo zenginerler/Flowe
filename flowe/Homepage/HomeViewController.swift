@@ -21,6 +21,11 @@ class HomeViewController: UIViewController {
     var count = 0
     var work: Bool = true
     
+    // pomodoro stacks
+    @IBOutlet weak var remainingTimeStack: UIStackView!
+    @IBOutlet weak var pomodoroCounter: UIStackView!
+    @IBOutlet weak var pomodoroStackView: UIStackView!
+    
     // Home Btttons
     @IBOutlet weak var button_TL: UIButton!
     @IBOutlet weak var button_TR: UIButton!
@@ -29,6 +34,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var resetPomo: UIButton!
+    @IBOutlet weak var breakB: UIButton!
+    @IBOutlet weak var startB: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var RemainTimeLabel: UILabel!
     @IBOutlet weak var numPomoLabel: UILabel!
@@ -43,23 +51,30 @@ class HomeViewController: UIViewController {
         assignBackground()
         customizeButtons()
         getFirstName()
-        nameLabel.text = "\(Variables.firstName)!"
         
-        //Lottie animation settings
-        animationView = .init(name: "hello")
-        animationView?.contentMode = .scaleAspectFit
-        animationView?.loopMode = .loop
-        animationView?.animationSpeed = 1
-        animationView?.frame = wrapperView.bounds
-        wrapperView.addSubview(animationView!)
+        //comment below line to bring stack view back
+        pomodoroStackView.isHidden = true
+        remainingTimeStack.isHidden = true
+        pomodoroCounter.isHidden = true
+        
+        nameLabel.text = "\(Variables.firstName)!"
+        nameLabel.layer.cornerRadius = 8
+        wrapperView.layer.cornerRadius = 8
+        nameLabel.layer.opacity = 30
+        wrapperView.layer.opacity = 30
+        resetPomo.layer.cornerRadius = 8
+        breakB.layer.cornerRadius = 8
+        startB.layer.cornerRadius = 8
     }
     
     override func viewWillAppear(_ animated: Bool) {
         darkModeCheck()
+        getFirstName()
+        nameLabel.text = "\(Variables.firstName)!"
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        animationView?.play()
+            
     }
     
     @IBAction func calendarButtonPress(_ sender: Any) {
@@ -68,18 +83,26 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
-        RemainTimeLabel.text = "25"
+        animationView?.stop()
+        animationView?.removeFromSuperview()
+        startTimerAnimation(animation: "timer")
+        RemainTimeLabel.text = "25 mins"
+        RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_green")
         statusLabel.text = "working"
         work = true
         minutes = 25
         timer.invalidate()
-        statusLabel.backgroundColor = UIColor .red
+        statusLabel.backgroundColor = UIColor.red
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(HomeViewController.timerClass), userInfo: nil, repeats: true)
     }
     
     
     @IBAction func breakButton(_ sender: Any) {
-        RemainTimeLabel.text = "5"
+        animationView?.stop()
+        animationView?.removeFromSuperview()
+        startTimerAnimation(animation: "pause")
+        RemainTimeLabel.text = "5 mins"
+        RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_red")
         statusLabel.text = "relaxing"
         work = false
         minutes = 5
@@ -92,14 +115,11 @@ class HomeViewController: UIViewController {
     @IBAction func resetButton(_ sender: Any) {
         count = 0
         numPomoLabel.text = "\(count)"
-        
-        
     }
-    
     
     @objc func timerClass() {
         minutes -= 1
-        RemainTimeLabel.text = String(minutes)
+        RemainTimeLabel.text = "\(String(minutes)) mins"
         if minutes == 0 {
             timer.invalidate()
             if work == true {
@@ -140,6 +160,17 @@ class HomeViewController: UIViewController {
         } else {
             print("\nTheme ERROR")
         }
+    }
+    
+    func startTimerAnimation(animation: String) {
+        //Lottie animation settings
+        animationView = .init(name: animation)
+        animationView?.contentMode = .scaleAspectFit
+        animationView?.loopMode = .loop
+        animationView?.animationSpeed = 1
+        animationView?.frame = wrapperView.bounds
+        wrapperView.addSubview(animationView!)
+        animationView?.play()
     }
     
     func customizeButtons() {
