@@ -248,20 +248,9 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Name!   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2a-6V-DBM">
                                 <rect key="frame" x="141" y="95" width="273" height="73"/>
-                                <color key="backgroundColor" name="custom_red"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="b1q-6z-Ytp"/>
                                     <constraint firstAttribute="height" constant="73" id="mIP-Ec-MNF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN4-w9-LAX">
-                                <rect key="frame" x="249" y="274" width="135" height="143"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="143" id="Gns-kT-CUJ"/>
-                                    <constraint firstAttribute="width" constant="135" id="YXY-ND-cNr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -300,6 +289,16 @@
                                     <constraint firstAttribute="width" constant="122" id="szJ-3o-TTM"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN4-w9-LAX">
+                                <rect key="frame" x="259" y="274" width="135" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="Gns-kT-CUJ"/>
+                                    <constraint firstAttribute="width" constant="135" id="YXY-ND-cNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m5K-9q-6gs"/>
                         <color key="backgroundColor" name="custom_bg"/>
@@ -312,8 +311,8 @@
                             <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="WvM-my-4SU" secondAttribute="trailing" constant="20" id="SjZ-zy-j5x"/>
                             <constraint firstItem="mLa-FA-4uS" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="650" id="ZTg-Lb-AIg"/>
                             <constraint firstItem="dof-67-SdR" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="650" id="ZfI-Ip-2NH"/>
+                            <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="yN4-w9-LAX" secondAttribute="trailing" constant="20" id="akI-tp-Fb5"/>
                             <constraint firstItem="a2a-6V-DBM" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="7" id="bC6-m6-fNR"/>
-                            <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="yN4-w9-LAX" secondAttribute="trailing" constant="30" id="d8f-DC-fFa"/>
                             <constraint firstItem="laR-4Y-8wU" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="565" id="fcv-kd-m9N"/>
                             <constraint firstItem="Mv7-0m-5AC" firstAttribute="leading" secondItem="laR-4Y-8wU" secondAttribute="trailing" constant="28" id="m5M-GM-iCx"/>
                             <constraint firstItem="akw-vp-lLX" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="40" id="msz-rt-xOZ"/>
@@ -1248,9 +1247,6 @@
         </namedColor>
         <namedColor name="custom_logo_light_blues">
             <color red="0.48627450980392156" green="0.76470588235294112" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="custom_red">
-            <color red="1" green="0.54509803921568623" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

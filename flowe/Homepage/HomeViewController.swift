@@ -52,13 +52,24 @@ class HomeViewController: UIViewController {
         customizeButtons()
         getFirstName()
         
+        // Starting center value
+        self.nameLabel.center.x = self.view.center.x + self.view.bounds.width
+        
+        UIView.animate(
+            withDuration: 1.0,
+            animations: {
+                self.nameLabel.center.x -= self.view.bounds.width
+            }
+        )
+        
         //comment below line to bring stack view back
         pomodoroStackView.isHidden = true
         remainingTimeStack.isHidden = true
         pomodoroCounter.isHidden = true
         
-        nameLabel.text = "\(Variables.firstName)!"
-        nameLabel.layer.cornerRadius = 8
+        nameLabel.text = "Welcome, \(Variables.firstName)!"
+        RemainTimeLabel.layer.masksToBounds = true
+        RemainTimeLabel.layer.cornerRadius = 8
         wrapperView.layer.cornerRadius = 8
         nameLabel.layer.opacity = 30
         wrapperView.layer.opacity = 30
@@ -70,11 +81,15 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         darkModeCheck()
         getFirstName()
-        nameLabel.text = "\(Variables.firstName)!"
+        nameLabel.text = "Welcome, \(Variables.firstName)!"
+        animationView?.play()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-            
+        DispatchQueue.main.async {
+            self.animationView?.play()
+        }
     }
     
     @IBAction func calendarButtonPress(_ sender: Any) {
