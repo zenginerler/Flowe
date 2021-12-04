@@ -59,6 +59,10 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
     func getProjects() {
         do{
             let request = Projects.fetchRequest() as NSFetchRequest<Projects>
+            let owner = NSPredicate(format: "owner == %@", Variables.username)
+            let finished = NSPredicate(format: "finished == %d", true)
+            let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [owner,finished])
+            request.predicate = compound
             try self.projects = self.context.fetch(request)
         }
         catch{
@@ -124,7 +128,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
         return UISwipeActionsConfiguration(actions: [action])
     }
     
-    // swipe right to restor to archive
+    // swipe right to restore to main projects
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal,
                                         title: "Edit",
@@ -146,6 +150,7 @@ class ProjectArchiveVC: UIViewController, UITableViewDataSource, UITableViewDele
                 }catch{
                     print("There was an error in saving the Project")
                 }
+                self.projects?.remove(at: row)
                 self.getProjects()
             })
         

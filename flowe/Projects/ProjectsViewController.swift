@@ -46,6 +46,11 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         projectsTableView.dataSource = self
         formatter.dateStyle = .full
         formatter.timeStyle = .none
+        view.backgroundColor = UIColor.init(named: "custom_logo_blues")
+        projectsTableView.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
+        addProjectButton.tintColor = UIColor.init(named: "custom_orange")
+        projectsTableView.layer.cornerRadius = 8
+        archiveButton.layer.cornerRadius = 8
         getProjects()
         wrapperView.backgroundColor = view.backgroundColor
     }
@@ -59,9 +64,9 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
             }catch{
                 print("There was an error in saving the Project")
             }
-            self.getProjects()
             Variables.removeProject = false
         }
+        self.getProjects()
         self.projectsTableView.reloadData()
         darkModeCheck()
     }
@@ -99,6 +104,11 @@ class ProjectViewController: UIViewController, UITableViewDataSource, UITableVie
         let project = self.projects![indexPath.row]
         let dueDate = formatter.string(from: project.due!)
         let name = project.name!
+//        cell.layer.borderWidth = 3
+//        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.cornerRadius = 8
+        
+        cell.backgroundColor = UIColor.init(named: "custom_logo_light_blues")
         cell.textLabel?.font = UIFont(name:"Sinhala Sangam MN", size: 20.0)
         cell.textLabel?.text = "\(name)\nDue: \(dueDate)"
         return cell
