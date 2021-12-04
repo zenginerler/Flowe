@@ -12,6 +12,8 @@ import EventKit
 class goal {
     var type_g = ""
     var content_g = ""
+    var title_g = ""
+    var date_g = ""
 }
 
 class GoalViewController: UIViewController {
@@ -72,6 +74,8 @@ class GoalViewController: UIViewController {
         newGoal = goal()
         newGoal.type_g = self.type
         newGoal.content_g = self.goalContent.text ?? ""
+        newGoal.title_g = self.titleTextField.text ?? ""
+        newGoal.date_g = self.dateTextField.text ?? ""
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -81,6 +85,8 @@ class GoalViewController: UIViewController {
         // store values in Core data
         goall.setValue(newGoal.type_g, forKey: "type")
         goall.setValue(newGoal.content_g, forKey: "content")
+        goall.setValue(newGoal.title_g, forKey: "title")
+        goall.setValue(newGoal.date_g, forKey: "date")
         
         print(goall)
         do {
