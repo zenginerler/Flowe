@@ -11,17 +11,17 @@ Dependencies: Xcode 13.1, Swift 5, IOS 13+
 • Before running the app, run "pod install" inside the Flowe folder where the podfile is located  
 • Create a new account or use this test account for logging in:  
 ```
-Email    : Test@gmail.com
+Email    : test@gmail.com
 Password : test123
 ```
 
 
 ## Required feature checklist
 - [x] Login/Register path with Firebase
-- [ ] Settings:
-  - [ ] Dark Mode
-  - [ ] Auto Login
-  - [ ] Home Screen on Launch Sound
+- [X] Settings:
+  - [X] Dark Mode
+  - [X] Sleep Mode
+  - [X] Home Screen on Launch Sound
 - [x] Non-default fonts and colors used
 
 Two major elements used:
@@ -63,9 +63,14 @@ At least one of the following per team member:
 ## Work Distribution
 
 #### Mehmet Zenginerler
-- Login & Onboarding Page
-- Firebase & Pod Functionality
-- Animation & Background Integration
+- Login, SignUp & Onboarding Pages
+    - Firebase & Pod Functionality
+    - SwiftUI to UIkit integration
+- DarkMode Functionality
+- Animation Integration (lottie)
+- Curvy Background Integration & Design (svg) 
+- Gradient Integration (removed)
+- Profile Page UI
 - Overall Bug Fixes
 
 #### Michael Walters
@@ -76,7 +81,7 @@ At least one of the following per team member:
     - project archive cell view
 - Overall UI Design
 - Color Scheming
-- Background images created by Carla Davis
+- Some background images created by Carla Davis
 - Sound effect implementation
 - Animation
 
