@@ -87,10 +87,10 @@ class GoalViewController: UIViewController {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_1_light")
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_3_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_1_dark")
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_3_dark")
         } else {
             print("\nTheme ERROR")
         }
