@@ -202,10 +202,10 @@ class HomeViewController: UIViewController {
     }
     
     func startQuotes(){
-        var stringIndex = Int.random(in: 0...Variables.quotes.count)
+        var stringIndex = Int.random(in: 0..<Variables.quotes.count)
         self.quoteLabel.text = "\(Variables.quotes[stringIndex][0]) - \(Variables.quotes[stringIndex][1])"
         let _ = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: true) { (timer) in
-            stringIndex = Int.random(in: 0...Variables.quotes.count)
+            stringIndex = Int.random(in: 0..<Variables.quotes.count)
             print(stringIndex)
             UIView.transition(with: self.quoteLabel, duration: 0.8,
                               options: .transitionCrossDissolve,
