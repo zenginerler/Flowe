@@ -246,16 +246,6 @@
                                     <segue destination="zEI-Qh-Adi" kind="show" id="GxE-aZ-Hll"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Name!   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2a-6V-DBM">
-                                <rect key="frame" x="71" y="204" width="273" height="73"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="mIP-Ec-MNF"/>
-                                    <constraint firstAttribute="width" constant="273" id="zzE-In-cig"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN4-w9-LAX">
                                 <rect key="frame" x="259" y="298" width="135" height="143"/>
                                 <constraints>
@@ -306,6 +296,16 @@
                                     <constraint firstAttribute="height" constant="96" id="f5u-iJ-fcd"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Name!   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2a-6V-DBM">
+                                <rect key="frame" x="37" y="217" width="340" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="mIP-Ec-MNF"/>
+                                    <constraint firstAttribute="width" constant="340" id="y9t-gn-8VM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m5K-9q-6gs"/>
                         <color key="backgroundColor" name="custom_bg"/>
@@ -315,13 +315,13 @@
                             <constraint firstItem="QBN-ag-0X6" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="12" id="88R-ft-dsl"/>
                             <constraint firstItem="WvM-my-4SU" firstAttribute="centerX" secondItem="Pge-ek-9Da" secondAttribute="centerX" id="A8d-Nf-Srr"/>
                             <constraint firstItem="yN4-w9-LAX" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="210" id="Ebk-PS-Viy"/>
-                            <constraint firstItem="a2a-6V-DBM" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="71" id="NDr-6b-Rl7"/>
-                            <constraint firstItem="a2a-6V-DBM" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="116" id="NhJ-U8-NER"/>
                             <constraint firstItem="dof-67-SdR" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="40" id="RFz-B0-VEf"/>
                             <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="WvM-my-4SU" secondAttribute="trailing" constant="20" id="SjZ-zy-j5x"/>
                             <constraint firstItem="mLa-FA-4uS" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="650" id="ZTg-Lb-AIg"/>
                             <constraint firstItem="dof-67-SdR" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="650" id="ZfI-Ip-2NH"/>
                             <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="yN4-w9-LAX" secondAttribute="trailing" constant="20" id="akI-tp-Fb5"/>
+                            <constraint firstItem="a2a-6V-DBM" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="37" id="dCv-ja-uen"/>
+                            <constraint firstItem="a2a-6V-DBM" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="129" id="fVf-7q-3D7"/>
                             <constraint firstItem="laR-4Y-8wU" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="565" id="fcv-kd-m9N"/>
                             <constraint firstItem="akw-vp-lLX" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="224" id="gSv-BP-oxd"/>
                             <constraint firstItem="Mv7-0m-5AC" firstAttribute="leading" secondItem="laR-4Y-8wU" secondAttribute="trailing" constant="28" id="m5M-GM-iCx"/>
