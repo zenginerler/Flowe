@@ -41,6 +41,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var RemainTimeLabel: UILabel!
     @IBOutlet weak var numPomoLabel: UILabel!
+    @IBOutlet weak var timerState: UILabel!
+    
+    var takingABreak = false
     
     var audioPlayer: AVAudioPlayer?
     
@@ -72,6 +75,7 @@ class HomeViewController: UIViewController {
         remainingTimeStack.isHidden = true
         pomodoroCounter.isHidden = true
         
+        // cosmetic instatiation
         nameLabel.text = "Welcome, \(Variables.firstName)!"
         RemainTimeLabel.layer.masksToBounds = true
         RemainTimeLabel.layer.cornerRadius = 8
@@ -81,7 +85,7 @@ class HomeViewController: UIViewController {
         resetPomo.layer.cornerRadius = 8
         breakB.layer.cornerRadius = 8
         startB.layer.cornerRadius = 8
-        
+        timerState.isHidden = true
         
     }
     
@@ -105,6 +109,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
+        timerState.text = "Working..."
+        timerState.isHidden = false
         playSound(file: "tick")
         animationView?.stop()
         animationView?.removeFromSuperview()
@@ -121,10 +127,17 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func breakButton(_ sender: Any) {
+        timerState.text = "Taking a break..."
+        timerState.isHidden = false
+        takingABreak = true
+        
+        //start the break animation and play sound
         playSound(file: "slow")
         animationView?.stop()
         animationView?.removeFromSuperview()
         startTimerAnimation(animation: "pause")
+        
+        // timer code for break
         RemainTimeLabel.text = "5 mins"
         RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_red")
         statusLabel.text = "relaxing"
@@ -142,9 +155,25 @@ class HomeViewController: UIViewController {
     }
     
     @objc func timerClass() {
-        minutes -= 1
+        minutes -= 25
         RemainTimeLabel.text = "\(String(minutes)) mins"
-        if minutes == 0 {
+        if minutes < 1 {
+            playSound(file: "drum")
+            
+            // alert if taking a break
+            if takingABreak {
+                timeIsUp(title: "Break Time Over", message: "It's great to take breaks! Now it's time to be productive.", button: "Back to Work")
+                takingABreak = false
+                timerState.text = "Resume timer"
+                RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_red")
+            }
+            else{
+                timeIsUp(title: "Time is Up", message: "Great Job! You were productive for 25 minutes!", button: "Confirm")
+                timerState.text = "Pomodoro Acheived!"
+                animationView?.stop()
+                animationView?.removeFromSuperview()
+                startTimerAnimation(animation: "checkmark")
+            }
             timer.invalidate()
             if work == true {
                 statusLabel.backgroundColor = UIColor .green
@@ -195,6 +224,17 @@ class HomeViewController: UIViewController {
         animationView?.frame = wrapperView.bounds
         wrapperView.addSubview(animationView!)
         animationView?.play()
+    }
+    
+    func timeIsUp(title: String, message: String, button: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let selectAction = UIAlertAction(title: button,
+                                         style: .default,
+                                         handler: nil)
+        alert.addAction(selectAction)
+        present(alert, animated: true)
     }
     
     func customizeButtons() {
