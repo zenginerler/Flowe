@@ -38,8 +38,62 @@ class WorkflowVC: UIViewController {
     struct SwiftUIView: View {
         @Environment(\.managedObjectContext) var moc
 
+        @FetchRequest(
+            entity: WorkflowTasks.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \WorkflowTasks.date, ascending: true)],
+            predicate: NSPredicate(format: "name MATCHES '\(Variables.username)'")
+        ) var tasksList: FetchedResults<WorkflowTasks>
+        
+         
+        @State var isPresented = false
+        
         var body: some View {
-            Text("Hello World")
+          NavigationView {
+            List {
+              ForEach(tasksList, id: \.title) {
+                TaskRow(taskObject: $0)
+              }
+              .onDelete(perform: deleteTask)
+            }
+            .sheet(isPresented: $isPresented) {
+              AddTask { title, task, date in
+                self.addTask(title: title, task: task, date: date)
+                self.isPresented = false
+              }
+            }
+            .navigationBarTitle(Text("Daily Tasks"))
+            .navigationBarItems(trailing:
+              Button(action: { self.isPresented.toggle() }) {
+                Image(systemName: "plus")
+              }
+            )
+          }
+        }
+
+        func deleteTask(at offsets: IndexSet) {
+          offsets.forEach { index in
+            let toDo = self.tasksList[index]
+            self.moc.delete(toDo)
+          }
+          saveContext()
+        }
+
+        func addTask(title: String, task: String, date: Date) {
+            
+            let newTask = WorkflowTasks(context: moc)
+            newTask.title = title
+            newTask.task = task
+            newTask.date = date
+            newTask.name = Variables.username
+            saveContext()
+        }
+
+        func saveContext() {
+          do {
+            try moc.save()
+          } catch {
+            print("Error saving managed object context: \(error)")
+          }
         }
     }
     
