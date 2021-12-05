@@ -50,7 +50,7 @@ Two of the following:
 - [x] User Defaults
 
 At least one of the following per team member:
-- [x] Local notifications
+- [ ] Local notifications
 - [ ] Core Graphics
 - [x] Gesture Recognition
 - [x] Animation
