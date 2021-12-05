@@ -31,7 +31,7 @@ class WorkflowVC: UIViewController {
         super.viewDidAppear(animated)
         
         let swiftUIView = UIHostingController(rootView: SwiftUIView().environment(\.managedObjectContext, moc!))
-        swiftUIView.modalPresentationStyle = .fullScreen
+//        swiftUIView.modalPresentationStyle = .fullScreen
         present(swiftUIView, animated: true, completion: nil)
     }
 
