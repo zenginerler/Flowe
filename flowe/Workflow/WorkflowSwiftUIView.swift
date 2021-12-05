@@ -57,7 +57,7 @@ struct WorkflowSwiftUIView: View {
         newTask.title = title
         newTask.task = task
         newTask.date = date
-        newTask.name = Variables.username
+        //newTask.name = Variables.username
         saveContext()
     }
 
