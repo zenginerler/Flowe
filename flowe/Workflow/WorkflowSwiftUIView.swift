@@ -6,18 +6,21 @@
 //
 
 import SwiftUI
+import CoreData
+import WebKit
 
 struct WorkflowSwiftUIView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
+    
     @FetchRequest(
-      entity: Workflow.entity(),
-      sortDescriptors: [
-        NSSortDescriptor(keyPath: \Workflow.title, ascending: true)
-      ]
+        entity: Workflow.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Workflow.date, ascending: true)],
+        predicate: NSPredicate(format: "name MATCHES '\(Variables.username)'")
     ) var tasksList: FetchedResults<Workflow>
-
+    
+     
     @State var isPresented = false
-
+    
     var body: some View {
       NavigationView {
         List {
@@ -50,11 +53,12 @@ struct WorkflowSwiftUIView: View {
     }
 
     func addTask(title: String, task: String, date: Date) {
-      let newTask = Workflow(context: managedObjectContext)
-      newTask.title = title
-      newTask.task = task
-      newTask.date = date
-      saveContext()
+        let newTask = Workflow(context: managedObjectContext)
+        newTask.title = title
+        newTask.task = task
+        newTask.date = date
+        newTask.name = Variables.username
+        saveContext()
     }
 
     func saveContext() {
@@ -82,4 +86,5 @@ class ChildHostingController: UIHostingController<WorkflowSwiftUIView> {
         super.viewDidLoad()
     }
 }
+
 
