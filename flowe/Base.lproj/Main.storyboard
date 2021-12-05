@@ -1024,16 +1024,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-ze-OIh">
-                                <rect key="frame" x="32" y="230" width="351" height="465"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="beautiful day ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-ze-OIh">
+                                <rect key="frame" x="32" y="230" width="351" height="491"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="custom_bg"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
-                                <rect key="frame" x="32" y="717" width="255" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
+                                <rect key="frame" x="32" y="752" width="255" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add my journal"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add my journal">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="AddButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="vye-qe-e4G"/>
                                 </connections>
@@ -1041,24 +1045,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
                                 <rect key="frame" x="32" y="97" width="351" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="What's your journal type?"/>
+                                <buttonConfiguration key="configuration" style="plain" title="What's your journal type?">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="typeActionsheet:" destination="7xx-uI-YRX" eventType="touchUpInside" id="k1K-wP-JSG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
-                                <rect key="frame" x="161" y="717" width="222" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add to calendar"/>
-                                <connections>
-                                    <action selector="addToCalendarButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="Jdi-cu-Tn1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE2-DQ-m5R">
                                 <rect key="frame" x="32" y="136" width="66" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Title:"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Title:">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="typeActionsheet:" destination="7xx-uI-YRX" eventType="touchUpInside" id="BV0-oN-Sfj"/>
                                 </connections>
@@ -1073,7 +1074,9 @@
                                 <rect key="frame" x="32" y="175" width="66" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Date:"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Date:">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="typeActionsheet:" destination="7xx-uI-YRX" eventType="touchUpInside" id="z7h-mg-xav"/>
                                 </connections>
@@ -1090,9 +1093,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
+                                <rect key="frame" x="161" y="752" width="222" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add to calendar">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addToCalendarButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="Jdi-cu-Tn1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sFg-cg-iSr"/>
-                        <color key="backgroundColor" name="custom_bg"/>
                         <constraints>
                             <constraint firstItem="ztp-8H-sZ4" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="32" id="9gG-O4-m90"/>
                             <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="ztp-8H-sZ4" secondAttribute="trailing" constant="31" id="AvZ-IJ-AKg"/>
@@ -1237,6 +1250,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
