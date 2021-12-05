@@ -32,8 +32,13 @@ class Variables: UIViewController {
     // delete project variable
     static var deleteProject = false
     
+    // Animation avatar
+    static var avatar = "sun"
+    
     // sound for home launch
-    static var sound = "fairy"
+    static var sound = (Variables.defaults.string(forKey: "appSound") ?? "bells")
+    
+    static var isMuted = false
     
     static var quotes =
     [

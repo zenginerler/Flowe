@@ -40,7 +40,6 @@ class HomeViewController: UIViewController {
     
     var takingABreak = false
     
-    
     var audioPlayer: AVAudioPlayer?
     var animationView: AnimationView?
     
@@ -50,7 +49,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playSound(file: Variables.sound)
+        if !Variables.isMuted{
+            playSound(file: Variables.sound)
+        }
         assignBackground()
         customizeButtons()
         getFirstName()
@@ -78,7 +79,6 @@ class HomeViewController: UIViewController {
         breakB.layer.cornerRadius = 8
         startB.layer.cornerRadius = 8
         timerState.isHidden = true
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,7 +102,9 @@ class HomeViewController: UIViewController {
     @IBAction func startButton(_ sender: Any) {
         timerState.text = "Working..."
         timerState.isHidden = false
-        playSound(file: "tick")
+        if !Variables.isMuted{
+            playSound(file: "tick")
+        }
         animationView?.stop()
         animationView?.removeFromSuperview()
         startTimerAnimation(animation: "timer")
@@ -121,7 +123,9 @@ class HomeViewController: UIViewController {
         takingABreak = true
         
         //start the break animation and play sound
-        playSound(file: "slow")
+        if !Variables.isMuted{
+            playSound(file: "slow")
+        }
         animationView?.stop()
         animationView?.removeFromSuperview()
         startTimerAnimation(animation: "pause")
@@ -139,6 +143,11 @@ class HomeViewController: UIViewController {
     @IBAction func resetButton(_ sender: Any) {
         count = 0
         numPomoLabel.text = "\(count)"
+        timer.invalidate()
+        RemainTimeLabel.text = "0 mins"
+        timerState.isHidden = true
+        animationView?.stop()
+        animationView?.removeFromSuperview()
     }
     
     @objc func timerClass() {
@@ -148,14 +157,18 @@ class HomeViewController: UIViewController {
             
             // alert if taking a break
             if takingABreak {
-                playSound(file: "drum")
+                if !Variables.isMuted{
+                    playSound(file: "drum")
+                }
                 timeIsUp(title: "Break Time Over", message: "It's great to take breaks! Now it's time to be productive.", button: "Back to Work")
                 takingABreak = false
                 timerState.text = "Resume timer"
                 RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_red")
             }
             else{
-                playSound(file: "finished")
+                if !Variables.isMuted{
+                    playSound(file: "finished")
+                }
                 timeIsUp(title: "Time is Up", message: "Great Job! You were productive for 25 minutes!", button: "Confirm")
                 timerState.text = "Pomodoro Acheived!"
                 animationView?.stop()

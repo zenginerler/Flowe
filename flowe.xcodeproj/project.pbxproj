@@ -38,6 +38,9 @@
 		74FAE468275C8FD7000C099D /* drum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE467275C8FD7000C099D /* drum.mp3 */; };
 		74FAE46C275C9AC7000C099D /* checkmark.json in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE46B275C9AC7000C099D /* checkmark.json */; };
 		74FAE470275D33AB000C099D /* finished.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE46F275D33AB000C099D /* finished.mp3 */; };
+		74FAE472275D7B2B000C099D /* earth.json in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE471275D7B2A000C099D /* earth.json */; };
+		74FAE475275D7B3B000C099D /* sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE473275D7B3B000C099D /* sun.json */; };
+		74FAE476275D7B3B000C099D /* moon.json in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE474275D7B3B000C099D /* moon.json */; };
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
 		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
 		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
@@ -99,6 +102,9 @@
 		74FAE467275C8FD7000C099D /* drum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drum.mp3; sourceTree = "<group>"; };
 		74FAE46B275C9AC7000C099D /* checkmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkmark.json; sourceTree = "<group>"; };
 		74FAE46F275D33AB000C099D /* finished.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finished.mp3; sourceTree = "<group>"; };
+		74FAE471275D7B2A000C099D /* earth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = earth.json; sourceTree = "<group>"; };
+		74FAE473275D7B3B000C099D /* sun.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sun.json; sourceTree = "<group>"; };
+		74FAE474275D7B3B000C099D /* moon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moon.json; sourceTree = "<group>"; };
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +257,9 @@
 		D70F661F27533DFF00D0053E /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				74FAE474275D7B3B000C099D /* moon.json */,
+				74FAE473275D7B3B000C099D /* sun.json */,
+				74FAE471275D7B2A000C099D /* earth.json */,
 				74FAE46B275C9AC7000C099D /* checkmark.json */,
 				D769BBB627527A2300EEF3BA /* workflow.json */,
 				74AEB250275B3C2700E31D6E /* archive.json */,
@@ -372,6 +381,7 @@
 				74FAE468275C8FD7000C099D /* drum.mp3 in Resources */,
 				74AEB24F275B178700E31D6E /* lightbulb.json in Resources */,
 				74FAE470275D33AB000C099D /* finished.mp3 in Resources */,
+				74FAE476275D7B3B000C099D /* moon.json in Resources */,
 				74FAE464275C8B37000C099D /* slow.mp3 in Resources */,
 				74697B30275C005F00DBCA43 /* hello.json in Resources */,
 				74FAE45F275C865F000C099D /* fairy.mp3 in Resources */,
@@ -385,7 +395,9 @@
 				74287A6A2759B41F004E94E5 /* projects.json in Resources */,
 				74697B32275C1AC400DBCA43 /* timer.json in Resources */,
 				D7AF68622733A1E1001C7461 /* Assets.xcassets in Resources */,
+				74FAE475275D7B3B000C099D /* sun.json in Resources */,
 				74AEB251275B3C2700E31D6E /* archive.json in Resources */,
+				74FAE472275D7B2B000C099D /* earth.json in Resources */,
 				D7AF685D2733A1E1001C7461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
