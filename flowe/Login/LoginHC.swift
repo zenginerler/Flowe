@@ -144,11 +144,11 @@ struct LoginHome: View {
             }).padding(.top)
             
             // Forgot my password button
-            Button (action: {}, label: {
-                Text("Forgot my password")
-                    .foregroundColor(.white)
-            }).padding(.top, 8)
-            
+//            Button (action: {}, label: {
+//                Text("Forgot my password")
+//                    .foregroundColor(.white)
+//            }).padding(.top, 8)
+//
             Spacer(minLength: 0)
             
             // Sign up Text & Button
