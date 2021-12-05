@@ -122,14 +122,15 @@ class GoalViewController: UIViewController {
         
         let startDate = NSDate()
         let endDate = startDate.addingTimeInterval(60*60)
+        let content = goalContent.text
         
         if (EKEventStore.authorizationStatus(for: .event) != .authorized) {
             eventStore.requestAccess(to: .event, completion: {
                 granted, error in
-                self.createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
+                self.createEvent(title: "\(content)", startDate: startDate, endDate: endDate)
             })
         } else {
-            createEvent(title: "Polish my bowling trophies", startDate: startDate, endDate: endDate)
+            createEvent(title: "\(content)", startDate: startDate, endDate: endDate)
         }
         
     }
