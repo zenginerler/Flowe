@@ -30,6 +30,8 @@
 		74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E2273C66240025CBCF /* GoalListViewController.swift */; };
 		74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E3273C66240025CBCF /* HomeViewController.swift */; };
 		74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DF780B274C4277005DF304 /* ProjectsView.swift */; };
+		74FAE44B275C7370000C099D /* WorkflowTasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAE44A275C7370000C099D /* WorkflowTasks+CoreDataClass.swift */; };
+		74FAE44C275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAE449275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift */; };
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
 		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
 		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
@@ -83,6 +85,8 @@
 		74DB65E2273C66240025CBCF /* GoalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
 		74DB65E3273C66240025CBCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74DF780B274C4277005DF304 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		74FAE449275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkflowTasks+CoreDataProperties.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		74FAE44A275C7370000C099D /* WorkflowTasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkflowTasks+CoreDataClass.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,8 @@
 				74DB65D4273C646A0025CBCF /* Profile+CoreDataProperties.swift */,
 				74DB65D5273C646A0025CBCF /* Goals+CoreDataClass.swift */,
 				74DB65D6273C646A0025CBCF /* Goals+CoreDataProperties.swift */,
+				74FAE44A275C7370000C099D /* WorkflowTasks+CoreDataClass.swift */,
+				74FAE449275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7749A4127582C540070219B /* WorkflowVC.swift in Sources */,
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
+				74FAE44B275C7370000C099D /* WorkflowTasks+CoreDataClass.swift in Sources */,
 				EC560D2E275AE38C00AE3C8B /* TaskRow.swift in Sources */,
 				74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */,
 				744CD9E8275BF77A00B605A0 /* DeleteProjectNotificationView.swift in Sources */,
@@ -429,6 +436,7 @@
 				ECC7ACC22750C3A7000F8C5B /* SettingsViewController.swift in Sources */,
 				EC560D26275ADB1900AE3C8B /* Projects+CoreDataProperties.swift in Sources */,
 				74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */,
+				74FAE44C275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift in Sources */,
 				D7FC035E2743B91F0019E686 /* ProfileViewController.swift in Sources */,
 				EC560D1C2759493400AE3C8B /* WorkflowSwiftUIView.swift in Sources */,
 				EC560D2C275AE33500AE3C8B /* AddTask.swift in Sources */,

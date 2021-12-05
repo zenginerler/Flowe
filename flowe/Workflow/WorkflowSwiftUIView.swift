@@ -53,11 +53,12 @@ struct WorkflowSwiftUIView: View {
     }
 
     func addTask(title: String, task: String, date: Date) {
-        let newTask = Workflow(context: managedObjectContext)
+        
+        let newTask = WorkflowTasks(context: managedObjectContext)
         newTask.title = title
         newTask.task = task
         newTask.date = date
-        //newTask.name = Variables.username
+        newTask.name = Variables.username
         saveContext()
     }
 

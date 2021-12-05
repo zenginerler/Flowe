@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/Projects+CoreDataClass.swift">
    </FileRef>
    <FileRef
