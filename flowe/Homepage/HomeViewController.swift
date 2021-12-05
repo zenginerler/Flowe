@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import EventKit
 import Lottie
+import AVFoundation
 
 class Pomodoro {
     var num = 0
@@ -41,6 +42,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var RemainTimeLabel: UILabel!
     @IBOutlet weak var numPomoLabel: UILabel!
     
+    var audioPlayer: AVAudioPlayer?
+    
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
     
@@ -51,10 +54,12 @@ class HomeViewController: UIViewController {
         assignBackground()
         customizeButtons()
         getFirstName()
+        playSound(file: Variables.sound)
         
         // Starting center value
         self.nameLabel.center.x = self.view.center.x + self.view.bounds.width
         
+        // name animation
         UIView.animate(
             withDuration: 1.0,
             animations: {
@@ -76,6 +81,8 @@ class HomeViewController: UIViewController {
         resetPomo.layer.cornerRadius = 8
         breakB.layer.cornerRadius = 8
         startB.layer.cornerRadius = 8
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,6 +105,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
+        playSound(file: "tick")
         animationView?.stop()
         animationView?.removeFromSuperview()
         startTimerAnimation(animation: "timer")
@@ -113,6 +121,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func breakButton(_ sender: Any) {
+        playSound(file: "slow")
         animationView?.stop()
         animationView?.removeFromSuperview()
         startTimerAnimation(animation: "pause")
@@ -209,6 +218,19 @@ class HomeViewController: UIViewController {
         let singleUser = context.object(with: Variables.userID!)
         let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
         Variables.firstName = "\(profileNSObj.value(forKey: "firstName") as! String)"
+    }
+    
+    func playSound(file: String){
+        let pathToSound = Bundle.main.path(forResource: file, ofType: "mp3")!
+        let url = URL(fileURLWithPath: pathToSound)
+        
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer!.play()
+        }
+        catch{
+            
+        }
     }
     
     

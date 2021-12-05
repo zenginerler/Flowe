@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class SettingsViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var jingleSegment: UISegmentedControl!
     @IBOutlet weak var sleepSwitch: UISwitch!
     @IBOutlet weak var themeSwitch: UISwitch!
+    
+    var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,13 +71,27 @@ class SettingsViewController: UIViewController {
     @IBAction func jingleChange(_ sender: Any) {
         switch jingleSegment.selectedSegmentIndex {
         case 0:
-            Variables.jingle = "Song 1"
+            playSound(file: "bells")
+            // save to user defaults
         case 1:
-            Variables.jingle = "Song 2"
+            playSound(file: "fairy")
         case 2:
-            Variables.jingle = "Song 3"
+            playSound(file: "flute")
         default:
-            Variables.jingle = "Song 1"
+            playSound(file: "bells")
+        }
+    }
+    
+    func playSound(file: String){
+        let pathToSound = Bundle.main.path(forResource: file, ofType: "mp3")!
+        let url = URL(fileURLWithPath: pathToSound)
+        
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer!.play()
+        }
+        catch{
+            
         }
     }
     

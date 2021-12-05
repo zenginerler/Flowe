@@ -41,7 +41,7 @@
         <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="userProfile" inverseEntity="Profile"/>
         <relationship name="workflow" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkflowTasks" inverseName="userWorkflow" inverseEntity="WorkflowTasks"/>
     </entity>
-    <entity name="WorkflowTasks" representedClassName="WorkflowTasks" syncable="YES" codeGenerationType="class">
+    <entity name="WorkflowTasks" representedClassName="WorkflowTasks" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="task" optional="YES" attributeType="String"/>

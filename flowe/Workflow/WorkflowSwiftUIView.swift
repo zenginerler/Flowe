@@ -13,10 +13,10 @@ struct WorkflowSwiftUIView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     
     @FetchRequest(
-        entity: Workflow.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Workflow.date, ascending: true)],
+        entity: WorkflowTasks.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \WorkflowTasks.date, ascending: true)],
         predicate: NSPredicate(format: "name MATCHES '\(Variables.username)'")
-    ) var tasksList: FetchedResults<Workflow>
+    ) var tasksList: FetchedResults<WorkflowTasks>
     
      
     @State var isPresented = false
@@ -24,10 +24,10 @@ struct WorkflowSwiftUIView: View {
     var body: some View {
       NavigationView {
         List {
-          ForEach(tasksList, id: \.title) {
-            TaskRow(taskObject: $0)
-          }
-          .onDelete(perform: deleteTask)
+//          ForEach(tasksList, id: \.title) {
+//            TaskRow(taskObject: $0)
+//          }
+//          .onDelete(perform: deleteTask)
         }
         .sheet(isPresented: $isPresented) {
           AddTask { title, task, date in

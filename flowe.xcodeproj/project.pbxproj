@@ -30,8 +30,13 @@
 		74DB65E5273C66240025CBCF /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E2273C66240025CBCF /* GoalListViewController.swift */; };
 		74DB65E6273C66240025CBCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB65E3273C66240025CBCF /* HomeViewController.swift */; };
 		74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DF780B274C4277005DF304 /* ProjectsView.swift */; };
-		74FAE44B275C7370000C099D /* WorkflowTasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAE44A275C7370000C099D /* WorkflowTasks+CoreDataClass.swift */; };
-		74FAE44C275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAE449275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift */; };
+		74FAE457275C8576000C099D /* WorkflowTasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAE455275C8576000C099D /* WorkflowTasks+CoreDataClass.swift */; };
+		74FAE458275C8576000C099D /* WorkflowTasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAE456275C8576000C099D /* WorkflowTasks+CoreDataProperties.swift */; };
+		74FAE45E275C865F000C099D /* bells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE45B275C865F000C099D /* bells.mp3 */; };
+		74FAE45F275C865F000C099D /* fairy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE45C275C865F000C099D /* fairy.mp3 */; };
+		74FAE460275C865F000C099D /* flute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE45D275C865F000C099D /* flute.mp3 */; };
+		74FAE464275C8B37000C099D /* slow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE462275C8B37000C099D /* slow.mp3 */; };
+		74FAE466275C8BC5000C099D /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74FAE465275C8BC5000C099D /* tick.mp3 */; };
 		74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */; };
 		74FD8EA02739BCE600A3F090 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */; };
 		AEB44A6D3D99FDE032390ABE /* Pods_flowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */; };
@@ -85,8 +90,13 @@
 		74DB65E2273C66240025CBCF /* GoalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
 		74DB65E3273C66240025CBCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74DF780B274C4277005DF304 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
-		74FAE449275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkflowTasks+CoreDataProperties.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		74FAE44A275C7370000C099D /* WorkflowTasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkflowTasks+CoreDataClass.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		74FAE455275C8576000C099D /* WorkflowTasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkflowTasks+CoreDataClass.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		74FAE456275C8576000C099D /* WorkflowTasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkflowTasks+CoreDataProperties.swift"; path = "/Users/marketsupreme/Desktop/School/Mobile Computing/Flowe/flowe/Models/WorkflowTasks+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		74FAE45B275C865F000C099D /* bells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bells.mp3; sourceTree = "<group>"; };
+		74FAE45C275C865F000C099D /* fairy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fairy.mp3; sourceTree = "<group>"; };
+		74FAE45D275C865F000C099D /* flute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flute.mp3; sourceTree = "<group>"; };
+		74FAE462275C8B37000C099D /* slow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slow.mp3; sourceTree = "<group>"; };
+		74FAE465275C8BC5000C099D /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		74FD8E9D2738E31000A3F090 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		74FD8E9F2739BCE600A3F090 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		8ECDEB33A065D4E01EAA2AA6 /* Pods_flowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,8 +205,8 @@
 				74DB65D4273C646A0025CBCF /* Profile+CoreDataProperties.swift */,
 				74DB65D5273C646A0025CBCF /* Goals+CoreDataClass.swift */,
 				74DB65D6273C646A0025CBCF /* Goals+CoreDataProperties.swift */,
-				74FAE44A275C7370000C099D /* WorkflowTasks+CoreDataClass.swift */,
-				74FAE449275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift */,
+				74FAE455275C8576000C099D /* WorkflowTasks+CoreDataClass.swift */,
+				74FAE456275C8576000C099D /* WorkflowTasks+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +223,18 @@
 				74287A6B275A8402004E94E5 /* NotificationView.swift */,
 			);
 			path = Projects;
+			sourceTree = "<group>";
+		};
+		74FAE45A275C8635000C099D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				74FAE45B275C865F000C099D /* bells.mp3 */,
+				74FAE465275C8BC5000C099D /* tick.mp3 */,
+				74FAE462275C8B37000C099D /* slow.mp3 */,
+				74FAE45C275C865F000C099D /* fairy.mp3 */,
+				74FAE45D275C865F000C099D /* flute.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		ABD5590F763861D2FE8D17CE /* Pods */ = {
@@ -275,6 +297,7 @@
 				D7AF68612733A1E1001C7461 /* Assets.xcassets */,
 				D7AF685E2733A1E1001C7461 /* flowe.xcdatamodeld */,
 				D7AF687627348335001C7461 /* GoogleService-Info.plist */,
+				74FAE45A275C8635000C099D /* Sounds */,
 				D7AF68662733A1E1001C7461 /* Info.plist */,
 				D70F661F27533DFF00D0053E /* Animations */,
 			);
@@ -344,10 +367,15 @@
 				74697B3A275C21B900DBCA43 /* pause.json in Resources */,
 				D7AF68652733A1E1001C7461 /* LaunchScreen.storyboard in Resources */,
 				74AEB24F275B178700E31D6E /* lightbulb.json in Resources */,
+				74FAE464275C8B37000C099D /* slow.mp3 in Resources */,
 				74697B30275C005F00DBCA43 /* hello.json in Resources */,
+				74FAE45F275C865F000C099D /* fairy.mp3 in Resources */,
+				74FAE45E275C865F000C099D /* bells.mp3 in Resources */,
 				D7AF687727348335001C7461 /* GoogleService-Info.plist in Resources */,
 				74AEB253275B3EE800E31D6E /* archive_up.json in Resources */,
 				D769BBB727527A2300EEF3BA /* workflow.json in Resources */,
+				74FAE466275C8BC5000C099D /* tick.mp3 in Resources */,
+				74FAE460275C865F000C099D /* flute.mp3 in Resources */,
 				74287A6A2759B41F004E94E5 /* projects.json in Resources */,
 				74697B32275C1AC400DBCA43 /* timer.json in Resources */,
 				D7AF68622733A1E1001C7461 /* Assets.xcassets in Resources */,
@@ -425,7 +453,7 @@
 				74FD8E9E2738E31000A3F090 /* ProjectsViewController.swift in Sources */,
 				D7749A4127582C540070219B /* WorkflowVC.swift in Sources */,
 				D7FC035C2743B9160019E686 /* ProfileEditViewController.swift in Sources */,
-				74FAE44B275C7370000C099D /* WorkflowTasks+CoreDataClass.swift in Sources */,
+				74FAE457275C8576000C099D /* WorkflowTasks+CoreDataClass.swift in Sources */,
 				EC560D2E275AE38C00AE3C8B /* TaskRow.swift in Sources */,
 				74DF780C274C4277005DF304 /* ProjectsView.swift in Sources */,
 				744CD9E8275BF77A00B605A0 /* DeleteProjectNotificationView.swift in Sources */,
@@ -436,7 +464,7 @@
 				ECC7ACC22750C3A7000F8C5B /* SettingsViewController.swift in Sources */,
 				EC560D26275ADB1900AE3C8B /* Projects+CoreDataProperties.swift in Sources */,
 				74DB65DB273C646A0025CBCF /* Tasks+CoreDataClass.swift in Sources */,
-				74FAE44C275C7370000C099D /* WorkflowTasks+CoreDataProperties.swift in Sources */,
+				74FAE458275C8576000C099D /* WorkflowTasks+CoreDataProperties.swift in Sources */,
 				D7FC035E2743B91F0019E686 /* ProfileViewController.swift in Sources */,
 				EC560D1C2759493400AE3C8B /* WorkflowSwiftUIView.swift in Sources */,
 				EC560D2C275AE33500AE3C8B /* AddTask.swift in Sources */,

@@ -29,4 +29,7 @@ class Variables: UIViewController {
     
     // delete project variable
     static var deleteProject = false
+    
+    // sound for home launch
+    static var sound = "fairy"
 }
