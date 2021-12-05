@@ -1009,29 +1009,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
                                 <rect key="frame" x="32" y="717" width="255" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add my journal"/>
                                 <connections>
                                     <action selector="AddButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="vye-qe-e4G"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
                                 <rect key="frame" x="32" y="97" width="351" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="What's your journal type?"/>
                                 <connections>
                                     <action selector="typeActionsheet:" destination="7xx-uI-YRX" eventType="touchUpInside" id="k1K-wP-JSG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
-                                <rect key="frame" x="32" y="756" width="222" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
+                                <rect key="frame" x="161" y="717" width="222" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="add to calendar"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add to calendar"/>
                                 <connections>
                                     <action selector="addToCalendarButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="Jdi-cu-Tn1"/>
                                 </connections>
@@ -1066,9 +1063,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-nJ-EEe">
-                                <rect key="frame" x="255" y="761" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-nJ-EEe">
+                                <rect key="frame" x="138" y="770" width="139" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1076,6 +1072,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sFg-cg-iSr"/>
                         <color key="backgroundColor" name="custom_bg"/>
+                        <constraints>
+                            <constraint firstItem="cNb-nJ-EEe" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="682" id="13Q-tr-oWH"/>
+                            <constraint firstItem="cNb-nJ-EEe" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="138" id="8cR-6G-1U0"/>
+                            <constraint firstItem="ztp-8H-sZ4" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="32" id="9gG-O4-m90"/>
+                            <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="ztp-8H-sZ4" secondAttribute="trailing" constant="31" id="AvZ-IJ-AKg"/>
+                            <constraint firstItem="Lof-LI-abe" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="629" id="AyS-sO-Mpi"/>
+                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="629" id="Fik-z5-bZf"/>
+                            <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="Gn5-wQ-0CL" secondAttribute="trailing" constant="127" id="KTa-DF-eAe"/>
+                            <constraint firstItem="Lof-LI-abe" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="161" id="KkH-qt-TPT"/>
+                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="32" id="V4v-Jy-ls0"/>
+                            <constraint firstItem="ztp-8H-sZ4" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="9" id="fcZ-9r-ZEp"/>
+                            <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="Lof-LI-abe" secondAttribute="trailing" constant="31" id="poV-jp-h7n"/>
+                            <constraint firstItem="sFg-cg-iSr" firstAttribute="bottom" secondItem="ztp-8H-sZ4" secondAttribute="bottom" constant="685" id="vDJ-SD-il3"/>
+                            <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="cNb-nJ-EEe" secondAttribute="trailing" constant="137" id="wCJ-DZ-hsu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOv-uP-0pr"/>
                     <connections>
