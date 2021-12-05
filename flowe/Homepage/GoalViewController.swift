@@ -127,10 +127,10 @@ class GoalViewController: UIViewController {
         if (EKEventStore.authorizationStatus(for: .event) != .authorized) {
             eventStore.requestAccess(to: .event, completion: {
                 granted, error in
-                self.createEvent(title: "\(content)", startDate: startDate, endDate: endDate)
+                self.createEvent(title: "\(content ?? "")", startDate: startDate, endDate: endDate)
             })
         } else {
-            createEvent(title: "\(content)", startDate: startDate, endDate: endDate)
+            createEvent(title: "\(content ?? "")", startDate: startDate, endDate: endDate)
         }
         
     }
