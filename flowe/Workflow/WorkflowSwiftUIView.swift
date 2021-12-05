@@ -24,10 +24,10 @@ struct WorkflowSwiftUIView: View {
     var body: some View {
       NavigationView {
         List {
-//          ForEach(tasksList, id: \.title) {
-//            TaskRow(taskObject: $0)
-//          }
-//          .onDelete(perform: deleteTask)
+          ForEach(tasksList, id: \.title) {
+            TaskRow(taskObject: $0)
+          }
+          .onDelete(perform: deleteTask)
         }
         .sheet(isPresented: $isPresented) {
           AddTask { title, task, date in
