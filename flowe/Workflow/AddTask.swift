@@ -33,7 +33,7 @@ struct AddTask: View {
           }
         }
         Section {
-          Button(action: addMoveAction) {
+          Button(action: addTaskAction) {
             Text("Add Task")
           }
         }
@@ -42,7 +42,7 @@ struct AddTask: View {
     }
   }
 
-  private func addMoveAction() {
+  private func addTaskAction() {
     onComplete(
       title.isEmpty ? AddTask.DefaultMovieTitle : title,
       task.isEmpty ? AddTask.DefaultMovieGenre : task,
