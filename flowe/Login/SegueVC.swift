@@ -43,6 +43,11 @@ class SegueVC: UIViewController {
         
         // Update the Dark Mode choices from user defaults
         Variables.appTheme = Variables.defaults.integer(forKey: Variables.userTheme)
+        
+        // Update Sleep Mode choice
+        Variables.isMuted = Variables.defaults.bool(forKey: "sleepMode")
+        
+        Variables.avatar = (Variables.defaults.string(forKey: "avatar") ?? "sun")
     }
     
     // Change the page with right swipe

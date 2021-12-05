@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Lottie
 
 class ProfileViewController: UIViewController {
     
@@ -26,7 +27,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var emailText: UILabel!
     @IBOutlet weak var phoneText: UILabel!
     @IBOutlet weak var aboutText: UILabel!
+    @IBOutlet weak var wrapperView: UIView!
     
+    var animationView: AnimationView?
     
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
@@ -34,16 +37,21 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assignBackground()
+        //startAnimation(animation: Variables.avatar)
 
         // Round Label & Image Borders
         roundBorders()
-
+        
         fillProfile()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         fillProfile()
         darkModeCheck()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //animationView?.play()
     }
         
     func fillProfile() {
@@ -73,8 +81,8 @@ class ProfileViewController: UIViewController {
  
     func roundBorders() {
         // Profile Picture Adjustments
-        profilePicture.clipsToBounds = true
-        profilePicture.layer.cornerRadius = profilePicture.frame.height/2
+//        profilePicture.clipsToBounds = true
+//        profilePicture.layer.cornerRadius = profilePicture.frame.height/2
 //        ProfileInfoView.layer.borderWidth = 1
         
         // Label Adjustments
@@ -91,6 +99,17 @@ class ProfileViewController: UIViewController {
         aboutMe.layer.masksToBounds = true
         aboutMe.layer.cornerRadius = 6
     }
+    
+//    func startAnimation(animation: String) {
+//        //Lottie animation settings
+//        animationView = .init(name: animation)
+//        animationView?.contentMode = .scaleAspectFit
+//        animationView?.loopMode = .loop
+//        animationView?.animationSpeed = 1
+//        animationView?.frame = wrapperView.bounds
+//        wrapperView.addSubview(animationView!)
+//        animationView?.play()
+//    }
     
     func darkModeCheck() {
         // Update the the theme according to user settings
