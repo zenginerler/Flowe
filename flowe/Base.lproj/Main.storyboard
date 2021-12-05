@@ -1009,31 +1009,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
-                                <rect key="frame" x="106" y="728" width="202" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
+                                <rect key="frame" x="32" y="717" width="255" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add my journal to core data"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add my journal"/>
                                 <connections>
                                     <action selector="AddButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="vye-qe-e4G"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
-                                <rect key="frame" x="32" y="97" width="189" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
+                                <rect key="frame" x="32" y="97" width="351" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="What's your journal type?"/>
                                 <connections>
                                     <action selector="typeActionsheet:" destination="7xx-uI-YRX" eventType="touchUpInside" id="k1K-wP-JSG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-nJ-EEe">
-                                <rect key="frame" x="183" y="776" width="47" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
-                                <rect key="frame" x="248" y="779" width="125" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
+                                <rect key="frame" x="32" y="756" width="222" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="add to calendar"/>
@@ -1071,15 +1066,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-nJ-EEe">
+                                <rect key="frame" x="255" y="761" width="139" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sFg-cg-iSr"/>
                         <color key="backgroundColor" name="custom_bg"/>
-                        <constraints>
-                            <constraint firstItem="ztp-8H-sZ4" firstAttribute="centerX" secondItem="XUR-RC-fol" secondAttribute="centerX" constant="0.5" id="Xpp-6q-Rtm"/>
-                            <constraint firstItem="ztp-8H-sZ4" firstAttribute="centerY" secondItem="XUR-RC-fol" secondAttribute="centerY" constant="-276.5" id="q2t-wS-Yup"/>
-                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="centerY" secondItem="XUR-RC-fol" secondAttribute="centerY" constant="295.5" id="wq5-6Z-Ot0"/>
-                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="centerX" secondItem="XUR-RC-fol" secondAttribute="centerX" id="xw5-vq-brk"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOv-uP-0pr"/>
                     <connections>
