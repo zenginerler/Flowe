@@ -21,8 +21,8 @@ Password : test123
 - [ ] Settings:
   - [ ] Dark Mode
   - [ ] Auto Login
-  - [ ] 3rd Setting...
-- [ ] Non-default fonts and colors used
+  - [ ] Home Screen on Launch Sound
+- [x] Non-default fonts and colors used
 
 Two major elements used:
 - [x] Core Data
@@ -33,7 +33,7 @@ Two major elements used:
 Minor Elements used
 - [x] Two additional view types such as sliders, segmented controllers, etc. The two we implemented are:  
   - [X] Segmented Controllers
-  - [ ] FIXME: 2
+  - [x] Sliders
 
 One of the following:
 - [x] Table View
@@ -50,14 +50,14 @@ Two of the following:
 - [x] User Defaults
 
 At least one of the following per team member:
-- [x] Local notifications
+- [ ] Local notifications
 - [ ] Core Graphics
 - [x] Gesture Recognition
 - [x] Animation
 - [x] Calendar
 - [ ] Core Motion
 - [ ] Core Location / MapKit
-- [ ] Core Audio
+- [x] Core Audio
 
 
 ## Work Distribution
@@ -70,10 +70,15 @@ At least one of the following per team member:
 
 #### Michael Walters
 - Backend core data organization
-- Projects tab/ project view/ project archive view
-- Notifications for projects due
-- Cosmetics
+- Projects Tab
+    - projects cell view
+    - project archive
+    - project archive cell view
+- Overall UI Design
+- Color Scheming
 - Background images created by Carla Davis
+- Sound effect implementation
+- Animation
 
 #### Hiran Manoharan
 - Profile/Edit Profile page
