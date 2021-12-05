@@ -319,10 +319,27 @@
             </objects>
             <point key="canvasLocation" x="-2465.217391304348" y="1232.8125"/>
         </scene>
+        <!--WorkflowVC-->
+        <scene sceneID="EjU-lj-fGu">
+            <objects>
+                <viewController id="plE-4v-XNK" customClass="WorkflowVC" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6j3-22-u5b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IOy-lL-Fk9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6An-b1-beg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7S-Si-CWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1314" y="1233"/>
+        </scene>
         <!--Workflow-->
         <scene sceneID="XrY-VK-FDT">
             <objects>
-                <navigationController id="8y6-Ya-Z1h" customClass="ChildHostingController" customModule="flowe" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbc-Fm-CMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="8y6-Ya-Z1h" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Workflow" image="pencil" catalog="system" selectedImage="pencil" id="XT5-Kv-gnA">
                         <color key="badgeColor" systemColor="labelColor"/>
                     </tabBarItem>
@@ -330,8 +347,10 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="plE-4v-XNK" kind="relationship" relationship="rootViewController" id="EZ8-zp-Y8h"/>
+                    </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nbc-Fm-CMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1314" y="494"/>
         </scene>
