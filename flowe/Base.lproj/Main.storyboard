@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -892,32 +892,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-tO-gpy">
-                                <rect key="frame" x="20" y="108" width="374" height="265"/>
+                                <rect key="frame" x="20" y="108" width="374" height="173.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUg-fj-feD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-Tm-m16">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hzZ-wc-vq6">
-                                        <rect key="frame" x="0.0" y="40.5" width="374" height="32"/>
-                                        <segments>
-                                            <segment title="Light Mode"/>
-                                            <segment title="Dark Mode"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="themeChange:" destination="by8-Kd-EAU" eventType="valueChanged" id="wVs-Rr-bLg"/>
-                                        </connections>
-                                    </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-Tm-m16">
-                                        <rect key="frame" x="0.0" y="91.5" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AeS-hg-Bmx">
-                                        <rect key="frame" x="0.0" y="132" width="374" height="32"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="374" height="32"/>
                                         <segments>
                                             <segment title="Bells"/>
                                             <segment title="Fairy"/>
@@ -928,7 +912,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfV-T2-h82">
-                                        <rect key="frame" x="0.0" y="183" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="374" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-JY-Ld7">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="31"/>
@@ -945,7 +929,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8T-90-o7K">
-                                        <rect key="frame" x="0.0" y="234" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="374" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFc-t0-wa6">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="31"/>
@@ -993,13 +977,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Flowe Settings" id="Lew-r3-I26"/>
                     <connections>
-                        <outlet property="colorText" destination="AUg-fj-feD" id="cOa-NC-jMV"/>
                         <outlet property="jingleSegment" destination="AeS-hg-Bmx" id="rBi-Qd-4Rn"/>
                         <outlet property="jingleText" destination="vWZ-Tm-m16" id="QoY-6B-Jw9"/>
                         <outlet property="signOutButton" destination="h3J-zm-tzb" id="rDZ-Yd-cPA"/>
                         <outlet property="sleepSwitch" destination="d7z-rc-CHS" id="MZd-p5-aav"/>
                         <outlet property="sleepText" destination="GaS-JY-Ld7" id="9KO-bf-fxC"/>
-                        <outlet property="themeSegment" destination="hzZ-wc-vq6" id="ObE-zs-Jzh"/>
                         <outlet property="themeSwitch" destination="Rey-Xb-Je9" id="Yc4-0B-GJO"/>
                     </connections>
                 </viewController>

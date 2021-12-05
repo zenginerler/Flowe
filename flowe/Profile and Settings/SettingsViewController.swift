@@ -14,12 +14,12 @@ class SettingsViewController: UIViewController {
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
     
-    @IBOutlet weak var colorText: UILabel!
+//    @IBOutlet weak var colorText: UILabel!
     @IBOutlet weak var jingleText: UILabel!
     @IBOutlet weak var sleepText: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
     
-    @IBOutlet weak var themeSegment: UISegmentedControl!
+//    @IBOutlet weak var themeSegment: UISegmentedControl!
     @IBOutlet weak var jingleSegment: UISegmentedControl!
     @IBOutlet weak var sleepSwitch: UISwitch!
     @IBOutlet weak var themeSwitch: UISwitch!
@@ -35,10 +35,11 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // Remember the dark mode button state
-        if (Variables.appTheme == 1) {
+        if (Variables.defaults.integer(forKey: Variables.userTheme) == 1) {
             themeSwitch.isOn = false
         } else {
             themeSwitch.isOn = true
+            Variables.appTheme = 2
         }
         darkModeCheck()
     }
@@ -47,8 +48,10 @@ class SettingsViewController: UIViewController {
         if #available(iOS 13.0, *){
             if (themeSwitch.isOn) {
                 Variables.appTheme = 2 // .dark
+                Variables.defaults.set(Variables.appTheme, forKey: Variables.userTheme)
             } else {
                 Variables.appTheme = 1 // .light
+                Variables.defaults.set(Variables.appTheme, forKey: Variables.userTheme)
             }
         } else {
             // pop up an alert if ios-13 isn't available
@@ -57,16 +60,16 @@ class SettingsViewController: UIViewController {
         darkModeCheck()
     }
     
-    @IBAction func themeChange(_ sender: Any) {
-        switch themeSegment.selectedSegmentIndex {
-           case 0:
-            print("option 1")
-           case 1:
-            print("option 2")
-           default:
-            print("default option")
-           }
-    }
+//    @IBAction func themeChange(_ sender: Any) {
+//        switch themeSegment.selectedSegmentIndex {
+//           case 0:
+//            print("option 1")
+//           case 1:
+//            print("option 2")
+//           default:
+//            print("default option")
+//           }
+//    }
     
     @IBAction func jingleChange(_ sender: Any) {
         switch jingleSegment.selectedSegmentIndex {

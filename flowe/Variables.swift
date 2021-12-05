@@ -16,8 +16,10 @@ class Variables: UIViewController {
     static var firstName = "New User"
     
     // Color Variables
+    static let userTheme = "appTheme"
     static var appTheme = 1 // Default app theme = .light
-    
+    static let defaults = UserDefaults.standard
+ 
     //Jingle Variable
     static var jingle = "song 1"
     
