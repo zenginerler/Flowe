@@ -55,7 +55,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jb5-1z-Bht">
                                 <rect key="frame" x="0.0" y="470" width="414" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="custom_bg"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ggP-X8-mAn"/>
@@ -338,7 +338,6 @@
         <!--Workflow-->
         <scene sceneID="XrY-VK-FDT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nbc-Fm-CMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="8y6-Ya-Z1h" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Workflow" image="pencil" catalog="system" selectedImage="pencil" id="XT5-Kv-gnA">
                         <color key="badgeColor" systemColor="labelColor"/>
@@ -351,6 +350,7 @@
                         <segue destination="plE-4v-XNK" kind="relationship" relationship="rootViewController" id="EZ8-zp-Y8h"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbc-Fm-CMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1314" y="494"/>
         </scene>
