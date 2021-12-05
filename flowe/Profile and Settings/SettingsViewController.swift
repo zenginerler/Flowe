@@ -34,14 +34,14 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        darkModeCheck()
+        
         // Remember the dark mode button state
         if (Variables.defaults.integer(forKey: Variables.userTheme) == 1) {
             themeSwitch.isOn = false
         } else {
             themeSwitch.isOn = true
-            Variables.appTheme = 2
         }
-        darkModeCheck()
     }
     
     @IBAction func changeTheme(_ sender: Any) {
@@ -60,16 +60,6 @@ class SettingsViewController: UIViewController {
         darkModeCheck()
     }
     
-//    @IBAction func themeChange(_ sender: Any) {
-//        switch themeSegment.selectedSegmentIndex {
-//           case 0:
-//            print("option 1")
-//           case 1:
-//            print("option 2")
-//           default:
-//            print("default option")
-//           }
-//    }
     
     @IBAction func jingleChange(_ sender: Any) {
         switch jingleSegment.selectedSegmentIndex {

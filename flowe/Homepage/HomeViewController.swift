@@ -166,7 +166,7 @@ class HomeViewController: UIViewController {
             if work == true {
                 work = false
                 count += 1
-                print("count", count)
+//                print("count", count)
                 numPomoLabel.text = "\(count)"
             }
             else {
@@ -206,7 +206,7 @@ class HomeViewController: UIViewController {
         self.quoteLabel.text = "\(Variables.quotes[stringIndex][0]) - \(Variables.quotes[stringIndex][1])"
         let _ = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: true) { (timer) in
             stringIndex = Int.random(in: 0..<Variables.quotes.count)
-            print(stringIndex)
+//            print(stringIndex)
             UIView.transition(with: self.quoteLabel, duration: 0.8,
                               options: .transitionCrossDissolve,
                               animations: {

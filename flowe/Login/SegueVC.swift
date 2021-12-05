@@ -40,6 +40,9 @@ class SegueVC: UIViewController {
         
         // Initiate the user or retrieve the existing user data
         userInitiation()
+        
+        // Update the Dark Mode choices from user defaults
+        Variables.appTheme = Variables.defaults.integer(forKey: Variables.userTheme)
     }
     
     // Change the page with right swipe
@@ -106,6 +109,7 @@ class SegueVC: UIViewController {
         }
     }
     func darkModeCheck() {
+        
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
