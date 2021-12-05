@@ -22,11 +22,6 @@ class HomeViewController: UIViewController {
     var count = 0
     var work: Bool = true
     
-    // pomodoro stacks
-    @IBOutlet weak var remainingTimeStack: UIStackView!
-    @IBOutlet weak var pomodoroCounter: UIStackView!
-    @IBOutlet weak var pomodoroStackView: UIStackView!
-    
     // Home Btttons
     @IBOutlet weak var button_TL: UIButton!
     @IBOutlet weak var button_TR: UIButton!
@@ -34,30 +29,32 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var button_BR: UIButton!
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var quoteLabel: UILabel!
     
     @IBOutlet weak var resetPomo: UIButton!
     @IBOutlet weak var breakB: UIButton!
     @IBOutlet weak var startB: UIButton!
-    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var RemainTimeLabel: UILabel!
     @IBOutlet weak var numPomoLabel: UILabel!
     @IBOutlet weak var timerState: UILabel!
     
     var takingABreak = false
     
-    var audioPlayer: AVAudioPlayer?
     
+    var audioPlayer: AVAudioPlayer?
+    var animationView: AnimationView?
+    
+    // core data container
     lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var context = appDelegate.persistentContainer.viewContext
     
-    var animationView: AnimationView?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        playSound(file: Variables.sound)
         assignBackground()
         customizeButtons()
         getFirstName()
-        playSound(file: Variables.sound)
+        startQuotes()
         
         // Starting center value
         self.nameLabel.center.x = self.view.center.x + self.view.bounds.width
@@ -70,12 +67,7 @@ class HomeViewController: UIViewController {
             }
         )
         
-        //comment below line to bring stack view back
-        pomodoroStackView.isHidden = true
-        remainingTimeStack.isHidden = true
-        pomodoroCounter.isHidden = true
-        
-        // cosmetic instatiation
+        // cosmetic instantiation
         nameLabel.text = "Welcome, \(Variables.firstName)!"
         RemainTimeLabel.layer.masksToBounds = true
         RemainTimeLabel.layer.cornerRadius = 8
@@ -94,7 +86,6 @@ class HomeViewController: UIViewController {
         getFirstName()
         nameLabel.text = "Welcome, \(Variables.firstName)!"
         animationView?.play()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -117,11 +108,9 @@ class HomeViewController: UIViewController {
         startTimerAnimation(animation: "timer")
         RemainTimeLabel.text = "25 mins"
         RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_green")
-        statusLabel.text = "working"
         work = true
         minutes = 25
         timer.invalidate()
-        statusLabel.backgroundColor = UIColor.red
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(HomeViewController.timerClass), userInfo: nil, repeats: true)
     }
     
@@ -140,11 +129,9 @@ class HomeViewController: UIViewController {
         // timer code for break
         RemainTimeLabel.text = "5 mins"
         RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_red")
-        statusLabel.text = "relaxing"
         work = false
         minutes = 5
         timer.invalidate()
-        statusLabel.backgroundColor = UIColor .green
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(HomeViewController.timerClass), userInfo: nil, repeats: true)
     }
     
@@ -158,16 +145,17 @@ class HomeViewController: UIViewController {
         minutes -= 25
         RemainTimeLabel.text = "\(String(minutes)) mins"
         if minutes < 1 {
-            playSound(file: "drum")
             
             // alert if taking a break
             if takingABreak {
+                playSound(file: "drum")
                 timeIsUp(title: "Break Time Over", message: "It's great to take breaks! Now it's time to be productive.", button: "Back to Work")
                 takingABreak = false
                 timerState.text = "Resume timer"
                 RemainTimeLabel.backgroundColor = UIColor.init(named: "custom_red")
             }
             else{
+                playSound(file: "finished")
                 timeIsUp(title: "Time is Up", message: "Great Job! You were productive for 25 minutes!", button: "Confirm")
                 timerState.text = "Pomodoro Acheived!"
                 animationView?.stop()
@@ -176,14 +164,12 @@ class HomeViewController: UIViewController {
             }
             timer.invalidate()
             if work == true {
-                statusLabel.backgroundColor = UIColor .green
                 work = false
                 count += 1
                 print("count", count)
                 numPomoLabel.text = "\(count)"
             }
             else {
-                statusLabel.backgroundColor = UIColor .red
                 work = true
             }
         }
@@ -200,7 +186,7 @@ class HomeViewController: UIViewController {
           imageView.center = view.center
           view.addSubview(imageView)
           self.view.sendSubviewToBack(imageView)
-      }
+    }
     
     func darkModeCheck() {
         // Update the the theme according to user settings
@@ -212,6 +198,24 @@ class HomeViewController: UIViewController {
             (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_1_dark")
         } else {
             print("\nTheme ERROR")
+        }
+    }
+    
+    func startQuotes(){
+        var stringIndex = Int.random(in: 0...Variables.quotes.count)
+        self.quoteLabel.text = "\(Variables.quotes[stringIndex][0]) - \(Variables.quotes[stringIndex][1])"
+        let _ = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: true) { (timer) in
+            stringIndex = Int.random(in: 0...Variables.quotes.count)
+            print(stringIndex)
+            UIView.transition(with: self.quoteLabel, duration: 0.8,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.quoteLabel.text = ""
+                            },completion: { (Void) in
+                UIView.transition(with: self.quoteLabel, duration: 0.8, options: .transitionCrossDissolve, animations: {
+                    self.quoteLabel.text = "\(Variables.quotes[stringIndex][0]) - \(Variables.quotes[stringIndex][1])"
+                }, completion: nil)
+            })
         }
     }
     
@@ -238,20 +242,12 @@ class HomeViewController: UIViewController {
     }
     
     func customizeButtons() {
-//        self.button_TL.applyGradient(colours: [.yellow, .orange])
         self.button_TR.backgroundColor = UIColor.init(named: "custom_orange")
         self.button_BL.backgroundColor = UIColor.init(named: "custom_orange")
-        
-//        self.button_BR.applyGradient(colours: [.purple, .blue])
-
-//        button_TL.layer.masksToBounds = true
         button_TR.layer.masksToBounds = true
         button_BL.layer.masksToBounds = true
-//        button_BR.layer.masksToBounds = true
-//        button_TL.layer.cornerRadius = 10
         button_TR.layer.cornerRadius = 10
         button_BL.layer.cornerRadius = 10
-//        button_BR.layer.cornerRadius = 10
     }
     
     func getFirstName () {
@@ -272,8 +268,6 @@ class HomeViewController: UIViewController {
             
         }
     }
-    
-    
 }
 
 extension UIView {

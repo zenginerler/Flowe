@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y7x-Pi-rBS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -144,62 +144,6 @@
                                     <action selector="calendarButtonPress:" destination="t2y-3n-C6O" eventType="touchUpInside" id="5ts-qD-QzT"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WvM-my-4SU">
-                                <rect key="frame" x="20" y="497" width="374" height="136"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1D-G6-crY">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Pomodoro timer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suc-rI-xq2">
-                                                <rect key="frame" x="0.0" y="0.0" width="283.5" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="zh3-AL-gfe"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbg-bf-bO3">
-                                                <rect key="frame" x="283.5" y="0.0" width="90.5" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="B1d-lA-2eJ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8a-G0-a3I">
-                                        <rect key="frame" x="0.0" y="48" width="374" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pomodoros achieved: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onQ-x9-k4C">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="t0B-vr-xjG"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-tk-jI4">
-                                        <rect key="frame" x="0.0" y="96" width="374" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Time left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V85-xn-5ki">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="6uk-F6-Ghy"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laR-4Y-8wU">
                                 <rect key="frame" x="104" y="653" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -316,19 +260,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-f7-aZv">
+                                <rect key="frame" x="45" y="497" width="324" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="324" id="IJN-uf-vRy"/>
+                                    <constraint firstAttribute="height" constant="127" id="yab-H7-ZpG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m5K-9q-6gs"/>
                         <color key="backgroundColor" name="custom_bg"/>
                         <constraints>
+                            <constraint firstItem="7zh-f7-aZv" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="409" id="3Zw-oM-pv4"/>
                             <constraint firstItem="hxe-QX-DAH" firstAttribute="leading" secondItem="Mv7-0m-5AC" secondAttribute="trailing" constant="28" id="57r-Ff-dYg"/>
                             <constraint firstItem="hxe-QX-DAH" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="260" id="6L8-DQ-xbj"/>
                             <constraint firstItem="QBN-ag-0X6" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" id="8EQ-fF-Ck5"/>
-                            <constraint firstItem="WvM-my-4SU" firstAttribute="centerX" secondItem="Pge-ek-9Da" secondAttribute="centerX" id="A8d-Nf-Srr"/>
                             <constraint firstItem="yN4-w9-LAX" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="210" id="Ebk-PS-Viy"/>
                             <constraint firstItem="dof-67-SdR" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="40" id="RFz-B0-VEf"/>
-                            <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="WvM-my-4SU" secondAttribute="trailing" constant="20" id="SjZ-zy-j5x"/>
                             <constraint firstItem="mLa-FA-4uS" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="650" id="ZTg-Lb-AIg"/>
                             <constraint firstItem="dof-67-SdR" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="650" id="ZfI-Ip-2NH"/>
+                            <constraint firstItem="7zh-f7-aZv" firstAttribute="centerX" secondItem="m5K-9q-6gs" secondAttribute="centerX" id="Zgv-gf-GSn"/>
                             <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="yN4-w9-LAX" secondAttribute="trailing" constant="20" id="akI-tp-Fb5"/>
                             <constraint firstItem="gcB-sU-zME" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="8" id="ap8-Tt-2ZY"/>
                             <constraint firstItem="a2a-6V-DBM" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="37" id="dCv-ja-uen"/>
@@ -340,7 +294,6 @@
                             <constraint firstItem="QBN-ag-0X6" firstAttribute="centerX" secondItem="m5K-9q-6gs" secondAttribute="centerX" id="mFh-jx-etS"/>
                             <constraint firstItem="akw-vp-lLX" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="40" id="msz-rt-xOZ"/>
                             <constraint firstItem="m5K-9q-6gs" firstAttribute="trailing" secondItem="mLa-FA-4uS" secondAttribute="trailing" constant="30" id="oQs-fM-8BQ"/>
-                            <constraint firstItem="WvM-my-4SU" firstAttribute="leading" secondItem="m5K-9q-6gs" secondAttribute="leading" constant="20" id="ovk-JZ-KLD"/>
                             <constraint firstItem="Mv7-0m-5AC" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="565" id="sWg-oK-pLr"/>
                             <constraint firstItem="hxe-QX-DAH" firstAttribute="top" secondItem="m5K-9q-6gs" secondAttribute="top" constant="565" id="tVH-Ya-3OK"/>
                         </constraints>
@@ -353,12 +306,9 @@
                         <outlet property="button_TR" destination="mLa-FA-4uS" id="P5P-Q3-hZf"/>
                         <outlet property="nameLabel" destination="a2a-6V-DBM" id="hhO-CT-4J0"/>
                         <outlet property="numPomoLabel" destination="M9U-8H-qyh" id="V00-ce-i0E"/>
-                        <outlet property="pomodoroCounter" destination="O8a-G0-a3I" id="lvC-5p-Edj"/>
-                        <outlet property="pomodoroStackView" destination="v1D-G6-crY" id="x5S-Rs-jaA"/>
-                        <outlet property="remainingTimeStack" destination="3DM-tk-jI4" id="1yW-zL-Ep0"/>
+                        <outlet property="quoteLabel" destination="7zh-f7-aZv" id="zmC-Rf-bFB"/>
                         <outlet property="resetPomo" destination="hxe-QX-DAH" id="Upy-gw-1ko"/>
                         <outlet property="startB" destination="Mv7-0m-5AC" id="kjM-4c-Fgx"/>
-                        <outlet property="statusLabel" destination="hbg-bf-bO3" id="MUg-6k-HAk"/>
                         <outlet property="timerState" destination="gcB-sU-zME" id="f2C-hR-VCX"/>
                         <outlet property="wrapperView" destination="akw-vp-lLX" id="mTt-7i-oTb"/>
                     </connections>

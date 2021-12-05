@@ -75,16 +75,15 @@ class SegueVC: UIViewController {
             } else if fetchedResults?.count == 0 {
                 let currentUser = Users(context: self.context)
                 currentUser.username = Variables.username
-                
+
                 let defaultProfile = Profile(context: self.context)
-                defaultProfile.firstName = "not specified"
-                defaultProfile.lastName = "not specified"
+                defaultProfile.firstName = "New"
+                defaultProfile.lastName = "User"
                 defaultProfile.email = Variables.username
-                defaultProfile.aboutMe = "not specified"
-                defaultProfile.contactInfo = "not specified"
+                defaultProfile.aboutMe = "A new Flowe User"
+                defaultProfile.contactInfo = "555-555-5555"
                 defaultProfile.userProfile = currentUser
                 currentUser.profile = defaultProfile
-                
 
                 do {
                     try context.save()
