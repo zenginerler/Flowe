@@ -21,7 +21,8 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         assignBackground()
-//        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.init(named: "custom_logo_blues")
+        tableView.backgroundColor = UIColor.init(named: "custmo_logo_light_blues")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +38,7 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: goalIdentifier, for: indexPath)
-        cell.backgroundColor = UIColor.init(named: "custom_orange")
+        cell.backgroundColor = UIColor.init(named: "custom_logo_blues")
         let row = indexPath.row
         // put the value in table view from core data.
         let typee = goallist[row].value(forKey: "type")
