@@ -65,21 +65,21 @@ At least one of the following per team member:
 
 #### Mehmet Zenginerler
 - Login, SignUp & Onboarding Pages
-    - Firebase & Pod Functionality
-    - SwiftUI to UIkit integration
+  - Firebase & Pod Functionality
+  - SwiftUI to UIkit integration
 - DarkMode Functionality
 - Animation Integration (lottie)
-- Curvy Background Integration & Design (svg) 
+- Curvy Background Integration & Design (svg)
 - Gradient Integration (removed)
 - Profile Page UI
 - Overall Bug Fixes
 
 #### Michael Walters
 - Backend core data organization
-- Projects Tab
-    - projects cell view
-    - project archive
-    - project archive cell view
+- Projects Tab - designed to keep track of project due dates and descriptions. Has archive functionality 
+  - projects cell view
+  - project archive
+  - project archive cell view
 - Overall UI Design
 - Color Scheming
 - Some background images created by Carla Davis
@@ -87,17 +87,17 @@ At least one of the following per team member:
 - Animation
 
 #### Hiran Manoharan
-- Profile/Edit Profile Tabs
-- Settings Tab
-- Workflow Tab
-    - Add Task
-    - Task Row
-- User Defaults for settings and Core Data for profiles and workflow 
+- Profile/Edit Profile Tabs - designed to edit personalised profile for future functionality with projects tab. Will be able to collaborate with other users in projects
+- Settings Tab - change app settings such as sounds, theme, and avatar
+- Workflow Tab - designed to keep track of tasks throughout the day
+  - Add Task
+  - Task Row
+- User Defaults for settings and Core Data for profiles and workflow
 - Logo Creation
 
 #### Yixing Ma
-- Journal
-- Pomodoro, if need help just ask
+- Journal - designed to keep track of thoughts like a journal and adds thoughts to the calendar
+- Pomodoro - designed to ensure user works for 25 mins and takes a break for 5 mins, creates a workflow
 - Implementing animation
 - Calendar
 - HomePage
