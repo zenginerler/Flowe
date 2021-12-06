@@ -139,7 +139,6 @@ class HomeViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(HomeViewController.timerClass), userInfo: nil, repeats: true)
     }
     
-    
     @IBAction func resetButton(_ sender: Any) {
         count = 0
         numPomoLabel.text = "\(count)"

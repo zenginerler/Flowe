@@ -42,6 +42,25 @@ class SettingsViewController: UIViewController {
         } else {
             themeSwitch.isOn = true
         }
+        
+        // sleep switch default state
+        if Variables.isMuted{
+            sleepSwitch.isOn = true
+        }
+        else{
+            sleepSwitch.isOn = false
+        }
+        
+        //jingle selector default state
+        if (Variables.defaults.string(forKey: "appSound")) == "bells"{
+            jingleSegment.selectedSegmentIndex = 0
+        }
+        else if (Variables.defaults.string(forKey: "appSound")) == "fairy"{
+            jingleSegment.selectedSegmentIndex = 1
+        }
+        else{
+            jingleSegment.selectedSegmentIndex = 2
+        }
     }
     
     @IBAction func changeTheme(_ sender: Any) {
@@ -65,13 +84,16 @@ class SettingsViewController: UIViewController {
         switch jingleSegment.selectedSegmentIndex {
         case 0:
             playSound(file: "bells")
-            // save to user defaults
+            Variables.defaults.set("bells", forKey: "appSound")
         case 1:
             playSound(file: "fairy")
+            Variables.defaults.set("fairy", forKey: "appSound")
         case 2:
             playSound(file: "flute")
+            Variables.defaults.set("flute", forKey: "appSound")
         default:
             playSound(file: "bells")
+            Variables.defaults.set("bells", forKey: "appSound")
         }
     }
     
@@ -90,9 +112,11 @@ class SettingsViewController: UIViewController {
     
     @IBAction func sleepChange(_ sender: Any) {
         if sleepSwitch.isOn {
-            Variables.sleep = "moon.png"
+            Variables.isMuted = true
+            Variables.defaults.set(true, forKey: "sleepMode")
         } else {
-            Variables.sleep = "sun.png"
+            Variables.isMuted = false
+            Variables.defaults.set(false, forKey: "sleepMode")
         }
     }
     
