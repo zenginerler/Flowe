@@ -26,10 +26,14 @@ class GoalViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var journalStatusLabel: UILabel!
     @IBOutlet weak var goalContent: UITextField!
+    @IBOutlet weak var addToJournalButton: UIButton!
+    @IBOutlet weak var addToCalendarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         assignBackground()
+        addToJournalButton.layer.cornerRadius = 10
+        addToCalendarButton.layer.cornerRadius = 10
         
     }
     

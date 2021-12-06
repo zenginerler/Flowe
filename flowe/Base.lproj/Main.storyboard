@@ -1051,6 +1051,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PRb-tk-T6B">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nHL-iS-HTd">
+                            <color key="tintColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="7xx-uI-YRX" kind="show" id="W8s-hn-bYW"/>
                             </connections>
@@ -1072,28 +1073,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="beautiful day ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-ze-OIh">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="beautiful day ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-ze-OIh">
                                 <rect key="frame" x="32" y="230" width="351" height="491"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="custom_bg"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
-                                <rect key="frame" x="32" y="752" width="255" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add my journal">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
-                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="AddButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="vye-qe-e4G"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-8H-sZ4">
                                 <rect key="frame" x="32" y="97" width="351" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="What's your journal type?">
+                                <buttonConfiguration key="configuration" style="plain" title="What's on your mind?">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
@@ -1141,36 +1131,58 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
-                                <rect key="frame" x="161" y="752" width="222" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-LI-abe">
+                                <rect key="frame" x="217" y="752" width="157" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="0q4-yA-Z6k"/>
+                                    <constraint firstAttribute="height" constant="50" id="4Hh-L5-n84"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add to calendar">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
-                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="addToCalendarButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="Jdi-cu-Tn1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-wQ-0CL">
+                                <rect key="frame" x="32" y="752" width="157" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="Ygh-pG-Tdh"/>
+                                    <constraint firstAttribute="height" constant="50" id="lgT-To-v00"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add my journal">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="AddButton:" destination="7xx-uI-YRX" eventType="touchUpInside" id="vye-qe-e4G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sFg-cg-iSr"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ztp-8H-sZ4" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="32" id="9gG-O4-m90"/>
                             <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="ztp-8H-sZ4" secondAttribute="trailing" constant="31" id="AvZ-IJ-AKg"/>
-                            <constraint firstItem="Lof-LI-abe" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="629" id="AyS-sO-Mpi"/>
                             <constraint firstItem="cNb-nJ-EEe" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="96" id="FTs-Bk-cyA"/>
-                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="629" id="Fik-z5-bZf"/>
-                            <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="Gn5-wQ-0CL" secondAttribute="trailing" constant="127" id="KTa-DF-eAe"/>
-                            <constraint firstItem="Lof-LI-abe" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="161" id="KkH-qt-TPT"/>
+                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="664" id="J4b-RY-tvv"/>
+                            <constraint firstItem="Lof-LI-abe" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="664" id="OoZ-nP-rO8"/>
                             <constraint firstItem="cNb-nJ-EEe" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="668" id="QXU-85-1Rz"/>
-                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="32" id="V4v-Jy-ls0"/>
+                            <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="Lof-LI-abe" secondAttribute="trailing" constant="40" id="RJp-0w-tYY"/>
+                            <constraint firstItem="Gn5-wQ-0CL" firstAttribute="leading" secondItem="sFg-cg-iSr" secondAttribute="leading" constant="38" id="TTW-3K-vub"/>
                             <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="cNb-nJ-EEe" secondAttribute="trailing" constant="95" id="d5n-jK-Cs3"/>
                             <constraint firstItem="ztp-8H-sZ4" firstAttribute="top" secondItem="sFg-cg-iSr" secondAttribute="top" constant="9" id="fcZ-9r-ZEp"/>
-                            <constraint firstItem="sFg-cg-iSr" firstAttribute="trailing" secondItem="Lof-LI-abe" secondAttribute="trailing" constant="31" id="poV-jp-h7n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOv-uP-0pr"/>
                     <connections>
+                        <outlet property="addToCalendarButton" destination="Lof-LI-abe" id="mQa-fn-3oq"/>
+                        <outlet property="addToJournalButton" destination="Gn5-wQ-0CL" id="VgT-8q-Oni"/>
                         <outlet property="dateTextField" destination="tU7-f3-imH" id="lhp-cj-vgX"/>
                         <outlet property="goalContent" destination="dAI-ze-OIh" id="NFp-Hj-Qpc"/>
                         <outlet property="journalStatusLabel" destination="cNb-nJ-EEe" id="4jt-Q4-IR9"/>
