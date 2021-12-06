@@ -140,7 +140,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: Any) {
-        count = 0
         numPomoLabel.text = "\(count)"
         timer.invalidate()
         RemainTimeLabel.text = "0 mins"
