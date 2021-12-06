@@ -11,15 +11,17 @@ import SwiftUI
 class WorkflowVC: UIViewController {
 
     let moc = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-    let viewHC = UIHostingController(rootView: SwiftUIView())
+    
+    @IBOutlet weak var theContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        addChild(viewHC)
-//        viewHC.view.frame = view.bounds
-//        view.addSubview(viewHC.view)
+        let viewHC = UIHostingController(rootView: SwiftUIView().environment(\.managedObjectContext, moc!))
+        addChild(viewHC)
+        viewHC.view.frame = theContainer.bounds
+        theContainer.addSubview(viewHC.view)
         
-        assignbackground()
+//        assignbackground()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,9 +32,9 @@ class WorkflowVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let swiftUIView = UIHostingController(rootView: SwiftUIView().environment(\.managedObjectContext, moc!))
-//        swiftUIView.modalPresentationStyle = .fullScreen
-        present(swiftUIView, animated: true, completion: nil)
+//        let swiftUIView = UIHostingController(rootView: SwiftUIView().environment(\.managedObjectContext, moc!))
+////        swiftUIView.modalPresentationStyle = .fullScreen
+//        present(swiftUIView, animated: true, completion: nil)
     }
 
     struct SwiftUIView: View {
@@ -114,10 +116,10 @@ class WorkflowVC: UIViewController {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_light")
+//            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
-            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_dark")
+//            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_dark")
         } else {
             print("\nTheme ERROR")
         }

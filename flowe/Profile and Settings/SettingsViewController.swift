@@ -28,9 +28,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        assignbackground()
         signOutButton.layer.masksToBounds = true
         signOutButton.layer.cornerRadius = 10
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,15 +108,31 @@ class SettingsViewController: UIViewController {
         Variables.sleep = "sun.png"
     }
     
+    func assignbackground() {
+          let background = UIImage()
+
+          var imageView : UIImageView!
+          imageView = UIImageView(frame: view.bounds)
+          imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+          imageView.clipsToBounds = true
+          imageView.image = background
+          imageView.center = view.center
+          view.addSubview(imageView)
+          self.view.sendSubviewToBack(imageView)
+      }
+    
     func darkModeCheck() {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
+//            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
+//            (view.subviews[0] as! UIImageView).image = UIImage(named: "sharp_dark")
         } else {
             print("\nTheme ERROR")
         }
     }
+    
     
 }
