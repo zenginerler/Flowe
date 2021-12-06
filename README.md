@@ -86,9 +86,10 @@ At least one of the following per team member:
 - Animation
 
 #### Hiran Manoharan
-- Profile/Edit Profile page
-- Settings Page
-- Workflow page
+- Profile/Edit Profile Tabs
+- Settings Tab
+- Workflow Tab
+- User Defaults and Core Data for profiles and workflow 
 
 #### Yixing Ma
 - Journal
