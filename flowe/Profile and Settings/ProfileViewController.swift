@@ -37,7 +37,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assignBackground()
-        //startAnimation(animation: Variables.avatar)
+        startAnimation(animation: Variables.avatar)
+        
 
         // Round Label & Image Borders
         roundBorders()
@@ -46,12 +47,15 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        animationView?.stop()
+        animationView?.removeFromSuperview()
+        startAnimation(animation: Variables.avatar)
         fillProfile()
         darkModeCheck()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //animationView?.play()
+        animationView?.play()
     }
         
     func fillProfile() {
@@ -100,16 +104,16 @@ class ProfileViewController: UIViewController {
         aboutMe.layer.cornerRadius = 6
     }
     
-//    func startAnimation(animation: String) {
-//        //Lottie animation settings
-//        animationView = .init(name: animation)
-//        animationView?.contentMode = .scaleAspectFit
-//        animationView?.loopMode = .loop
-//        animationView?.animationSpeed = 1
-//        animationView?.frame = wrapperView.bounds
-//        wrapperView.addSubview(animationView!)
-//        animationView?.play()
-//    }
+    func startAnimation(animation: String) {
+        //Lottie animation settings
+        animationView = .init(name: animation)
+        animationView?.contentMode = .scaleAspectFit
+        animationView?.loopMode = .loop
+        animationView?.animationSpeed = 1
+        animationView?.frame = wrapperView.bounds
+        wrapperView.addSubview(animationView!)
+        animationView?.play()
+    }
     
     func darkModeCheck() {
         // Update the the theme according to user settings

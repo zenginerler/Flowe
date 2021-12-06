@@ -19,10 +19,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var sleepText: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
     
-//    @IBOutlet weak var themeSegment: UISegmentedControl!
+    @IBOutlet weak var themeSegment: UISegmentedControl!
     @IBOutlet weak var jingleSegment: UISegmentedControl!
     @IBOutlet weak var sleepSwitch: UISwitch!
     @IBOutlet weak var themeSwitch: UISwitch!
+    @IBOutlet weak var avatarSelection: UISegmentedControl!
     
     var audioPlayer: AVAudioPlayer?
     
@@ -62,6 +63,17 @@ class SettingsViewController: UIViewController {
         else{
             jingleSegment.selectedSegmentIndex = 2
         }
+        
+        //avatar default state
+        if Variables.avatar == "sun"{
+            avatarSelection.selectedSegmentIndex = 0
+        }
+        else if Variables.avatar == "moon"{
+            avatarSelection.selectedSegmentIndex = 1
+        }
+        else{
+            avatarSelection.selectedSegmentIndex = 2
+        }
     }
     
     @IBAction func changeTheme(_ sender: Any) {
@@ -98,6 +110,25 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    @IBAction func avatarSelected(_ sender: Any) {
+        switch avatarSelection.selectedSegmentIndex {
+        case 0:
+            Variables.defaults.set("sun", forKey: "avatar")
+            Variables.avatar = "sun"
+            print("avatar set to \(Variables.avatar)")
+        case 1:
+            Variables.defaults.set("moon", forKey: "avatar")
+            Variables.avatar = "moon"
+        case 2:
+            Variables.defaults.set("earth", forKey: "avatar")
+            Variables.avatar = "earth"
+        default:
+            Variables.defaults.set("sun", forKey: "avatar")
+            Variables.avatar = "sun"
+        }
+    }
+    
+    
     func playSound(file: String){
         let pathToSound = Bundle.main.path(forResource: file, ofType: "mp3")!
         let url = URL(fileURLWithPath: pathToSound)
@@ -128,8 +159,6 @@ class SettingsViewController: UIViewController {
         Variables.username = ""
         Variables.userID = nil
         Variables.appTheme = 1
-        Variables.jingle = "song 1"
-        Variables.sleep = "sun.png"
     }
     
     func assignbackground() {

@@ -19,12 +19,6 @@ class Variables: UIViewController {
     static let userTheme = "appTheme"
     static var appTheme = 1 // Default app theme = .light
     static let defaults = UserDefaults.standard
- 
-    //Jingle Variable
-    static var jingle = "song 1"
-    
-    // Sleep icon
-    static var sleep = "sun.png"
     
     // remove project variable
     static var removeProject = false
