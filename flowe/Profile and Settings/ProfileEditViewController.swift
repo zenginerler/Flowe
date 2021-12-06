@@ -48,11 +48,11 @@ class ProfileEditViewController: UIViewController {
         let profileNSObj = singleUser.value(forKey: "profile") as! NSManagedObject
     
         self.usernameLabel.text = "\(Variables.username)"
-        self.firstNameTextField.placeholder = "  \(profileNSObj.value(forKey: "firstName") as! String)"
-        self.lastNameTextField.placeholder = "  \(profileNSObj.value(forKey: "lastName") as! String)"
-        self.phoneNumberTextField.placeholder = "  \(profileNSObj.value(forKey: "contactInfo") as! String)"
-        self.emailTextField.placeholder = "  \(profileNSObj.value(forKey: "email") as! String)"
-        self.aboutMeTextField.placeholder = "  \(profileNSObj.value(forKey: "aboutMe") as! String)"
+        self.firstNameTextField.placeholder = "\(profileNSObj.value(forKey: "firstName") as! String)"
+        self.lastNameTextField.placeholder = "\(profileNSObj.value(forKey: "lastName") as! String)"
+        self.phoneNumberTextField.placeholder = "\(profileNSObj.value(forKey: "contactInfo") as! String)"
+        self.emailTextField.placeholder = "\(profileNSObj.value(forKey: "email") as! String)"
+        self.aboutMeTextField.placeholder = "\(profileNSObj.value(forKey: "aboutMe") as! String)"
     }
     
     @IBAction func saveProfile(_ sender: Any) {
