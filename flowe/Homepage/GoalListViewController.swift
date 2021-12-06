@@ -20,6 +20,8 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        assignBackground()
+//        view.backgroundColor = UIColor.blue
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +37,7 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: goalIdentifier, for: indexPath)
+        cell.backgroundColor = UIColor.init(named: "custom_orange")
         let row = indexPath.row
         // put the value in table view from core data.
         let typee = goallist[row].value(forKey: "type")
@@ -93,15 +96,40 @@ class GoalListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func assignBackground() {
+          let background = UIImage()
+
+          var imageView : UIImageView!
+          imageView = UIImageView(frame: view.bounds)
+          imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+          imageView.clipsToBounds = true
+          imageView.image = background
+          imageView.center = view.center
+          view.addSubview(imageView)
+          self.view.sendSubviewToBack(imageView)
+    }
+    
     func darkModeCheck() {
         // Update the the theme according to user settings
         if (Variables.appTheme == 1) {
             overrideUserInterfaceStyle = .light
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_3_light")
         } else if (Variables.appTheme == 2) {
             overrideUserInterfaceStyle = .dark
+            (view.subviews[0] as! UIImageView).image = UIImage(named: "bg_3_dark")
         } else {
             print("\nTheme ERROR")
         }
     }
+//    func darkModeCheck() {
+//        // Update the the theme according to user settings
+//        if (Variables.appTheme == 1) {
+//            overrideUserInterfaceStyle = .light
+//        } else if (Variables.appTheme == 2) {
+//            overrideUserInterfaceStyle = .dark
+//        } else {
+//            print("\nTheme ERROR")
+//        }
+//    }
 
 }
