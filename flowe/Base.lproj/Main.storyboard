@@ -83,10 +83,13 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ukK-xv-nHw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="custom_bg"/>
-                        <color key="selectedImageTintColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="custom_logo_blues"/>
+                        <color key="tintColor" red="0.93149036169999999" green="0.50639921430000001" blue="0.49410498139999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.93149036169999999" green="0.50639921430000001" blue="0.49410498139999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance">
                             <color key="backgroundColor" name="custom_logo_light_blues"/>
+                            <color key="shadowColor" red="0.93333333330000001" green="0.50588235290000005" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="selectionIndicatorTintColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </tabBarAppearance>
                     </tabBar>
