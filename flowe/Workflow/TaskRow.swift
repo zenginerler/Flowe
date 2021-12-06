@@ -11,7 +11,7 @@ struct TaskRow: View {
   let taskObject: WorkflowTasks
   static let releaseFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateStyle = .long
+    formatter.timeStyle = .short
     return formatter
   }()
 

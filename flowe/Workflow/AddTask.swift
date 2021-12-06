@@ -28,8 +28,8 @@ struct AddTask: View {
         Section {
           DatePicker(
             selection: $date,
-            displayedComponents: .date) {
-              Text("Finish Date").foregroundColor(Color(.gray))
+            displayedComponents: .hourAndMinute) {
+              Text("Finish Time").foregroundColor(Color(.gray))
           }
         }
         Section {
