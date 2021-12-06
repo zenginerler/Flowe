@@ -89,7 +89,10 @@ At least one of the following per team member:
 - Profile/Edit Profile Tabs
 - Settings Tab
 - Workflow Tab
-- User Defaults and Core Data for profiles and workflow 
+    - Add Task
+    - Task Row
+- User Defaults for settings and Core Data for profiles and workflow 
+- Logo Creation
 
 #### Yixing Ma
 - Journal
