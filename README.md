@@ -22,6 +22,7 @@ Password : test123
   - [X] Dark Mode
   - [X] Sleep Mode
   - [X] Home Screen on Launch Sound
+  - [X] Change avatar
 - [x] Non-default fonts and colors used
 
 Two major elements used:
@@ -50,7 +51,7 @@ Two of the following:
 - [x] User Defaults
 
 At least one of the following per team member:
-- [ ] Local notifications
+- [X] Local notifications
 - [ ] Core Graphics
 - [x] Gesture Recognition
 - [x] Animation
