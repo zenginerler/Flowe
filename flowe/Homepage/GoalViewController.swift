@@ -34,6 +34,8 @@ class GoalViewController: UIViewController {
         assignBackground()
         addToJournalButton.layer.cornerRadius = 10
         addToCalendarButton.layer.cornerRadius = 10
+        goalContent.layer.masksToBounds = true
+        goalContent.layer.cornerRadius = 12
         
     }
     
