@@ -168,7 +168,7 @@ class HomeViewController: UIViewController {
                     playSound(file: "finished")
                 }
                 timeIsUp(title: "Time is Up", message: "Great Job! You were productive for 25 minutes!", button: "Confirm")
-                timerState.text = "Pomodoro Acheived!"
+                timerState.text = "Pomodoro Achieved!"
                 animationView?.stop()
                 animationView?.removeFromSuperview()
                 startTimerAnimation(animation: "checkmark")
